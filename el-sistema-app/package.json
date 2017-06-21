@@ -1,6 +1,7 @@
 {
   "name": "el-sistema-app",
   "version": "0.1.0",
+  "main": "server/index.js",
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
