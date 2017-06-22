@@ -10,6 +10,7 @@
     "express-session": "^1.15.3",
     "lodash": "^4.17.4",
     "massive": "^3.0.0-rc1",
+    "nodemailer": "^4.0.1",
     "passport": "^0.3.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

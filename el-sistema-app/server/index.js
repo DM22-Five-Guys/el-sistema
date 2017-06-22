@@ -22,6 +22,7 @@ massive(connection_info).then(instance => {
 //---------Controllers that will access the DB via Massive-------
 const mainCtrl = require('./mainCtrl')
 const twilioCtrl = require('./twilioCtrl')
+const nodemailerCtrl = require('./nodemailerCtrl')
 
 
 //app.use(session({
@@ -51,6 +52,8 @@ const twilioCtrl = require('./twilioCtrl')
 app.get('/test', mainCtrl.testDb);//See mainCtrl.js for how to do functions that access the DB
 
 app.get('/sms/:message', twilioCtrl.textTest);
+
+app.get('/email/:emailAddress', nodemailerCtrl.testEmail);
 
 app.listen(port, function(){
     console.log(`Listening on ${port}.`)
