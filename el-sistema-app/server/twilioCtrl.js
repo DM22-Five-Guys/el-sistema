@@ -15,7 +15,12 @@ exports.textTest = function (req, res) {
         body: message,
         to: '+18014299939',
         from: fromNumber
-    }).then((message) => {
+    })
+    .then((message) => {
         res.status(200).send("Test Sucessful");
-        console.log(message.sid)}); //prints SMS id. It isn't particularly useful so far that I see.
+        console.log(message.sid) //prints SMS id. It isn't particularly useful so far that I see.
+    })
+    .catch(err=>{
+        console.log(err);
+    })    
 }
