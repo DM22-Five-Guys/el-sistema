@@ -34,6 +34,7 @@ const nodemailerCtrl = require('./nodemailerCtrl')
 app.get('/test', mainCtrl.testDb);//See mainCtrl.js for how to do functions that access the DB
 
 app.get('/sms/:message', twilioCtrl.textTest);
+app.post('/sms/bulk', twilioCtrl.bulkText);
 
 app.post('/register', userCtrl.register);
 app.get('/email/:emailAddress', nodemailerCtrl.testEmail);

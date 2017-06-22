@@ -24,3 +24,23 @@ exports.textTest = function (req, res) {
         console.log(err);
     })    
 }
+
+exports.bulkText = function (req, res) {
+    let recipients = req.body.recipients; //array of recipient phone numbers as strings hopefully in the format: '+18018675309'
+    let text = req.body.message;
+
+    for (let i = 0; i < recipients.length; i++) {
+        client.messages.create({
+            body: text,
+            to: recipients[i],
+            from: fromNumber
+        })
+        .then((message) => {
+            console.log(`Message sent to: ${recipients[i]}`);
+        })
+        .catch(err=>{
+            console.log(err);
+        })   
+    }
+    res.status(200).send("Notification sent to recipients");
+}
