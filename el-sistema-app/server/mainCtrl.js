@@ -10,5 +10,4 @@ exports.testDb = function (req, res) {
         console.log(results);
         res.status(200).json(results);
     }).catch((error) => {console.log(error)})
-    })
 }
