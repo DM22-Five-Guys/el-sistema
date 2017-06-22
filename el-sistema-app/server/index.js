@@ -24,6 +24,7 @@ massive(connection_info).then(instance => {
 const mainCtrl = require('./mainCtrl')
 const twilioCtrl = require('./twilioCtrl')
 const userCtrl = require('./userCtrl');
+const nodemailerCtrl = require('./nodemailerCtrl')
 
 
 
@@ -35,6 +36,7 @@ app.get('/test', mainCtrl.testDb);//See mainCtrl.js for how to do functions that
 app.get('/sms/:message', twilioCtrl.textTest);
 
 app.post('/register', userCtrl.register);
+app.get('/email/:emailAddress', nodemailerCtrl.testEmail);
 
 app.listen(port, function(){
     console.log(`Listening on ${port}.`)
