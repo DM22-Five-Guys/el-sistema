@@ -8,5 +8,5 @@ exports.testDb = function (req, res) {
     db.tests.test().then(results => {
         console.log(results);
         res.status(200).json(results);
-    })
+    }).catch((error) => {console.log(error)})
 }
