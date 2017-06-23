@@ -8,6 +8,20 @@ const config = require('./config')
 
 
 const app = module.exports = express()
+
+// var corsOptions= {
+//     origin: 'http://localhost:3000'}
+app.use(cors());
+
+// app.use(function(req, res, next){
+
+//    res.header('Access-Control-Allow-Origin', 'http://localhost:3001')
+//    res.header('Access-Control-Allow-Methods', ['GET','PUT','POST','DELETE']);
+//    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//    res.header('Access-Control-Allow-Credentials', true);
+//    return next();
+// })
+
 //-----------Variables-----------------------------------------
 const port = config.port; //I set the port as 8080 because our npm start is running on port 3000. All api calls from the frontend will need to be made to localhost:8080/api. When we do our final build, we will switch the port to 3000 and update the frontend accordingly
 const connection_info = config.database_info;
@@ -35,6 +49,9 @@ app.get('/test', mainCtrl.testDb);//See mainCtrl.js for how to do functions that
 app.get('/sms/:message', twilioCtrl.textTest);
 
 app.post('/register', userCtrl.register);
+
+app.post('/login', userCtrl.login);
+app.post('/update-password', userCtrl.changePassword);
 
 app.listen(port, function(){
     console.log(`Listening on ${port}.`)

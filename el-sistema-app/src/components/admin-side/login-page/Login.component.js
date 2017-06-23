@@ -20,24 +20,18 @@ class LoginForm extends Component{
             <input placeholder="Password" className="password_input" {...field.input} type="password"/>
         )
     }
-    firstLogin(){
-        return <Redirect to="/first-login"/>
-    }
     onSubmit(values){
-        //console.log(values)
         this.props.login(values)
-        console.log(this.props.first_login);
-        // if(this.props.first_login){
-        //     return(
-        //         <Redirect to="/first-login"/>
-        //     )
-        // }
+  
         
     }
     render(){
+        console.log(this.props.first_login)
+        console.log(this.props)
         const { handleSubmit } = this.props;
         return(
             <div className="login-container">
+                {this.props.first_login === true?<Redirect to="/first-login"/>:''};
                 <div className="form-box">
                     <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                         <div className="form-header"><h1 className="form-header-title">Welcome Back</h1></div>
@@ -70,10 +64,9 @@ function mapStateToProps(state){
     console.log(state.user)
     if(state.user.first_login){
         console.log(state.user.first_login)
-        this.firstLogin()
     }
     return {
-        first_login: state.user
+        first_login: state.user.first_login
     }
 }
 

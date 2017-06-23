@@ -16,7 +16,7 @@ class FirstLoginForm extends Component{
     }
     renderPasswordField(field){
         return(
-            <input placeholder={field.placeholder} className="first-password_input" {...field.input} type="text"/>
+            <input placeholder={field.placeholder} className="first-password_input" {...field.input} type="password"/>
         )
     }
 
@@ -80,4 +80,4 @@ function validate(values){
     return errors;
 }
 
-export default connect(null, {firstLogin})(reduxForm({validate,form: 'firstLoginForm'})(FirstLoginForm));
+export default connect(null, {firstLogin})(reduxForm({validate, form: 'firstLoginForm'})(FirstLoginForm));
