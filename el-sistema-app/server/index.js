@@ -33,11 +33,26 @@ const nodemailerCtrl = require('./nodemailerCtrl')
 //-------------------Endpoints--------------------------
 app.get('/test', mainCtrl.testDb);//See mainCtrl.js for how to do functions that access the DB
 
+
+//--------------------Twilio----------------------------
 app.get('/sms/:message', twilioCtrl.textTest);
 app.post('/sms/bulk', twilioCtrl.bulkText);
 
+
+//--------------------NodeMailer------------------------
 app.post('/register', userCtrl.register);
 app.get('/email/:emailAddress', nodemailerCtrl.testEmail);
+
+
+//--------------------Database--------------------------
+app.get('/api/events/week', function(req, res){
+    db.getCurrentWeekEvents(function(err, events){
+        res.send(events)
+    })
+})
+
+
+
 
 app.listen(port, function(){
     console.log(`Listening on ${port}.`)
