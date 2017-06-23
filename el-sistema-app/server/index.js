@@ -20,11 +20,12 @@ massive(connection_info).then(instance => {
     app.set('db', instance);
 })
 
+
 //---------Controllers that will access the DB via Massive-------
 const mainCtrl = require('./mainCtrl')
 const twilioCtrl = require('./twilioCtrl')
 const userCtrl = require('./userCtrl');
-const nodemailerCtrl = require('./nodemailerCtrl')
+//const nodemailerCtrl = require('./nodemailerCtrl')
 
 
 
@@ -40,16 +41,13 @@ app.post('/sms/bulk', twilioCtrl.bulkText);
 
 
 //--------------------NodeMailer------------------------
-app.post('/register', userCtrl.register);
-app.get('/email/:emailAddress', nodemailerCtrl.testEmail);
+//app.post('/register', userCtrl.register);
+//app.get('/email/:emailAddress', nodemailerCtrl.testEmail);
 
 
 //--------------------Database--------------------------
-app.get('/api/events/week', function(req, res){
-    db.getCurrentWeekEvents(function(err, events){
-        res.send(events)
-    })
-})
+app.get('/api/events/week', mainCtrl.getCurrentWeekEvents)
+app.get('/api/events/month/:num', mainCtrl.getEventsByMonth)
 
 
 
