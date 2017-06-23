@@ -35,6 +35,7 @@ app.get('/test', mainCtrl.testDb);//See mainCtrl.js for how to do functions that
 
 app.get('/sms/:message', twilioCtrl.textTest);
 app.post('/sms/bulk', twilioCtrl.bulkText);
+app.post('/sms/unsubscribe', twilioCtrl.unsubscribe);
 
 app.post('/register', userCtrl.register);
 app.get('/email/:emailAddress', nodemailerCtrl.testEmail);

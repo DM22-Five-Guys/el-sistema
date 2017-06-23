@@ -44,3 +44,8 @@ exports.bulkText = function (req, res) {
     }
     res.status(200).send("Notification sent to recipients");
 }
+
+exports.unsubscribe = function (req, res) {
+    console.log(req.body);
+    res.status(200);
+}
