@@ -46,6 +46,7 @@ exports.bulkText = function (req, res) {
 }
 
 exports.unsubscribe = function (req, res) {
-    console.log(req.body);
+    console.log("Endpoint reached.")
+    console.log(req.body.Body);
     res.status(200);
 }
