@@ -1,0 +1,84 @@
+.login-container{
+    margin: 153px auto;
+}
+.email_input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 321px;
+    font-size: 1em;
+    outline: none;
+    margin-top: 78px;
+}
+
+.email_input::placeholder{
+    color:#ddd;
+}
+.error-message{
+    color:red;
+    padding-top: 10px;
+}
+
+.password_input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 321px;
+    font-size: 1em;
+    outline: none;
+    margin-top: 48px;
+}
+
+.password_input::placeholder{
+    color:#ddd;
+}
+
+.form-box{
+    margin: auto;
+    width:544px;
+    height: 459px;
+    background-color: #fffffc;
+	box-shadow: 0 8px 8px 0 rgba(186, 186, 186, 0.5), 0 0 8px 0 rgba(237, 237, 237, 0.5);
+    text-align: center;
+}
+.form-header{
+    width:544px;
+    height: 153px;
+    background-color: #4f89ab;
+}
+.form-header-title{
+    padding-top: 81px;
+    font-size: 48px;
+    color: white;
+}
+
+.forgot-password-link{
+    color: #4990e2;
+    font-size: 14px;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 107px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.login-button{
+    width: 112px;
+	height: 38px;
+	border-radius: 2px;
+	background-color: #4f89ab;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    margin-left: 323px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.login-button-text{
+    color: white;
+    font-size: 16px;
+
+}
+
+button{
+    border:none
+}

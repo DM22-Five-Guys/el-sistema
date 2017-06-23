@@ -1,3 +1,17 @@
+.app-login-button{
+  width: 200px;
+  height: 80px;
+  background-color: #4f89ab;
+  color: white;
+  font-size: 1.3em;
+  transition: 1s background-color;
+
+}
+.app-login-button:hover{
+  background-color: purple;
+  transition: 1s background-color;
+}
+
 .App {
   text-align: center;
 }
