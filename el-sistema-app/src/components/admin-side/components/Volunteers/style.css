@@ -1,0 +1,136 @@
+ul{
+  list-style: none;
+
+}
+
+.main-container{
+  max-width: 1440px;
+  padding: 0;
+  margin:auto;
+}
+.container{
+  margin: auto;
+}
+
+.add-volunteer {
+	width: 220px;
+	height: 24px;
+	font-family: Roboto;
+	font-size: 25px;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.first-last-name-ul{
+  display: inline-flex;
+  margin: 0%;
+  padding: 0;
+}
+.first-name{
+font-size: 19px;
+border: none;
+height: 20px;
+}
+
+.first-name-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 321px;
+ font-size: 1em;
+ outline: none;
+ margin-top:3px;
+
+}
+
+.first-last-name-container{
+  margin-top: 4%;
+}
+.last-name-li{
+ margin-left: 7.4%;
+}
+.last-name{
+font-size: 19px;
+border: none;
+height: 20px;
+}
+
+.last-name-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 321px;
+ font-size: 1em;
+ outline: none;
+ margin-top:3px;
+}
+.email-address-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 690px;
+ font-size: 1em;
+
+ margin-top:3px;
+}
+.email-placeholder{
+margin-top: 50px;
+font-size: 19px;
+outline: none;
+font-family: Roboto;
+border: none;
+height: 20px;
+}
+
+.job-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 690px;
+ font-size: 1em;
+ outline: none;
+ margin-top:3px;
+}
+.job-placeholder{
+margin-top: 50px;
+font-size: 19px;
+outline: none;
+font-family: Roboto;
+border: none;
+height: 20px;
+}
+.long-bio-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 690px;
+ font-size: 1em;
+ outline: none;
+ margin-top:123px;
+}
+.long-bio-placeholder{
+margin-top: 50px;
+font-size: 19px;
+font-family: Roboto;
+border: none;
+outline: none;
+width: 39vw;
+height: 20px;
+}
+.short-bio-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 690px;
+ font-size: 1em;
+ outline: none;
+ margin-top:90px;
+}
+.short-bio-placeholder{
+margin-top: 50px;
+font-size: 19px;
+font-family: Roboto;
+border: none;
+outline: none;
+width: 39vw;
+height: 20px;
+}
