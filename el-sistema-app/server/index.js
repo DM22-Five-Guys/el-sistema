@@ -20,11 +20,12 @@ massive(connection_info).then(instance => {
     app.set('db', instance);
 })
 
+
 //---------Controllers that will access the DB via Massive-------
 const mainCtrl = require('./mainCtrl')
 const twilioCtrl = require('./twilioCtrl')
 const userCtrl = require('./userCtrl');
-const nodemailerCtrl = require('./nodemailerCtrl')
+//const nodemailerCtrl = require('./nodemailerCtrl')
 
 
 
@@ -33,11 +34,26 @@ const nodemailerCtrl = require('./nodemailerCtrl')
 //-------------------Endpoints--------------------------
 app.get('/test', mainCtrl.testDb);//See mainCtrl.js for how to do functions that access the DB
 
+
+//--------------------Twilio----------------------------
 app.get('/sms/:message', twilioCtrl.textTest);
 app.post('/sms/bulk', twilioCtrl.bulkText);
 
-app.post('/register', userCtrl.register);
-app.get('/email/:emailAddress', nodemailerCtrl.testEmail);
+
+//--------------------NodeMailer------------------------
+//app.post('/register', userCtrl.register);
+//app.get('/email/:emailAddress', nodemailerCtrl.testEmail);
+
+
+//--------------------Database--------------------------
+app.get('/api/events/week', mainCtrl.getCurrentWeekEvents)
+app.get('/api/events/month/:num', mainCtrl.getEventsByMonth)
+app.get('/api/events/classes', mainCtrl.getClasses)
+app.get('/api/events/performances', mainCtrl.getPerformances)
+
+app.get('/api/users', mainCtrl.getAllUsers)
+
+
 
 app.listen(port, function(){
     console.log(`Listening on ${port}.`)
