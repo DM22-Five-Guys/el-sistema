@@ -8,7 +8,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="main-container">
         <BrowserRouter>
           <Switch>
             <Route path='/admin' component={AdminSide} />
