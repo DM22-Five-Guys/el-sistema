@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../style.css';
+import camera from '../../../../../img/blue-camera.png';
 
 class AddVolunteer extends Component{
   render(){
@@ -11,7 +12,9 @@ class AddVolunteer extends Component{
 
 </div>
 
-<div className='container'>
+<div className='container '>
+  <div className='row'>
+    <div className='col-md-9'>
 <div className='first-last-name-container'>
 <ul className='first-last-name-ul'>
 <li className='first-name-li'>
@@ -44,8 +47,48 @@ class AddVolunteer extends Component{
   <input placeholder='Long Bio' type='text' className='long-bio-placeholder'></input>
   <div className='long-bio-line'></div>
 
+
+<div className='permissions-container'>
+  <h1 className='permissions-header'>Permissions</h1>
+<div className='checkbox-container'>
+<ul className='all-permissions'>
+<li className='permissions'><input placeholder='Blog' type='checkbox' className='permission'></input>       Blog</li>
+  <li className='permissions'><input placeholder='Videos' type='checkbox' className='permission'></input>     Videos</li>
+    <li className='permissions'><input placeholder='Classes' type='checkbox' className='permission'></input>     Classes</li>
+      <li className='permissions'><input placeholder='Performance' type='checkbox' className='permission'></input>        Performance</li>
+        <li className='permissions'><input placeholder='Content' type='checkbox' className='permission'></input>    Content</li>
+</ul>
+<div className='buttons-container'>
+<ul className='buttons'>
+  <li className='list-button'>
+    <div className='save-button'>
+      <p className='save-text'>SAVE</p>
+    </div>
+    </li>
+  <li className='list-button'>
+    <div className='cancel-button' >
+    <p className='cancel-text'>CANCEL</p>
+    </div>
+  </li>
+</ul>
 </div>
 </div>
+</div>
+</div>
+<div className='col-md-1'>
+  <div className='circle'>
+    <img src={camera} className='camera img-responsive'></img>
+  </div>
+  <div className='rectangle'>
+    <img src={camera} className='camera img-responsive'></img>
+  </div>
+</div>
+</div>
+</div>
+
+
+</div>
+
 
 
 
