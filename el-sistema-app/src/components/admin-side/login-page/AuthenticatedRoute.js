@@ -1,12 +1,28 @@
 // not sure if this will work...
+import React, { Component } from 'react'
+//import { loadToken } from './../../../reducers/users.reducer';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types' 
+export default function(ComposedComponent){
+    class Authenticate extends Component{
+        
+       
+        render(){
+        // return loadToken() === null? <Redirect to="/login"/> : <ComposedComponent {...this.props} />
+        return this.props.isLoggedIn === false? <Redirect to="/login"/> : <ComposedComponent {...this.props} />
+                
+        }
+    }
 
-import React from 'react';
-import {Route, Redirect} from 'react-router-dom';
-
-export default ({Component: C, props:cProps, ...rest}) => (
-<Route {...rest} render={props =>(
-    cProps.userToken !== null ?
-    <C {...props} {...cProps}/>
-    : <Redirect to={`/login?redirect=${props.location.pathname}${props.location.search}`}/>
-    )}/>
-)
+    Authenticate.propTypes = {
+        isLoggedIn: PropTypes.bool.isRequired
+    }
+ 
+  function mapStateToProps(state){
+      return {
+          isLoggedIn: state.user.isLoggedIn
+      }
+  }
+    return connect(mapStateToProps)(Authenticate)
+}

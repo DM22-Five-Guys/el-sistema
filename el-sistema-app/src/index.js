@@ -14,16 +14,27 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 
 import App from './components/App';
+
+
+
 import { loadToken } from './reducers/users.reducer'
 import setAuthorizationToken from './reducers/utils/setAuthorizationToken';
-let isAuthenticated = false;
+
+
+import requireAuth from './components/admin-side/login-page/AuthenticatedRoute';
+
+// let isAuthenticated = false;
 if (localStorage.id_token){
     setAuthorizationToken(loadToken());
-    isAuthenticated = true;
-}else {
-    isAuthenticated = false;
+    // isAuthenticated = true;
 }
-console.log(isAuthenticated);
+// else {
+//     isAuthenticated = false;
+// }
+
+// console.log(isAuthenticated);
+
+
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
 
 ReactDOM.render(
@@ -33,7 +44,7 @@ ReactDOM.render(
                 <Route exact path='/' component={App}></Route>
                 <Route path="/login" component={ Login }></Route>
                 <Route path="/first-login" component={firstLogin}></Route>
-                <Route path="/test" component={isAuthenticated?testAuth:Login}></Route> 
+                <Route path="/test" component={requireAuth(testAuth)}></Route> 
             </div>
         </BrowserRouter>
     </Provider>

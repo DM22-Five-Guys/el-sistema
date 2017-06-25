@@ -1,9 +1,12 @@
 import axios from 'axios';
+import setAuthorizationToken from './utils/setAuthorizationToken';
 const TEST = 'TEST';
 const LOGIN = 'LOGIN';
 const FIRST_LOGIN = 'FIRST_LOGIN';
+const LOGOUT = 'LOGOUT';
 
 let initialState = {
+    isLoggedIn: false,
     first_login: false,
     token: null,
     user: {}
@@ -23,12 +26,20 @@ export function loadToken(){
     return token;
 }
 
+function clearLocalStorage(){
+    localStorage.clear();
+}
 
 export function logout(){
-    initialState.isLoggedIn = false;
-    initialState.user = null;
-    initialState.token = null;
-    localStorage.clear();
+    // initialState.isLoggedIn = false;
+    // initialState.user = null;
+    // initialState.token = null;
+    return {
+        type: LOGOUT,
+        payload: {isLoggedIn: false, user:{}, token:null}
+    }
+    //window.location = '/login';
+    
 }
 
 export function simpleTest(){
@@ -53,20 +64,6 @@ export function login(user){
                 payload: data
             }
 }
-
-
-        // if(data.success){
-        //     return {
-        //         type: LOGIN,
-        //         payload: data
-        //     }
-        // }
-        // else{
-        //     return {
-        //         type: LOGIN1,
-        //         payload: data
-        //     }
-        // }
          
 
 // after fist successful login user will be redirected to a new form where they will create their own password.
@@ -84,11 +81,19 @@ export function firstLogin(user){
 export default function UserReducer(state = initialState, action ){
     switch(action.type){
         case LOGIN:
-            console.log('login ',action.payload)
+            //console.log('login ',action.payload)
             storeUserData(action.payload.token, action.payload.user);
-            return Object.assign({}, state, {first_login: action.payload.firstLogin, token: action.payload.token, user: action.payload.user});
+            if(action.payload.isLoggedIn){
+                setAuthorizationToken(loadToken());
+            }
+            return Object.assign({}, state, {isLoggedIn:action.payload.isLoggedIn, first_login: action.payload.firstLogin, token: action.payload.token, user: action.payload.user});
         case FIRST_LOGIN:
             return Object.assign({}, state, {user: action.payload.user});
+
+        case LOGOUT:
+            clearLocalStorage();
+            console.log(action.payload);
+            return Object.assign({},state, action.payload);
         default:
             return state;
     }
