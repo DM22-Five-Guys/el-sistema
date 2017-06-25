@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom'
-import {login} from './../../../reducers/users.reducer';
+import { login } from './../../../reducers/users.reducer';
 import './Login.component.css';
 
 class LoginForm extends Component{
@@ -26,12 +26,12 @@ class LoginForm extends Component{
         
     }
     render(){
-        console.log(this.props.first_login)
-        console.log(this.props)
+        // console.log(this.props.first_login)
+        // console.log(this.props)
         const { handleSubmit } = this.props;
         return(
             <div className="login-container">
-                {this.props.first_login === true?<Redirect to="/first-login"/>:''};
+                {this.props.first_login === true?<Redirect to="/first-login"/>:""};
                 <div className="form-box">
                     <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                         <div className="form-header"><h1 className="form-header-title">Welcome Back</h1></div>
@@ -61,13 +61,13 @@ function validate(values){
     return errors;
 }
 function mapStateToProps(state){
-    console.log(state.user)
+    //console.log(state.user)
     if(state.user.first_login){
-        console.log(state.user.first_login)
+        //console.log(state.user.first_login)
     }
     return {
         first_login: state.user.first_login
     }
 }
 
-export default connect(mapStateToProps, {login})(reduxForm({validate,form: 'LoginForm'})(LoginForm));
+export default connect(mapStateToProps, { login })(reduxForm({validate,form: 'LoginForm'})(LoginForm));

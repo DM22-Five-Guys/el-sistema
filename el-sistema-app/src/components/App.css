@@ -5,6 +5,7 @@
   color: white;
   font-size: 1.3em;
   transition: 1s background-color;
+  margin: 3px;
 
 }
 .app-login-button:hover{
