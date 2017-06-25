@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-
+import MediaTable from './components/Media-Table'
 class Media extends Component {
   render() {
     return (
-      <h1>Media Page</h1>
+    <MediaTable />
     )
   }
 }
