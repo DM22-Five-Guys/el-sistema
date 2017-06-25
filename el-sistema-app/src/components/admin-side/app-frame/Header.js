@@ -1,21 +1,68 @@
 import React, { Component } from 'react';
-import Router, { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 
-class Header extends Component {
+import Dashboard from './../components/Dashboard/Dashboard';
+import Volunteers from './../components/Volunteers/Volunteers';
+import Performances from './../components/Performances/Performances';
+import Classes from './../components/Classes/Classes';
+import ContentPictures from './../components/ContentPictures/ContentPictures';
+import ContentText from './../components/ContentText/ContentText';
+import Media from './../components/Media/Media';
+import Blog from './../components/Blog/Blog';
+
+import './style.css';
+
+import Sidebar from './Sidebar';
+
+export default class Header extends Component {
+  constructor(){
+    super();
+    this.state = {
+      showSide: true
+    }
+  }
+
+  toggleSidebar = function () {
+    this.setState({
+      showSide: !this.state.showSide
+    })
+  }
 
   render() {
     return (
-       <ul>
-         <li> <Link to='/admin'> Dashboard </Link></li>
-         <li> <Link to='/admin/volunteers'> Volunteers </Link></li>
-         <li> <Link to='/admin/classes'> Classes </Link></li>
-         <li> <Link to='/admin/content/pictures'> Content Pictures </Link></li>
-         <li> <Link to='/admin/content/text'> Content Text </Link></li>
-         <li> <Link to='/admin/media'> Media </Link></li>
-         <li> <Link to='/admin/blog'> Blog </Link></li>
-       </ul>
+      <div>
+        <div className="top-nav-container">
+          {/*<span className="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>*/}
+          <div className="hamburger" onClick={ (e) => this.toggleSidebar() }>
+            <div className="ham-bar"></div>
+            <div className="ham-bar"></div>
+            <div className="ham-bar"></div>
+          </div>
+          <h3 className="nav-title">El Sistema Pittsburg - Website Administration</h3>
+        </div>
+
+        <div className="admin-content">
+          {
+            this.state.showSide
+            ?
+            <Sidebar />
+            :
+            null
+          }
+          <Switch>
+            <Route path='/admin/volunteers' component={Volunteers} />
+            <Route path='/admin/classes' component={Classes} />
+            <Route path='/admin/performances' component={Performances} />
+            <Route path='/admin/content/pictures' component={ContentPictures} />
+            <Route path='/admin/content/text' component={ContentText} />
+            <Route path='/admin/media' component={Media} />
+            <Route path='/admin/blog' component={Blog} />
+            <Route path='/admin' component={Dashboard} />
+          </Switch>
+        </div>
+
+      </div>
     )
   }
 }
-
-export default Header;
