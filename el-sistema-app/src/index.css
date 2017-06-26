@@ -3,18 +3,6 @@
   margin: 0;
   padding: 0;
 }
-
-html, body, #root {
-  height: 100%;
-}
-
-#root {
-  width: 100vw;
-}
-
-.main-container {
-  width: 1440px;
-  height: 100%;
+body{
   background-color: #fefef6;
-  margin: auto;
 }

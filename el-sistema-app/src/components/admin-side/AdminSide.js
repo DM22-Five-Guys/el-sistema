@@ -13,7 +13,7 @@ import Header from './app-frame/Header';
 export default class AdminSide extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="main-container">
         <Header />
         {/*<Switch>
           <Route path='/admin/volunteers' component={Volunteers} />

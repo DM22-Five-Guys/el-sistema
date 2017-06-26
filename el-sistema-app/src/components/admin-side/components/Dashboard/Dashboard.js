@@ -9,17 +9,21 @@ import './style.css';
 export default class Dashboard extends Component {
   render() {
     return (
-      <div>
-        <div className="dash-container">
-          <div className="left-col">
+      <div className='change-container'>
+ <div className='row'>
+   <div className='col-md-6'>
             <RecentEdits />
-            <Notifications />
-          </div >
-          <div className="right-col">
+            </div>
+
+             <div className='col-sm-6'>
             <Calendar />
-          </div>
+            </div>
+</div>
+          <Notifications />
+
+
         </div>
-      </div>
+
     )
   }
 }

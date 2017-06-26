@@ -3,9 +3,9 @@
     box-sizing: border-box;
 }
 
-.top-nav-container{
+.container-fluid{
     background-color: #4f89ab;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     height: 64px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.23);
     color: white;
@@ -30,7 +30,7 @@
 }
 
 .sidebar-box{
-    padding: 16px 24px;
+    padding: 17px 8px 16px 9px;
     color: #4d4d4e;
     font-family: 'Roboto', sans-serif;
     display: flex;

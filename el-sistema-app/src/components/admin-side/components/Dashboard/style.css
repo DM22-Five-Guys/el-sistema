@@ -1,7 +1,20 @@
+/* .main-container{
+  max-width: 1440px;
+margin: auto;
+padding: 0;
+
+} */
+.change-container{
+  margin-left: 1%;
+}
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
 .widget{
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     margin: 25px 14px;
-    width: calc(50vw - 178px);   
+    width: calc(50vw - 178px);
 }
 .widget-header{
     display: flex;
@@ -16,26 +29,20 @@
 }
 .dash-container{
     height: 600px;
-    /*background-color: red;*/
     display: flex;
 }
 
-.left-col{
-    width: 50%;
-    height: 600px;
-    /*background-color: blue;*/
-}
-.right-col{
-    width: 50%;
-    height: 600px;
-    /*background-color: blue;*/
-}
+
 .edits{
-    height: 50%;
-}
+  height: 424px;
+width: 30vw;
+  }
 .notifications{
-    height: 50%;
+  height: 424px;
+width: 30vw;
 }
 .calendar{
-    height: 100%;
+    height:600px;
+    width: 36vw;
+margin-left: -7%;
 }

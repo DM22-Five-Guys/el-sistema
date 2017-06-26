@@ -32,7 +32,7 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <div className="top-nav-container">
+        <div className="container-fluid">
           {/*<span className="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>*/}
           <div className="hamburger" onClick={ (e) => this.toggleSidebar() }>
             <div className="ham-bar"></div>
