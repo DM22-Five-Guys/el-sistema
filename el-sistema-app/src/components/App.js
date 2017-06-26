@@ -17,13 +17,8 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 
 class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      loggedout: false
-    }
+
     
-  }
   render(){
      return (
       <BrowserRouter>
@@ -38,7 +33,7 @@ class App extends Component {
 }
 
 
- ReactDOM.render(<App />, document.querySelector('#root'));
+//  ReactDOM.render(<App />, document.querySelector('#root'));
 
 
 
