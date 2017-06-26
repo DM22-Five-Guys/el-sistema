@@ -7,6 +7,7 @@ const passport = require('passport')
 const config = require('./config')
 
 
+
 const app = module.exports = express()
 
 // var corsOptions= {
@@ -22,22 +23,33 @@ app.use(cors());
 //    return next();
 // })
 
+
 //-----------Variables-----------------------------------------
 const port = config.port; //I set the port as 8080 because our npm start is running on port 3000. All api calls from the frontend will need to be made to localhost:8080/api. When we do our final build, we will switch the port to 3000 and update the frontend accordingly
 const connection_info = config.database_info;
 
+
 //---------------App.use middleware-----------------------------
 app.use(express.static('../src'))
 app.use(bodyParser.json())
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 
 massive(connection_info).then(instance => {
     app.set('db', instance);
+    require('./passport')(passport);
 })
 
+
 //---------Controllers that will access the DB via Massive-------
+
 const mainCtrl = require('./mainCtrl')
 const twilioCtrl = require('./twilioCtrl')
 const userCtrl = require('./userCtrl');
+
+
 
 
 
@@ -48,10 +60,16 @@ app.get('/test', mainCtrl.testDb);//See mainCtrl.js for how to do functions that
 
 app.get('/sms/:message', twilioCtrl.textTest);
 
-app.post('/register', userCtrl.register);
+app.post('/register', passport.authenticate('jwt', {session:false}), userCtrl.register);
 
 app.post('/login', userCtrl.login);
+
 app.post('/update-password', userCtrl.changePassword);
+
+app.post('/new-test', (req,res) =>{ res.status(200).json('ok')})
+
+// end point for testing
+app.get('/users', passport.authenticate('jwt', {session:false}), userCtrl.getAllUsers);
 
 app.listen(port, function(){
     console.log(`Listening on ${port}.`)
