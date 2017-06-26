@@ -13,7 +13,7 @@ export default class Header extends Component {
         {
           name: 'Home',
           path: '/home',
-          width: 55,
+          width: 61,
           selected: false
         },
         {
@@ -77,7 +77,7 @@ export default class Header extends Component {
     return (
       <ul className={`${this.defineClass()}-Navigation`}>
         {this.state.navItems.map((item, index) => {
-          item.updateSelection = this.updateSelection; //updateSelection gets passed as a prop
+          item.updateSelection = this.updateSelection; //updateSelection method gets passed as a prop
           item.key = item.name + index; //key is required... shouldn't just be the index ;)
           item.index = index; //argument to be passed to updateSelection
           return <NavItem {...item} />

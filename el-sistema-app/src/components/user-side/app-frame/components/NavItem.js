@@ -12,7 +12,6 @@ export default class NavItem extends Component {
         height: 14,
         backgroundColor: '#edc93a',
         position: 'absolute',
-        marginTop: 26,
         display: null
       },
       textStyle: {
@@ -37,6 +36,7 @@ export default class NavItem extends Component {
 
     var selectorStyle = Object.assign({}, this.state.selectorStyle);
     selectorStyle.width = props.width;
+    selectorStyle.marginTop = props.path === '/home' ? 38.5 : 22;
     selectorStyle.display = props.selected ? 'block' : 'none';
 
     this.setState({
