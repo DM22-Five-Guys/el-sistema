@@ -53,7 +53,7 @@ class FirstLoginForm extends Component{
         const { handleSubmit } = this.props;
         return(
             <div className="first-login-container">
-                {this.isAuthed()?<Redirect to='/'/>:''}
+                {this.isAuthed()?<Redirect to='/admin'/>:''}
                 <div className="first-form-box">
                     <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                         <div className="first-form-header"><h1 className="first-form-header-title">Welcome Back</h1></div>
@@ -96,4 +96,5 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, {firstLogin})(reduxForm({validate, form: 'firstLoginForm'})(FirstLoginForm));
+export default reduxForm({validate, form: "firstLoginForm"})(connect(mapStateToProps, {firstLogin})(FirstLoginForm))
+//export default connect(mapStateToProps, {firstLogin})(reduxForm({validate, form: 'firstLoginForm'})(FirstLoginForm));
