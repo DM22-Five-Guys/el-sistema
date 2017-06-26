@@ -2,14 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter, Route} from 'react-router-dom';
-import Login from './components/admin-side/login-page/Login.component'
-import firstLogin from './components/admin-side/login-page/first-login.component';
-import RegisterUserForm from './components/admin-side/register-user/register-user.component';
 import './index.css';
 import reducers from './reducers';
 import promise from 'redux-promise';
 // delete after test
-import testAuth from './components/admin-side/login-page/testAuth.component';
 
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
@@ -18,19 +14,13 @@ import App from './components/App';
 
 
 
-import getToken from './components/admin-side/login-page/token.service';
-import setAuthorizationToken from './reducers/utils/setAuthorizationToken';
+// import getToken from './components/admin-side/login-page/token.service';
+// import setAuthorizationToken from './reducers/utils/setAuthorizationToken';
 
 
-import requireAuth from './components/admin-side/login-page/AuthenticatedRoute';
+// import requireAuth from './components/admin-side/login-page/AuthenticatedRoute';
 
-import New_Test from './components/admin-side/login-page/new_test.component';
-
-
-if (localStorage.id_token){
-    setAuthorizationToken(getToken());
-    
-}
+// import New_Test from './components/admin-side/login-page/new_test.component';
 
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
