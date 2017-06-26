@@ -4,6 +4,7 @@ import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Login from './components/admin-side/login-page/Login.component'
 import firstLogin from './components/admin-side/login-page/first-login.component';
+import RegisterUserForm from './components/admin-side/register-user/register-user.component';
 import './index.css';
 import reducers from './reducers';
 import promise from 'redux-promise';
@@ -17,22 +18,19 @@ import App from './components/App';
 
 
 
-import { loadToken } from './reducers/users.reducer'
+import getToken from './components/admin-side/login-page/token.service';
 import setAuthorizationToken from './reducers/utils/setAuthorizationToken';
 
 
 import requireAuth from './components/admin-side/login-page/AuthenticatedRoute';
 
-// let isAuthenticated = false;
-if (localStorage.id_token){
-    setAuthorizationToken(loadToken());
-    // isAuthenticated = true;
-}
-// else {
-//     isAuthenticated = false;
-// }
+import New_Test from './components/admin-side/login-page/new_test.component';
 
-// console.log(isAuthenticated);
+
+if (localStorage.id_token){
+    setAuthorizationToken(getToken());
+    
+}
 
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
@@ -44,7 +42,9 @@ ReactDOM.render(
                 <Route exact path='/' component={App}></Route>
                 <Route path="/login" component={ Login }></Route>
                 <Route path="/first-login" component={firstLogin}></Route>
-                <Route path="/test" component={requireAuth(testAuth)}></Route> 
+                <Route path="/test" component={requireAuth(testAuth)}></Route>
+                <Route path="/register" component={requireAuth(RegisterUserForm)}/>
+                 <Route path="/new-test" component={New_Test}/>
             </div>
         </BrowserRouter>
     </Provider>

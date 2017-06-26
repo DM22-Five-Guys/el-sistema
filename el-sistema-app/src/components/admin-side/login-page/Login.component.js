@@ -82,4 +82,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, { login })(reduxForm({validate,form: 'LoginForm'})(LoginForm));
+export default connect(mapStateToProps, { login })(reduxForm({validate,form: 'loginForm'})(LoginForm));

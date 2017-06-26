@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import { Link, Redirect } from 'react-router-dom';
 //import { logout } from './../reducers/users.reducer';
-import { logout, loadToken } from './../reducers/users.reducer';
+import { logout } from './../reducers/users.reducer';
+import getToken from './../components/admin-side/login-page/token.service';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
@@ -30,6 +31,9 @@ class App extends Component {
       <div>
           <Link to="/test"><button className="app-login-button">TEST</button></Link>
           <button onClick={()=> {this.props.logout(); this.setState({ loggedout: true }, ()=> console.log(this.state.loggedout))} } className="app-login-button">LOGOUT</button>
+          <Link to='/register'><button className="app-login-button">REGISTER</button></Link>
+          {/*delete this test */}
+           <Link to='/new-test'><button className="app-login-button">REGISTER</button></Link>
       </div>
     )
     return (
@@ -42,7 +46,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         {/*{this.state.loggedout !== false? <Redirect to="/login"/>:''}*/}
-         {loadToken() === null? <Redirect to="/login"/>:''}
+         {getToken() === null? <Redirect to="/login"/>:''}
         {this.props.isLoggedIn !== false? userLinks: guestLinks}
         {/*{loadToken()!== null?userLinks: guestLinks}*/}
         
