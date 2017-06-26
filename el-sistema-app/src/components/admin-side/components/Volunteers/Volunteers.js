@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
-class Volunteers extends Component {
+import './../Volunteers/style.css';
+
+export default class Volunteers extends Component {
   render() {
     return (
-      <h1>Volunteers Page</h1>
+      <div className="volunteer-container">
+        <h1>Volunteers Page</h1>
+      </div>
     )
   }
 }
-
-export default Volunteers;
