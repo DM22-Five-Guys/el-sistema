@@ -8,8 +8,7 @@ ul{
   padding: 0;
   margin:auto;
 }
-.container{
-}
+
 
 .add-volunteer {
 	width: 220px;
@@ -31,7 +30,7 @@ height: 20px;
 }
 
 .first-name-line{
-  background: transparent;
+background: transparent;
  border: none;
  border-bottom: 1px solid gray;
  width: 321px;
