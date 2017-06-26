@@ -1,0 +1,10 @@
+.UserSide-container {
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.UserSide-container .content-container {
+  flex: 1 0 auto;
+}

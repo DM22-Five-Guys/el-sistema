@@ -1,0 +1,81 @@
+.admin-content{
+    display: flex;
+    box-sizing: border-box;
+}
+
+.top-nav-container{
+    background-color: #4f89ab;
+    max-width: 1440px;
+    height: 64px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.23);
+    color: white;
+    font-family: 'Roboto';
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 26px;
+}
+
+.nav-title{
+    margin-left: 25px;
+    font-size: 21px;
+}
+
+.sibebar-container{
+    width: 300px;
+    height: 800px;
+    background-color: #eee;
+    font-size: 21px;
+    margin-right: 20px;
+}
+
+.sidebar-box{
+    padding: 16px 24px;
+    color: #4d4d4e;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+.sidebar-box:hover{
+    background-color: lightgray;
+}
+.sidebar-box:hover .nav-logo{
+    background-color: white;
+}
+.sibebar-box:a{
+    text-decoration: none;
+    color: #4d4d4e;
+}
+a:-webkit-any-link {
+    color: #4d4d4e;
+    cursor: auto;
+    text-decoration: none;
+}
+.sibebar-link:visited{
+    color: #4d4d4e;
+}
+.create-new-box{
+    background-color: #f6a623;
+    color: white;
+}
+.create-new-box:hover{
+    background-color: #e69613;
+}
+.nav-logo{
+    border: 2px solid white;
+    height: 24px;
+    width: 24px;
+    margin-right: 24px;
+    border-radius: 50%;
+}
+
+.hamburger{
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ham-bar{
+    background-color: white;
+    width: 20px;
+    height: 2px;
+}

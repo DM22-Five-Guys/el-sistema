@@ -48,6 +48,7 @@ massive(connection_info).then(instance => {
 const mainCtrl = require('./mainCtrl')
 const twilioCtrl = require('./twilioCtrl')
 const userCtrl = require('./userCtrl');
+//const nodemailerCtrl = require('./nodemailerCtrl')
 
 
 
@@ -58,7 +59,26 @@ const userCtrl = require('./userCtrl');
 //-------------------Endpoints--------------------------
 app.get('/test', mainCtrl.testDb);//See mainCtrl.js for how to do functions that access the DB
 
+
+//--------------------Twilio----------------------------
 app.get('/sms/:message', twilioCtrl.textTest);
+app.post('/sms/bulk', twilioCtrl.bulkText);
+
+
+//--------------------NodeMailer------------------------
+//app.post('/register', userCtrl.register);
+//app.get('/email/:emailAddress', nodemailerCtrl.testEmail);
+
+
+//--------------------Database--------------------------
+app.get('/api/events/week', mainCtrl.getCurrentWeekEvents)
+app.get('/api/events/month/:num', mainCtrl.getEventsByMonth)
+app.get('/api/events/classes', mainCtrl.getClasses)
+app.get('/api/events/performances', mainCtrl.getPerformances)
+
+app.get('/api/users', mainCtrl.getAllUsers)
+
+
 
 app.post('/register', passport.authenticate('jwt', {session:false}), userCtrl.register);
 
@@ -70,6 +90,7 @@ app.post('/new-test', (req,res) =>{ res.status(200).json('ok')})
 
 // end point for testing
 app.get('/users', passport.authenticate('jwt', {session:false}), userCtrl.getAllUsers);
+
 
 app.listen(port, function(){
     console.log(`Listening on ${port}.`)

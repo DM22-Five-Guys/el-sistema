@@ -7,6 +7,12 @@ import { logout } from './../reducers/users.reducer';
 import getToken from './../components/admin-side/login-page/token.service';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
+import ReactDOM from 'react-dom';
+import AdminSide from './admin-side/AdminSide';
+import UserSide from './user-side/UserSide';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+
 
 class App extends Component {
   constructor(props){
@@ -43,36 +49,24 @@ class App extends Component {
       </div>
     )
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-         {getToken() === null? <Redirect to="/login"/>:''}
-         { this.isAuthed()? userLinks: guestLinks}
-        {/*{this.props.isLoggedIn !== false? userLinks: guestLinks}*/}
+
+
      
         
+      <div className="main-container">
+        <BrowserRouter>
+          <Switch>
+            <Route path='/admin' component={AdminSide} />
+            <Route path='/' component={UserSide} />
+          </Switch>
+        </BrowserRouter>
+
       </div>
-    );
+    )
   }
 }
 
-App.propTypes = {
-  isLoggedIn: PropTypes.bool.isRequired
-}
-function mapStateToProps(state){
-  //console.log(state.user)
-  return {
-    isLoggedIn: state.user.isLoggedIn
-  }
-}
-//console.log(this.props.isLoggedIn)
 
-export default connect(mapStateToProps, {logout})(App)
 
 
 
@@ -84,3 +78,35 @@ export default connect(mapStateToProps, {logout})(App)
           //test if auth is working on page request
           // <Link to="/test"><button className="app-login-button">TEST</button></Link>
           // <button onClick={()=> logout() } className="app-login-button">LOGOUT</button>*/
+
+
+ReactDOM.render(<App />, document.querySelector('#root'));
+
+
+
+export default App;
+
+
+
+
+     /*<div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to React</h2>
+        </div>
+         {getToken() === null? <Redirect to="/login"/>:''}
+         { this.isAuthed()? userLinks: guestLinks}
+        {this.props.isLoggedIn !== false? userLinks: guestLinks}
+
+
+
+        App.propTypes = {
+  isLoggedIn: PropTypes.bool.isRequired
+}
+function mapStateToProps(state){
+  return {
+    isLoggedIn: state.user.isLoggedIn
+  }
+}
+
+export default connect(mapStateToProps, {logout})(App)*/
