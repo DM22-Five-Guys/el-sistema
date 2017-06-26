@@ -9,7 +9,7 @@ class MediaTable extends Component {
     return (
       <div className='main-container'>
         <h1 className='current-content'>Content Text Content</h1>
-        <ul className='media-list line'>
+        <ul className='media-list'>
           <li >
           <div className='checkbox-volunteer'>
             <input placeholder='' type='checkbox' ></input>

@@ -16,6 +16,7 @@ class AdminSide extends Component {
     return (
       <div className="container">
         <Header />
+      
         <Switch>
           <Route path='/admin/volunteers' component={Volunteers} />
           <Route path='/admin/classes' component={Classes} />
