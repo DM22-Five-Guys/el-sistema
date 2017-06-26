@@ -17,7 +17,13 @@ class App extends Component {
     
   }
 
-
+  isAuthed(){
+    if(this.props.isLoggedIn || getToken() !== null){
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   render() {
     const guestLinks = (
@@ -33,7 +39,7 @@ class App extends Component {
           <button onClick={()=> {this.props.logout(); this.setState({ loggedout: true }, ()=> console.log(this.state.loggedout))} } className="app-login-button">LOGOUT</button>
           <Link to='/register'><button className="app-login-button">REGISTER</button></Link>
           {/*delete this test */}
-           <Link to='/new-test'><button className="app-login-button">REGISTER</button></Link>
+           <Link to='/new-test'><button className="app-login-button">NEW-TEST</button></Link>
       </div>
     )
     return (
@@ -45,10 +51,10 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        {/*{this.state.loggedout !== false? <Redirect to="/login"/>:''}*/}
          {getToken() === null? <Redirect to="/login"/>:''}
-        {this.props.isLoggedIn !== false? userLinks: guestLinks}
-        {/*{loadToken()!== null?userLinks: guestLinks}*/}
+         { this.isAuthed()? userLinks: guestLinks}
+        {/*{this.props.isLoggedIn !== false? userLinks: guestLinks}*/}
+     
         
       </div>
     );

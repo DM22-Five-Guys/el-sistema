@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import {Field, reduxForm } from 'redux-form';
+import { Field, reduxForm } from 'redux-form';
+import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
-import {firstLogin} from './../../../reducers/users.reducer';
+import { firstLogin } from './../../../reducers/users.reducer';
+import getToken from './token.service';
 import './first-login.component.css';
 
 class FirstLoginForm extends Component{
@@ -40,10 +42,18 @@ class FirstLoginForm extends Component{
         //console.log(values)
         this.props.firstLogin(values)
     }
+    isAuthed(){
+        if(this.props.isLoggedIn || getToken() !== null){
+            return true;
+        }else{
+            return false;
+        }
+    }
     render(){
         const { handleSubmit } = this.props;
         return(
             <div className="first-login-container">
+                {this.isAuthed()?<Redirect to='/'/>:''}
                 <div className="first-form-box">
                     <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                         <div className="first-form-header"><h1 className="first-form-header-title">Welcome Back</h1></div>
@@ -80,4 +90,10 @@ function validate(values){
     return errors;
 }
 
-export default connect(null, {firstLogin})(reduxForm({validate, form: 'firstLoginForm'})(FirstLoginForm));
+function mapStateToProps(state){
+    return {
+        isLoggedIn: state.user.isLoggedIn
+    }
+}
+
+export default connect(mapStateToProps, {firstLogin})(reduxForm({validate, form: 'firstLoginForm'})(FirstLoginForm));
