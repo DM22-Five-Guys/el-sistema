@@ -9,12 +9,14 @@ import Header from './app-frame/Header';
 // import ContentText from './components/ContentText/ContentText';
 // import Media from './components/Media/Media';
 // import Blog from './components/Blog/Blog';
+//import Calendar from './calendar/Calendar';
 
 export default class AdminSide extends Component {
   render() {
     return (
       <div className="main-container">
         <Header />
+        
         {/*<Switch>
           <Route path='/admin/volunteers' component={Volunteers} />
           <Route path='/admin/classes' component={Classes} />

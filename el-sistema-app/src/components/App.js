@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import { Link, Redirect } from 'react-router-dom';
 //import { logout } from './../reducers/users.reducer';
@@ -49,21 +49,14 @@ class App extends Component {
       </div>
     )
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route path='/admin' component={AdminSide} />
-          <Route path='/' component={UserSide} />
-        </Switch>
-      </BrowserRouter>
-
-     
-        
-
+      
         <BrowserRouter>
+        <div>
           <Switch>
             <Route path='/admin' component={AdminSide} />
             <Route path='/' component={UserSide} />
           </Switch>
+        </div>
         </BrowserRouter>
 
 
