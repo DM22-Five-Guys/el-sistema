@@ -8,14 +8,12 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 class App extends Component {
   render() {
     return (
-      <div className="main-container">
-        <BrowserRouter>
-          <Switch>
-            <Route path='/admin' component={AdminSide} />
-            <Route path='/' component={UserSide} />
-          </Switch>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path='/admin' component={AdminSide} />
+          <Route path='/' component={UserSide} />
+        </Switch>
+      </BrowserRouter>
     )
   }
 }

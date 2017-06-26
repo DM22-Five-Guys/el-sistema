@@ -11,10 +11,3 @@ html, body, #root {
 #root {
   width: 100vw;
 }
-
-.main-container {
-  width: 1440px;
-  height: 100%;
-  background-color: #fefef6;
-  margin: auto;
-}

@@ -1,10 +1,57 @@
 import React, { Component } from 'react';
-import Router, { Link } from 'react-router-dom';
 import homeLogo from './assets/homeLogo.png';
 import regLogo from './assets/regLogo.png';
+import NavItem from './components/NavItem';
 import './style.css';
 
-export default class SmartHeader extends Component {
+export default class Header extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      navItems: [
+        {
+          name: 'Home',
+          path: '/home',
+          width: 55,
+          selected: false
+        },
+        {
+          name: 'Calendar',
+          path: '/calendar',
+          width: 82,
+          selected: false
+        },
+        {
+          name: 'About Us',
+          path: '/about',
+          width: 86,
+          selected: false
+        },
+        {
+          name: 'Media',
+          path: '/media',
+          width: 57,
+          selected: false
+        },
+        {
+          name: 'Blog',
+          path: '/blog',
+          width: 42,
+          selected: false
+        },
+        {
+          name: 'Support Us',
+          path: '/support',
+          width: 0,
+          selected: false,
+          support: true
+        }
+      ]
+    }
+
+    this.updateSelection = this.updateSelection.bind(this);
+  }
 
   isHome() {
     return window.location.href.includes('home');
@@ -29,14 +76,31 @@ export default class SmartHeader extends Component {
   giveNavigation() {
     return (
       <ul className={`${this.defineClass()}-Navigation`}>
-         <li> <Link to='/'> Home </Link> </li>
-         <li> <Link to='/calendar'> Calendar </Link></li>
-         <li> <Link to='/about'> About </Link></li>
-         <li> <Link to='/media'>Media </Link></li>
-         <li> <Link to='/blog'>Blog </Link></li>
-         <li> <Link to='/support'> <span>Support Us</span></Link></li>
-       </ul>
+        {this.state.navItems.map((item, index) => {
+          item.updateSelection = this.updateSelection; //updateSelection gets passed as a prop
+          item.key = item.name + index; //key is required... shouldn't just be the index ;)
+          item.index = index; //argument to be passed to updateSelection
+          return <NavItem {...item} />
+        })}
+      </ul>
     )
+  }
+
+  updateSelection(selectedIndex) {
+    var updatedNavItems = this.state.navItems.map((item, index) => {
+      if (selectedIndex === index) {
+        item.selected = true;
+        return item;
+      }
+      else {
+        item.selected = false;
+        return item;
+      }
+    })
+
+    this.setState({
+      navItems: updatedNavItems
+    })
   }
 
   render() {
@@ -49,4 +113,5 @@ export default class SmartHeader extends Component {
       </header>
     )
   }
+
 }
