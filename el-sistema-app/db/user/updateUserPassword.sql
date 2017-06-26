@@ -1,0 +1,1 @@
+update users set userpassword = $1 where id = $2 RETURNING *;

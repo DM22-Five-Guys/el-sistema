@@ -1,0 +1,1 @@
+update users set firstlogin = $1 where id = $2;
