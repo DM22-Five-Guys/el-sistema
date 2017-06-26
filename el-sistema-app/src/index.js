@@ -37,7 +37,16 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
 
 ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
-        <BrowserRouter>
+        <App/>
+    </Provider>
+
+, document.getElementById('root'));
+registerServiceWorker();
+
+
+
+
+{/*<BrowserRouter>
             <div>
                 <Route exact path='/' component={App}></Route>
                 <Route path="/login" component={ Login }></Route>
@@ -45,9 +54,5 @@ ReactDOM.render(
                 <Route path="/test" component={requireAuth(testAuth)}></Route>
                 <Route path="/register" component={requireAuth(RegisterUserForm)}/>
                  <Route path="/new-test" component={New_Test}/>
-            </div>
-        </BrowserRouter>
-    </Provider>
-
-, document.getElementById('root'));
-registerServiceWorker();
+            </div> 
+</BrowserRouter>*/}

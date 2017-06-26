@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
-import { firstLogin } from './../../../reducers/users.reducer';
+import { firstLogin } from './../../../../reducers/users.reducer';
 import getToken from './token.service';
 import './first-login.component.css';
 

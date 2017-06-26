@@ -18,14 +18,9 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
         <div className="top-nav-container">
           <div className="hamburger" onClick={ (e) => this.props.toggleSide() }>
-=======
-        <div className="container-fluid">
-          {/*<span className="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>*/}
-          <div className="hamburger" onClick={ (e) => this.toggleSidebar() }>
->>>>>>> master
+
             <div className="ham-bar"></div>
             <div className="ham-bar"></div>
             <div className="ham-bar"></div>
