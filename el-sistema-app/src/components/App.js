@@ -49,11 +49,16 @@ class App extends Component {
       </div>
     )
     return (
-
+      <BrowserRouter>
+        <Switch>
+          <Route path='/admin' component={AdminSide} />
+          <Route path='/' component={UserSide} />
+        </Switch>
+      </BrowserRouter>
 
      
         
-      <div className="main-container">
+
         <BrowserRouter>
           <Switch>
             <Route path='/admin' component={AdminSide} />
@@ -61,7 +66,8 @@ class App extends Component {
           </Switch>
         </BrowserRouter>
 
-      </div>
+
+
     )
   }
 }
