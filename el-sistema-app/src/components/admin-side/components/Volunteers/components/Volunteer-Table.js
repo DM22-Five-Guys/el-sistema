@@ -9,7 +9,7 @@ class VolunteerTable extends Component {
     return (
       <div className='main-container'>
         <h1 className='current-volunteer'>Current Volunteers</h1>
-        <ul className='volunteers-list line'>
+        <ul className='volunteers-list'>
           <li >
             <input placeholder='' type='checkbox' className='checkbox-volunteer'></input>
           </li>
