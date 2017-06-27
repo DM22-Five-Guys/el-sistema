@@ -1,3 +1,13 @@
+import React, { Component } from 'react';
+import '../style.css';
+import trash from '../../../../../img/trash.png';
+import edit from '../../../../../img/pencil.png'
+
+class BlogTable extends Component{
+  render(){
+    return(
+
+
 <div className='main-container'>
   <h1 className='current-content'>Content Text Content</h1>
   <ul className='media-list'>
@@ -6,9 +16,9 @@
       <input placeholder='' type='checkbox' ></input>
       </div>
     </li>
-    <li className='media-titles'>Type</li>
-    <li className='media-titles'>Date Published</li>
     <li className='media-titles'>Title</li>
+    <li className='media-titles'>Publish Date</li>
+    <li className='media-titles'>Author</li>
     <li className='media-titles'>Actions</li>
 
   </ul>
@@ -19,13 +29,13 @@
       </div>
     </li>
     <li className='col-md-4' >
-      <input placeholder='type' type='text' className='type-placeholder '></input>
+      <input placeholder='Title' type='text' className='type-placeholder '></input>
     </li>
     <li className='col-md-5'>
-      <input placeholder='type' type='date' className='date-placeholder'></input>
+      <input placeholder='Publish Date' type='date' className='date-placeholder'></input>
     </li>
     <li className='col-md-6'>
-      <input placeholder='title' type='text' className='title-placeholder'></input>
+      <input placeholder='Author' type='text' className='author-placeholder'></input>
     </li>
     <li className='col-md-2'>
       <img src={edit} className='edit-media'></img>
@@ -43,13 +53,13 @@
     </div>
   </li>
   <li className='col-md-4' >
-    <input placeholder='type' type='text' className='type-placeholder '></input>
+    <input placeholder='Title' type='text' className='type-placeholder '></input>
   </li>
   <li className='col-md-5'>
-    <input placeholder='type' type='date' className='date-placeholder'></input>
+    <input placeholder='Publish Date' type='date' className='date-placeholder'></input>
   </li>
   <li className='col-md-6'>
-    <input placeholder='title' type='text' className='title-placeholder'></input>
+    <input placeholder='Author' type='text' className='author-placeholder'></input>
   </li>
   <li className='col-md-2'>
     <img src={edit} className='edit-media'></img>
@@ -59,3 +69,7 @@
   </li>
 </ul>
 </div>
+)
+}
+}
+export default BlogTable;

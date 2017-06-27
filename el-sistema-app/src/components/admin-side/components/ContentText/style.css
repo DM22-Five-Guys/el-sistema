@@ -1,0 +1,114 @@
+
+.edit-catagory-title {
+  display: inline-flex;
+  margin: 0%;
+  padding: 0;
+}
+
+.catagory-title {
+  font-size: 19px;
+  border: none;
+  height: 20px;
+  outline: none;
+}
+
+.edit-title-line {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 321px;
+  font-size: 1em;
+  outline: none;
+  margin-top: 3px;
+}
+
+.edit-catagory-title {
+  margin-top: 4%;
+}
+
+.edit-title-li {
+  margin-left: 7.4%;
+}
+
+.edit-title {
+  font-size: 19px;
+  border: none;
+  height: 20px;
+  outline: none;
+}
+
+.catagory-title-line {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 321px;
+  font-size: 1em;
+  outline: none;
+  margin-top: 3px;
+}
+
+.add-text-content-header{
+  font-size: 19px;
+  border: none;
+  height: 20px;
+  margin-top: 5%;
+}
+
+
+
+.long-bio-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 690px;
+ font-size: 1em;
+ outline: none;
+ margin-top:105px;
+}
+.long-bio-placeholder{
+margin-top: 50px;
+font-size: 19px;
+font-family: Roboto;
+border: none;
+outline: none;
+width: 39vw;
+height: 20px;
+}
+
+
+
+
+
+.save-button{
+width: 160px;
+height: 35px;
+border-radius: 3px;
+background-color: #4f89ab;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+.save-text{
+  font-family: Roboto;
+ padding-top: 8px;
+	font-size: 16px;
+	text-align: center;
+	color: #ffffff;
+}
+.buttons{
+  margin-top:50px;
+  display: inline-flex;
+}
+.cancel-button {
+	width: 160px;
+	height: 35px;
+	border-radius: 3px;
+	background-color: #eaeaea;
+margin-left: 25%;
+}
+.cancel-text{
+  font-family: Roboto;
+ padding-top: 8px;
+	font-size: 16px;
+	text-align: center;
+	color: #a8a8a8;
+
+}
