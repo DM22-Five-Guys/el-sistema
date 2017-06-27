@@ -97,6 +97,7 @@ let Cultures = React.createClass({
           </select>
         </h3>
         <BigCalendar
+          popup
           events={events()}
           culture={this.state.culture}
           defaultDate={new Date()}
