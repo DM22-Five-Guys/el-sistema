@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import homeLogo from './assets/homeLogo.png';
 import regLogo from './assets/regLogo.png';
+import navInfo from './assets/navigationItems';
 import NavItem from './components/NavItem';
 import './style.css';
 
@@ -9,48 +10,49 @@ export default class Header extends Component {
     super();
 
     this.state = {
-      navItems: [
-        {
-          name: 'Home',
-          path: '/home',
-          width: 61,
-          selected: false
-        },
-        {
-          name: 'Calendar',
-          path: '/calendar',
-          width: 82,
-          selected: false
-        },
-        {
-          name: 'About Us',
-          path: '/about',
-          width: 86,
-          selected: false
-        },
-        {
-          name: 'Media',
-          path: '/media',
-          width: 57,
-          selected: false
-        },
-        {
-          name: 'Blog',
-          path: '/blog',
-          width: 42,
-          selected: false
-        },
-        {
-          name: 'Support Us',
-          path: '/support',
-          width: 0,
-          selected: false,
-          support: true
-        }
-      ]
+      navInfo: this.prepareNavInfo()
     }
 
-    this.updateSelection = this.updateSelection.bind(this);
+    this.updateNavInfo = this.updateNavInfo.bind(this);
+  }
+
+  prepareNavInfo() {
+    var toSend = navInfo.information.map(item => {
+      if (window.location.href.includes(item.path)) {
+        if (item.support) {
+          item.selected = true;
+          return item;
+        }
+        else {
+          item.textColor = "#ffcf16";
+          item.selected = true;
+          return item;
+        }
+      }
+      else {
+        if (item.support) {
+          return item;
+        }
+        else {
+          item.textColor = "#fefef6";
+          item.selected = false;
+          return item;
+        }
+      }
+    });
+
+    if (toSend.every(item => !item.selected)) {
+      toSend[0].selected = true;
+      toSend[0].textColor = "#ffcf16";
+    }
+
+    return toSend;
+  }
+
+  updateNavInfo() {
+    this.setState({
+      navItems: this.prepareNavInfo()
+    })
   }
 
   isHome() {
@@ -76,31 +78,13 @@ export default class Header extends Component {
   giveNavigation() {
     return (
       <ul className={`${this.defineClass()}-Navigation`}>
-        {this.state.navItems.map((item, index) => {
-          item.updateSelection = this.updateSelection; //updateSelection method gets passed as a prop
-          item.key = item.name + index; //key is required... shouldn't just be the index ;)
-          item.index = index; //argument to be passed to updateSelection
+        {this.state.navInfo.map(item => {
+          item.updateNavInfo = this.updateNavInfo; //passes updateNavInfo as a property to be called by child component
+          item.key = item.name;
           return <NavItem {...item} />
         })}
       </ul>
     )
-  }
-
-  updateSelection(selectedIndex) {
-    var updatedNavItems = this.state.navItems.map((item, index) => {
-      if (selectedIndex === index) {
-        item.selected = true;
-        return item;
-      }
-      else {
-        item.selected = false;
-        return item;
-      }
-    })
-
-    this.setState({
-      navItems: updatedNavItems
-    })
   }
 
   render() {
@@ -108,7 +92,7 @@ export default class Header extends Component {
       <header className={`${this.defineClass()}-Root`}>
         <div className={`${this.defineClass()}-Container`}>
           {this.giveLogo()}
-          {this.giveNavigation()}
+          {this.giveNavigation(this)}
         </div>
       </header>
     )

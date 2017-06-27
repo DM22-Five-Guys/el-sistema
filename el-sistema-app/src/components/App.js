@@ -2,19 +2,17 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 
 import './App.css';
-import { Link, Redirect } from 'react-router-dom';
-//import { logout } from './../reducers/users.reducer';
-import { logout } from './../reducers/users.reducer';
-// import getToken from './../components/admin-side/login-page/token.service';
-import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
-import ReactDOM from 'react-dom';
 import AdminSide from './admin-side/AdminSide';
 import UserSide from './user-side/UserSide';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter,Route, Switch} from 'react-router-dom';
+import getToken from './../components/admin-side/components/login-page/token.service';
+import setAuthenticatonToken from './../components/admin-side/components/login-page/utils/setAuthorizationToken';
 
 
 
+if (localStorage.getItem('id_token')){
+    setAuthenticatonToken(getToken());
+}
 
 
 
@@ -33,12 +31,6 @@ class App extends Component {
     )
   }
 }
-
-
-//  ReactDOM.render(<App />, document.querySelector('#root'));
-
-
-
 
 
 export default App;
