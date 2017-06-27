@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Field, reduxForm} from 'redux-form';
-import {register} from './../../../reducers/users.reducer';
+import {register} from './../../../../reducers/users.reducer';
 import { connect } from 'react-redux'
 
 class RegisterUserForm extends Component{

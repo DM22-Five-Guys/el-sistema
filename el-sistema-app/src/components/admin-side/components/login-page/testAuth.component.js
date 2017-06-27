@@ -23,7 +23,7 @@ class testAuth extends Component{
         <div>
             
             TestComponent
-            <Link to="/">
+            <Link to="/admin">
                 <button>HOME</button>
             </Link>
            

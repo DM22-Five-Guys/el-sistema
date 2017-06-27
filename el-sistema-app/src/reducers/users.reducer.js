@@ -1,6 +1,6 @@
 import axios from 'axios';
 import setAuthorizationToken from './utils/setAuthorizationToken';
-import getToken from './../components/admin-side/login-page/token.service';
+import getToken from './../components/admin-side/components/login-page/token.service';
 const TEST = 'TEST';
 const LOGIN = 'LOGIN';
 const FIRST_LOGIN = 'FIRST_LOGIN';
