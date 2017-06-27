@@ -7,7 +7,7 @@ import requireAuth from './components/login-page/AuthenticatedRoute';
 import Header from './app-frame/Header';
 import Sidebar from './app-frame/Sidebar';
 
-import './app-frame/style.css';
+import './adminSide.style.css';
 
 import RegisterUserForm from './components/register-user/register-user.component'
 import Login from './components/login-page/Login.component';

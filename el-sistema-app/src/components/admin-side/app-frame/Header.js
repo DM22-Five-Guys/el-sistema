@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.css';
+import './app-frame.style.css';
 
 export default class Header extends Component {
   constructor(){

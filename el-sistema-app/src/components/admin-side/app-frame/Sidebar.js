@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './app-frame.style.css';
 
 export default class Sidebar extends Component {
 
   render() {
     return (
       <aside className="sidebar-container">
-        <div className="sidebar-box create-new-box"><div className="nav-logo"></div> Create New</div>
+        <div className="sidebar-box create-new-box"><div className="nav-logo"></div> <Link className="sidebar-link" to='/admin/register'> Create New </Link></div>
         <div className="sidebar-box"><div className="nav-logo"></div> <Link className="sidebar-link" to='/admin'> Dashboard </Link></div>
         <div className="sidebar-box"><div className="nav-logo"></div> <Link className="sidebar-link" to='/admin/volunteers'> Volunteers </Link></div>
         <div className="sidebar-box"><div className="nav-logo"></div> <Link className="sidebar-link" to='/admin/classes'> Classes </Link></div>

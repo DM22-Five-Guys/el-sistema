@@ -1,7 +1,4 @@
-.all-content{
-    display: flex;
-    box-sizing: border-box;
-}
+
 
 .top-nav-container{
     background-color: #4f89ab;
@@ -69,6 +66,9 @@ a:-webkit-any-link {
 }
 .create-new-box{
     background-color: #f6a623;
+    color: white;
+}
+.create-new-box a{
     color: white;
 }
 .create-new-box:hover{
