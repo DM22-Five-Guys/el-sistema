@@ -8,7 +8,8 @@
 }
 
 .reg-header-Container {
-  width: 1204px;
+  width: 100%;
+  max-width: 1204px;
   height: 92.5px;
   margin: auto;
 }
@@ -88,7 +89,8 @@
 }
 
 .home-header-Container {
-  width: 1206px;
+  width: 100%;
+  max-width: 1206px;
   margin: auto;
   height: 129px;
 }
@@ -169,7 +171,66 @@ footer {
   width: 100%;
   height: 453px;
   background-color: #4a4a4a;
-  padding-top: 48.8px;
+  padding-top: 40px;
+  font-family: 'Nunito';
 }
+
+footer .footer-container {
+  width: 100%;
+  max-width: 1196px;
+  margin: auto;
+}
+
+footer .stay-connected {
+  position: relative;
+  width: 400px;
+}
+
+footer .stay-connected h4 {
+  font-size: 27px;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+  color: #fff;
+}
+
+footer .stay-connected p {
+  font-size: 16px;
+  letter-spacing: 1.1px;
+  color: #fefef6;
+  margin-top: 19.8px;
+}
+
+footer .stay-connected form {
+  margin-top: 20px;
+  height: 41px;
+}
+
+footer .stay-connected form input {
+  float: left;
+}
+
+footer .stay-connected form input[type="tel"] {
+  width: 274px;
+  height: 40.6px;
+  box-sizing: content-box;
+  border: none;
+}
+
+footer .stay-connected form input[type="image"] {
+  border: none;
+  margin-left: 16px;
+}
+
+footer .stay-connected .social-icons {
+  margin-top: 33.5px;
+}
+
+
+footer .stay-connected .social-icons img {
+  height: 41px;
+  width: 41px;
+  margin-right: 33px;
+}
+
 
 /*miscellaneous styling*/
