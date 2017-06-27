@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom'
-import { login } from './../../../reducers/users.reducer';
+import { login } from './../../../../reducers/users.reducer';
 import getToken from './token.service';
 //import setAuthorizationToken from './../../../reducers/utils/setAuthorizationToken';
 import './Login.component.css';
@@ -45,8 +45,8 @@ class LoginForm extends Component{
         const { handleSubmit } = this.props;
         return(
             <div className="login-container">
-                {this.props.first_login === true?<Redirect to="/first-login"/>:""};
-                {this.isAuthed() === true?<Redirect to='/'/>:''}
+                {this.props.first_login === true?<Redirect to="/admin/first-login"/>:""};
+                {this.isAuthed() === true?<Redirect to='/admin'/>:''}
                 {/*{this.props.isLoggedIn === true?<Redirect to='/'/>:''}*/}
 
                 <div className="form-box">

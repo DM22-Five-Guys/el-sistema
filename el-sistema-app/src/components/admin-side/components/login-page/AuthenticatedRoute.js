@@ -18,7 +18,7 @@ export default function(ComposedComponent){
        
         render(){
         // return loadToken() === null? <Redirect to="/login"/> : <ComposedComponent {...this.props} />
-        return this.isAuthed()?<ComposedComponent {...this.props}/> : <Redirect to="/login"/>
+        return this.isAuthed()?<ComposedComponent {...this.props}/> : <Redirect to="/admin/login"/>
                 
         }
     }
