@@ -53,6 +53,8 @@ export default class Header extends Component {
     this.setState({
       navItems: this.prepareNavInfo()
     })
+    console.log(this.props);
+    this.props.updateMarginTop(); //executes function in parent to determine if content containers top margin should be changed
   }
 
   isHome() {
