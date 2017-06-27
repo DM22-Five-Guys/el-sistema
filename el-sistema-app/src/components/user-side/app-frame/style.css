@@ -49,6 +49,10 @@
   font-weight: 500;
 }
 
+.reg-header-Navigation li a:hover {
+  opacity: .8;
+}
+
 .reg-header-Navigation li:last-child {
   width: 133px;
   height: 41px;
@@ -56,6 +60,16 @@
   align-items: center;
   justify-content: center;
   background-color: #edc93a;
+}
+
+.reg-header-Navigation li:last-child:hover {
+  cursor: pointer;
+  background-color: #debc36;
+  opacity: 1;
+}
+
+.reg-header-Navigation li:last-child:active {
+  background-color: #c9ab31;
 }
 
 .reg-header-Navigation li:last-child a {
@@ -117,6 +131,10 @@
   font-weight: 500;
 }
 
+.home-header-Navigation li a:hover {
+  opacity: .8;
+}
+
 .home-header-Navigation li:last-child {
   width: 133px;
   height: 41px;
@@ -124,6 +142,16 @@
   align-items: center;
   justify-content: center;
   background-color: #edc93a;
+}
+
+.home-header-Navigation li:last-child:hover {
+  cursor: pointer;
+  background-color: #debc36;
+  opacity: 1;
+}
+
+.home-header-Navigation li:last-child:active {
+  background-color: #c9ab31;
 }
 
 .home-header-Navigation li:last-child a {
@@ -141,4 +169,7 @@ footer {
   width: 100%;
   height: 453px;
   background-color: #4a4a4a;
+  padding-top: 48.8px;
 }
+
+/*miscellaneous styling*/
