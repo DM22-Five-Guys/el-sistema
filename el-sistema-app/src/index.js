@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
+//import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter, Route} from 'react-router-dom';
 import './index.css';
 import reducers from './reducers';
@@ -31,7 +31,7 @@ ReactDOM.render(
     </Provider>
 
 , document.getElementById('root'));
-registerServiceWorker();
+//registerServiceWorker();
 
 
 
