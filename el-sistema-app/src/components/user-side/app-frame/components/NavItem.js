@@ -30,7 +30,6 @@ export default class NavItem extends Component {
   }
 
   render() {
-
     return (
       <li onClick={() => this.props.updateNavInfo()}>
         <Link to={this.props.path} style={{color: this.props.textColor}}>{this.props.name}</Link>
