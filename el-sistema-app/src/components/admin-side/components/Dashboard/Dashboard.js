@@ -14,17 +14,10 @@ if(localStorage.id_token){
 export default class Dashboard extends Component {
   render() {
     return (
-      <div className='change-container'>
-        <div className='row'>
-          <div className='col-md-6'>
-            <RecentEdits />
-          </div>
-          <div className='col-sm-6'>
-            <Calendar />
-          </div>
-        </div>
-        <Notifications />
+      <div>
+        
       </div>
+
     )
   }
 }

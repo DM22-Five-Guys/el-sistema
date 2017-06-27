@@ -1,13 +1,14 @@
-<<<<<<< HEAD
 ul{
   list-style: none;
 
 }
-
-.main-container{
-  max-width: 1440px;
+.container{
   padding: 0;
   margin:auto;
+}
+.main-container{
+  padding: 0;
+  margin: auto;
 }
 
 
@@ -196,6 +197,7 @@ margin-left: 25%;
 	height: 224px;
 	background-color: #ececec;
   margin-top:150%;
+  margin-left: -9vw;
 }
 .circle{
   width: 224px;
@@ -203,6 +205,7 @@ margin-left: 25%;
 	border-radius: 112px;
 	background-color: #ececec;
   margin-top: 40%;
+  margin-left: -9vw;
 }
 .camera{
 padding-top: 25%;
@@ -304,9 +307,3 @@ margin-left: 25%;
 	color: #a8a8a8;
 
 }
-=======
-volunteer-container{
-    padding: 100px;
-    background-color: red;
-}
->>>>>>> master

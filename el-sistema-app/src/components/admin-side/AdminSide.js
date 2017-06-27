@@ -43,23 +43,9 @@ export default class AdminSide extends Component {
 
   render() {
     return (
-      <div className="container">
-<<<<<<< HEAD
-        <Header />
-      
-        <Switch>
-          <Route path='/admin/volunteers' component={Volunteers} />
-          <Route path='/admin/classes' component={Classes} />
-          <Route path='/admin/performances' component={Performances} />
-          <Route path='/admin/content/pictures' component={ContentPictures} />
-          <Route path='/admin/content/text' component={ContentText} />
-          <Route path='/admin/media' component={Media} />
-          <Route path='/admin/blog' component={Blog} />
-          <Route path='/admin' component={Dashboard} />
-        </Switch>
-=======
+      <div>
         <Header toggleSide={this.toggleSide}/>
-        <div className="all-content">
+        <div className='login-container'>
           {
             this.state.showSide
             ?
@@ -67,7 +53,7 @@ export default class AdminSide extends Component {
             :
             null
           }
-            <section className="content">
+            <section className='login-container'>
               <Switch>
                 {/*register is in test mode*/}
                 <Route path="/admin/register" component={requireAuth(RegisterUserForm)}/>
@@ -84,7 +70,6 @@ export default class AdminSide extends Component {
               </Switch>
             </section>
         </div>
->>>>>>> master
       </div>
     )
   }

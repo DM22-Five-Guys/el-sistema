@@ -13,7 +13,6 @@ export default class Volunteers extends Component {
       <VolunteerTable />
 
 
-        <h1>Volunteers Page</h1>
       </div>
     )
   }
