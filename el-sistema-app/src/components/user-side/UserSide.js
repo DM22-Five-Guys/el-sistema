@@ -7,23 +7,28 @@ import AboutPage from './components/about-page/AboutPage';
 import MediaPage from './components/media-page/MediaPage';
 import BlogPage from './components/blog-page/BlogPage';
 import DonatePage from './components/donate-page/DonatePage';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Redirect} from 'react-router-dom';
+import './style.css';
 
 
 
 class UserSide extends Component {
+
   render () {
     return (
-      <div className="container">
+      <div className="UserSide-container">
         <Header />
+          <div className="content-container">
             <Switch>
               <Route path='/calendar' component={CalendarPage} />
               <Route path='/about' component={AboutPage} />
               <Route path='/media' component={MediaPage} />
               <Route path='/blog' component={BlogPage} />
-              <Route path='/donate' component={DonatePage} />
-              <Route path='/' component={HomePage} />
+              <Route path='/support' componet={DonatePage} />
+              <Route path='/home' component={HomePage} />
+              <Redirect from='/' to='/home' />
             </Switch>
+          </div>
         <Footer />
       </div>
     )

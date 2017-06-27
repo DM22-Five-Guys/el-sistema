@@ -1,0 +1,15 @@
+.UserSide-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.UserSide-container .content-container {
+  flex: 1 0 auto;
+  position: relative;
+  width: 1440px;
+  margin: auto;
+  top: 92.5px;
+  font-family: 'Nunito'
+}
