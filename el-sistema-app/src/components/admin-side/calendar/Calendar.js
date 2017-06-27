@@ -52,3 +52,60 @@
 //
 //export default DragDropContext(HTML5Backend)(Dnd)
 
+import React, {Component} from 'react';
+import BigCalendar from 'react-big-calendar';
+import events from './events';
+import moment from 'moment';
+
+import 'react-big-calendar/lib/css/react-big-calendar.css'
+
+BigCalendar.setLocalizer(
+    BigCalendar.momentLocalizer(moment)
+)
+
+require('moment/locale/es-do');
+require('moment/locale/en-gb');
+
+const English = 'en-gb';
+const Spanish = 'es-do';
+
+let Cultures = React.createClass({
+
+  getInitialState(){
+    return { culture: English }
+  },
+
+  render(){
+    let cultures = [English, Spanish]
+
+    return (
+      <div>
+        <h3 className="callout">
+          <label>Select a Language</label>
+          {' '}
+          <select
+            className='form-control'
+            style={{ width: 200, display: 'inline-block'}}
+            defaultValue={English}
+            onChange={e => this.setState({ culture: e.target.value })}
+          >
+          {
+            cultures.map((c, idx) =>
+              <option key={idx} value={c}>{c}</option>
+            )
+          }
+          </select>
+        </h3>
+        <BigCalendar
+          events={events()}
+          culture={this.state.culture}
+          defaultDate={new Date()}
+        />
+      </div>
+    )
+  }
+})
+
+export default Cultures;
+
+
