@@ -1,16 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //import registerServiceWorker from './registerServiceWorker';
-import {BrowserRouter, Route} from 'react-router-dom';
 import './index.css';
 import reducers from './reducers';
 import promise from 'redux-promise';
-// delete after test
+import getToken from './components/admin-side/components/login-page/token.service';
+import setAuthenticatonToken from './components/admin-side/components/login-page/utils/setAuthorizationToken';
 
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
-
 import App from './components/App';
+
+// delete after test
+
+if (localStorage.getItem('token_id')){
+    setAuthenticatonToken(getToken());
+}
+
+
 
 
 
@@ -36,7 +43,7 @@ ReactDOM.render(
 
 
 
-{/*<BrowserRouter>
+/*<BrowserRouter>
             <div>
                 <Route exact path='/' component={App}></Route>
                 <Route path="/login" component={ Login }></Route>
@@ -45,4 +52,4 @@ ReactDOM.render(
                 <Route path="/register" component={requireAuth(RegisterUserForm)}/>
                  <Route path="/new-test" component={New_Test}/>
             </div> 
-</BrowserRouter>*/}
+</BrowserRouter>*/

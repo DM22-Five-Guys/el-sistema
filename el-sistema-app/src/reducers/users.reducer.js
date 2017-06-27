@@ -1,5 +1,5 @@
 import axios from 'axios';
-import setAuthorizationToken from './utils/setAuthorizationToken';
+import setAuthorizationToken from './../components/admin-side/components/login-page/utils/setAuthorizationToken';
 import getToken from './../components/admin-side/components/login-page/token.service';
 const TEST = 'TEST';
 const LOGIN = 'LOGIN';
@@ -52,10 +52,9 @@ export function simpleTest(){
 export function login(user){
     const userInfo = user
     const config = {
-        url: 'http://localhost:3001/login',
         withCredentials: true
     }
-    let data = axios.post(config.url, userInfo, config.withCredentials)
+    let data = axios.post('http://localhost:3001/login', userInfo, config)
         .then(response => {
             //console.log(response.data)
             return response.data;
@@ -71,10 +70,10 @@ export function login(user){
 export function register(user){
     const userInfo = user
     const config = {
-        url: 'http://localhost:3001/register',
-        withCredentials: true
+        withCredentials: false,
+        headers: {'Authorization': getToken()}
     }
-    let data = axios.post(config.url, userInfo, config.withCredentials)
+    let data = axios.post('http://localhost:3001/register', userInfo, config)
         .then(response => {
             return response.data;
         })
