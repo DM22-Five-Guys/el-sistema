@@ -15,20 +15,16 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div className='change-container'>
- <div className='row'>
-   <div className='col-md-6'>
+        <div className='row'>
+          <div className='col-md-6'>
             <RecentEdits />
-            </div>
-
-             <div className='col-sm-6'>
+          </div>
+          <div className='col-sm-6'>
             <Calendar />
-            </div>
-</div>
-          <Notifications />
-
-
+          </div>
         </div>
-
+        <Notifications />
+      </div>
     )
   }
 }

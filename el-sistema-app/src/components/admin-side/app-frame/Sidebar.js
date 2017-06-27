@@ -5,7 +5,7 @@ export default class Sidebar extends Component {
 
   render() {
     return (
-      <aside>
+      <aside className="sidebar-container">
         <div className="sidebar-box create-new-box"><div className="nav-logo"></div> Create New</div>
         <div className="sidebar-box"><div className="nav-logo"></div> <Link className="sidebar-link" to='/admin'> Dashboard </Link></div>
         <div className="sidebar-box"><div className="nav-logo"></div> <Link className="sidebar-link" to='/admin/volunteers'> Volunteers </Link></div>
