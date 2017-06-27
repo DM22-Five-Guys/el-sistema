@@ -2,8 +2,8 @@
   max-width: 1440px;
 margin: auto;
 padding: 0;
-
 } */
+
 .change-container{
   margin-left: 1%;
 }
@@ -32,17 +32,16 @@ padding: 0;
     display: flex;
 }
 
-
 .edits{
   height: 424px;
-width: 30vw;
-  }
+  width: 30vw;
+}
 .notifications{
   height: 424px;
-width: 30vw;
+  width: 30vw;
 }
 .calendar{
     height:600px;
     width: 36vw;
-margin-left: -7%;
+    margin-left: -7%;
 }
