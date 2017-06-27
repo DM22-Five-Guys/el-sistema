@@ -8,7 +8,7 @@ import setAuthenticatonToken from './../components/admin-side/components/login-p
 
 
 
-if (localStorage.getItem('token_id')){
+if (localStorage.getItem('id_token')){
     setAuthenticatonToken(getToken());
 }
 
