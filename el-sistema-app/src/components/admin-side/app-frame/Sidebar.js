@@ -16,32 +16,33 @@ export default class Sidebar extends Component {
 
         <aside className="sidebar-container">
         <ul className='nav-links'>
-          <li className='create-new-box'><img src={create} className='nav-img'></img>Create New
+          <li className='create-new-box'><img src={create}></img>Create New
 
           </li>
 
-          <li className='nav-link'><img src={pictures} className='nav-img'></img><Link to='/admin'>Dashboard</Link>
+          <li className='nav-link'><img src={pictures} ></img>
+          <Link to='/admin' className='nav-img'>Dashboard</Link>
 
           </li>
 
 
-          <li className='nav-link'><img src={volunteers} className='nav-img'></img><Link to='/admin/volunteers'>Volunteers</Link>
+          <li className='nav-link'><img src={volunteers} ></img><Link to='/admin/volunteers' className='nav-img'>Volunteers</Link>
 
           </li>
-            <li className='nav-link'>  <img src={classes} className='nav-img'></img><Link to='/admin/classes'>Classes</Link>
+            <li className='nav-link'>  <img src={classes} ></img><Link to='/admin/classes' className='nav-img'>Classes</Link>
 
             </li>
-            <li className='nav-link'><img src={pictures} className='nav-img'></img><Link to='/admin/content/pictures'>Content Pictures</Link>
+            <li className='nav-link'><img src={pictures} ></img><Link to='/admin/content/pictures' className='nav-img'>Content Pictures</Link>
 
             </li>
-            <li className='nav-link'><img src={text} className='nav-img'></img><Link to='./admin/content/text'>Content Text</Link>
+            <li className='nav-link'><img src={text} ></img><Link to='./admin/content/text' className='nav-img'>Content Text</Link>
 
             </li>
 
-              <li className='nav-link'><img src={media} className='nav-img'></img><Link to='/admin/media'>Media</Link>
+              <li className='nav-link'><img src={media} ></img><Link to='/admin/media' className='nav-img'>Media</Link>
 
               </li>
-              <li className='nav-link'><img src={blog} className='nav-img'></img><Link to='/admin/blog'>Blog</Link>
+              <li className='nav-link'><img src={blog} ></img><Link to='/admin/blog' className='nav-img'>Blog</Link>
 
               </li>
 

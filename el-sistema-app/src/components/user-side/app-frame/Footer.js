@@ -9,7 +9,7 @@ import footerContent from './assets/footerContent';
 class Footer extends Component {
   render() {
     return (
-      <footer>
+      <footer >
         <div className="footer-container">
           <StayConnected content={footerContent.stay_connected}/>
         </div>
