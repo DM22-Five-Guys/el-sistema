@@ -75,6 +75,7 @@ app.get('/api/events/week', mainCtrl.getCurrentWeekEvents)
 app.get('/api/events/month/:num', mainCtrl.getEventsByMonth)
 app.get('/api/events/classes', mainCtrl.getClasses)
 app.get('/api/events/performances', mainCtrl.getPerformances)
+app.get('/api/events/', mainCtrl.getAllEvents)
 
 app.get('/api/users', mainCtrl.getAllUsers)
 
