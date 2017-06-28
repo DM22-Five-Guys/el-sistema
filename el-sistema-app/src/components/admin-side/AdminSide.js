@@ -76,7 +76,6 @@ class AdminSide extends Component {
                 <Route path='/admin/content/text' component={ContentText} />
                 <Route path='/admin/media' component={Media} />
                 <Route path='/admin/blog' component={Blog} />
-                <Route path='/admin/calendar' component={Calendar} />
                 <Route path='/admin' component={Dashboard} />
               </Switch>
           </div>
