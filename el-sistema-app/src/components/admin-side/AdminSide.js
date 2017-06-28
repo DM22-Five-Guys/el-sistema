@@ -5,6 +5,7 @@ import setAuthorizationToken from './components/login-page/utils/setAuthorizatio
 import requireAuth from './components/login-page/AuthenticatedRoute';
 
 import Header from './app-frame/Header';
+
 import Sidebar from './app-frame/Sidebar';
 
 import './app-frame/style.css';
@@ -20,10 +21,12 @@ import ContentPictures from './components/ContentPictures/ContentPictures';
 import ContentText from './components/ContentText/ContentText';
 import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
+import Calendar from './calendar/Calendar';
 
 if(localStorage.id_token){
   setAuthorizationToken(getToken());
 }
+
 
 export default class AdminSide extends Component {
   constructor(){
@@ -43,7 +46,12 @@ export default class AdminSide extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
       <div className='sidebar-container'>
+=======
+
+      <div className="container">
+>>>>>>> master
         <Header toggleSide={this.toggleSide}/>
 
           {
@@ -66,6 +74,7 @@ export default class AdminSide extends Component {
                 <Route path='/admin/content/text' component={ContentText} />
                 <Route path='/admin/media' component={Media} />
                 <Route path='/admin/blog' component={Blog} />
+                <Route path='/admin/calendar' component={Calendar} />
                 <Route path='/admin' component={Dashboard} />
               </Switch>
           </div>
