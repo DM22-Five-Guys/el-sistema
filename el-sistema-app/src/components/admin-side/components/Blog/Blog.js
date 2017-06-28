@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import AddBlog from './components/Add-Blog';
+import BlogTable from './components/Blog-Table';
 
 class Blog extends Component {
   render() {
     return (
-      <h1>Blog Page</h1>
+    <div>
+      <AddBlog />
+      <BlogTable />
+      </div>
     )
   }
 }

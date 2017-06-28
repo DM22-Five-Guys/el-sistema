@@ -17,28 +17,44 @@ export default class Header extends Component {
   }
 
   prepareNavInfo() {
-    return navInfo.information.map(item => {
-      if (item.support) { //avoids changes on "support us" item
-        item.selected = true;
-        return item;
-      }
-      else if (window.location.href.includes(item.path)) {
-        item.textColor = "#ffcf16";
-        item.selected = true;
-        return item;
+    var toSend = navInfo.information.map(item => {
+      if (window.location.href.includes(item.path)) {
+        if (item.support) {
+          item.selected = true;
+          return item;
+        }
+        else {
+          item.textColor = "#ffcf16";
+          item.selected = true;
+          return item;
+        }
       }
       else {
-        item.textColor = "#fefef6";
-        item.selected = false;
-        return item;
+        if (item.support) {
+          return item;
+        }
+        else {
+          item.textColor = "#fefef6";
+          item.selected = false;
+          return item;
+        }
       }
-    })
+    });
+
+    if (toSend.every(item => !item.selected)) {
+      toSend[0].selected = true;
+      toSend[0].textColor = "#ffcf16";
+    }
+
+    return toSend;
   }
 
   updateNavInfo() {
     this.setState({
       navItems: this.prepareNavInfo()
     })
+    console.log(this.props);
+    this.props.updateMarginTop(); //executes function in parent to determine if content containers top margin should be changed
   }
 
   isHome() {

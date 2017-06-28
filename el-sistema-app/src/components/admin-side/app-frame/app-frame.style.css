@@ -1,3 +1,4 @@
+<<<<<<< HEAD:el-sistema-app/src/components/admin-side/app-frame/app-frame.style.css
 
 
 .top-nav-container{
@@ -11,60 +12,40 @@
     display: flex;
     align-items: center;
     padding: 0 0 0 26px;
+=======
+body{
+  background-color: white;
+>>>>>>> master:el-sistema-app/src/components/admin-side/app-frame/style.css
 }
 
 .container-fluid{
     background-color: #4f89ab;
-    /* max-width: 1440px; */
     height: 64px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.23);
     color: white;
     font-family: 'Roboto';
     font-size: 21px;
-    display: flex;
-    align-items: center;
-    padding: 0 0 0 26px;
+
+
 }
 
-.nav-title{
-    margin: 0;
-    margin-left: 25px;
-    font-size: 21px;
+.container{
+  padding: 0;
+  margin: auto;
 }
+.nav-img{
+  color:inherit;
+  margin-left: 5%;
+}
+aside {
+  display: inline-grid;
+  width: 304px;
+	height: 600px;
+	background-color: #eeeeee;
 
-.sidebar-container{
-    width: 300px;
-    height: 800px;
-    background-color: #eee;
-    font-size: 21px;
-    margin-right: 20px;
-}
-
-.sidebar-box{
-    padding: 17px 8px 16px 9px;
-    color: #4d4d4e;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-}
-.sidebar-box:hover{
-    background-color: lightgray;
-}
-.sidebar-box:hover .nav-logo{
-    background-color: white;
-}
-.sibebar-box:a{
-    text-decoration: none;
-    color: #4d4d4e;
-}
-a:-webkit-any-link {
-    color: #4d4d4e;
-    cursor: auto;
-    text-decoration: none;
-}
-.sibebar-link:visited{
-    color: #4d4d4e;
 }
 .create-new-box{
+<<<<<<< HEAD:el-sistema-app/src/components/admin-side/app-frame/app-frame.style.css
     background-color: #f6a623;
     color: white;
 }
@@ -81,15 +62,30 @@ a:-webkit-any-link {
     margin-right: 24px;
     border-radius: 50%;
 }
+=======
+  background-color: orange;
+	font-family: Roboto;
+	font-size: 15px;
+	color: #ffffff;
+  text-align: center;
+  padding: 23px;
+margin-left: -13%;
+>>>>>>> master:el-sistema-app/src/components/admin-side/app-frame/style.css
 
-.hamburger{
-    height: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
-.ham-bar{
-    background-color: white;
-    width: 20px;
-    height: 2px;
+.nav-title{
+  padding-left: 5%;
+}
+.nav-link{
+  padding: 23px;
+  margin-left: 7%;
+  	font-family: Roboto;
+  	font-size: 15px;
+  	color: #4d4d4e;
+  text-align: left;
+}
+.menu-img{
+  margin-left: -3%;
+  margin-top: 9.5px;
+  position: absolute;
 }
