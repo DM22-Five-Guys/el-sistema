@@ -1,0 +1,63 @@
+
+.current-content{
+  width: 206.1px;
+height: 24px;
+font-family: Roboto;
+font-size: 20px;
+color: rgba(0, 0, 0, 0.87);
+}
+.media-list{
+  display: inline-flex;
+  margin-top: 5%;
+}
+.line{
+width: 1000.3px;
+height: 2px;
+border: solid 1px #e0e0e0;
+}
+.line2{
+  width: 1008.3px;
+height: 2px;
+border: solid 1px #e0e0e0;
+margin-left: -4.5%;
+}
+.media-titles{
+  padding-left: 170px;
+}
+.checkbox-volunteer{
+  opacity: 0.54;
+
+  margin-top: 16%;
+}
+
+.title-placeholder{
+  border: none;
+  outline: none;
+  margin-left: 28%;
+  margin-top:11%;
+
+}
+.type-placeholder{
+  border: none;
+  outline: none;
+  margin-left: 13.6%;
+    margin-top: 16%;
+}
+.date-placeholder{
+  border: none;
+  outline: none;
+  margin-left: 19.4%;
+    margin-top: 14%;
+}
+.edit-media{
+  width: 24px;
+	height: 24px;
+  margin-left: -16%;
+margin-top: 39%;
+}
+.delete-media{
+  width: 24px;
+	height: 24px;
+margin-left: -206%;
+margin-top: 100%;
+}

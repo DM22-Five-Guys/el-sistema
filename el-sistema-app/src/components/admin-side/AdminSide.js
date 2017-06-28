@@ -4,6 +4,8 @@ import getToken from './components/login-page/token.service';
 import setAuthorizationToken from './components/login-page/utils/setAuthorizationToken';
 import requireAuth from './components/login-page/AuthenticatedRoute';
 
+import {connect} from 'react-redux';
+
 import Header from './app-frame/Header';
 
 import Sidebar from './app-frame/Sidebar';
@@ -27,11 +29,12 @@ if(localStorage.id_token){
   setAuthorizationToken(getToken());
 }
 
+class AdminSide extends Component {
 
-export default class AdminSide extends Component {
   constructor(){
     super();
     this.state={
+      canShow: false,
       showSide: false
     }
 
@@ -39,17 +42,23 @@ export default class AdminSide extends Component {
   }
 
   toggleSide(){
-    this.setState({
-      showSide: !this.state.showSide
-    })
+    if (this.props.isLoggedIn || getToken() !== null){
+      this.setState({
+        showSide: !this.state.showSide
+      })
+    }
   }
 
   render() {
     return (
+<<<<<<< HEAD
+      <div className='sidebar-container'>
+=======
 
       <div className="container">
+>>>>>>> master
         <Header toggleSide={this.toggleSide}/>
-        <div className="all-content">
+
           {
             this.state.showSide
             ?
@@ -57,7 +66,7 @@ export default class AdminSide extends Component {
             :
             null
           }
-            <section className="content">
+        <div>
               <Switch>
                 {/*register is in test mode*/}
                 <Route path="/admin/register" component={requireAuth(RegisterUserForm)}/>
@@ -73,9 +82,17 @@ export default class AdminSide extends Component {
                 <Route path='/admin/calendar' component={Calendar} />
                 <Route path='/admin' component={Dashboard} />
               </Switch>
-            </section>
-        </div>
+          </div>
+
       </div>
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    isLoggedIn: state.user.isLoggedIn
+  }
+}
+
+export default connect(mapStateToProps,null)(AdminSide)

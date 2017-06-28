@@ -4,7 +4,6 @@ import {register} from './../../../../reducers/users.reducer';
 import { connect } from 'react-redux'
 
 class RegisterUserForm extends Component{
-
     renderTextField(field){
         return(
             <div>

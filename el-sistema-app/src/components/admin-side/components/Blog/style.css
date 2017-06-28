@@ -1,0 +1,187 @@
+ul {
+  list-style: none;
+}
+
+.add-blog-header {
+  width: 220px;
+  height: 24px;
+  font-family: Roboto;
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.blog-title-caption {
+  display: inline-flex;
+  margin: 0%;
+  padding: 0;
+}
+
+.blog-title {
+  font-size: 19px;
+  border: none;
+  height: 20px;
+  outline: none;
+}
+
+.blog-title-line {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 321px;
+  font-size: 1em;
+  outline: none;
+  margin-top: 3px;
+}
+
+.blog-caption-title-container {
+  margin-top: 4%;
+}
+
+.blog-caption-li {
+  margin-left: 7.4%;
+}
+
+.blog-caption {
+  font-size: 19px;
+  border: none;
+  height: 20px;
+  outline: none;
+}
+
+.blog-caption-line {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 321px;
+  font-size: 1em;
+  outline: none;
+  margin-top: 3px;
+}
+
+.blog-content-header {
+  font-size: 19px;
+  border: none;
+  height: 20px;
+  margin-top: 5%;
+}
+
+.blog-content-placeholder {
+  font-size: 19px;
+  border: none;
+  height: 20px;
+  outline: none;
+  margin-top: 5%;
+}
+
+.blog-content-line {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 690px;
+  font-size: 1em;
+  outline: none;
+  margin-top: 20%;
+}
+
+.rectangles {
+  margin-top: -9%;
+}
+
+.blog-rectangle {
+  width: 224px;
+  height: 224px;
+  background-color: #ececec;
+  margin-top: 10%;
+}
+
+.blog-picute-header {
+  text-align: center;
+  margin-top: 6%;
+  margin-left: 33%;
+}
+
+.camera {
+  padding-top: 25%;
+}
+
+.top-picture-header {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.current-content {
+  width: 206.1px;
+  height: 24px;
+  font-family: Roboto;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.media-list {
+  display: inline-flex;
+  margin-top: 5%;
+}
+
+.line {
+  width: 1000.3px;
+  height: 2px;
+  border: solid 1px #e0e0e0;
+}
+
+.line2 {
+  width: 1008.3px;
+  height: 2px;
+  border: solid 1px #e0e0e0;
+  margin-left: -4.5%;
+}
+
+.media-titles {
+  padding-left: 170px;
+}
+
+.checkbox-volunteer {
+  opacity: 0.54;
+  margin-top: 16%;
+}
+
+.title-placeholder {
+  border: none;
+  outline: none;
+  margin-left: 28%;
+  margin-top: 11%;
+}
+
+.author-placeholder {
+  margin-left: 17%;
+  border: none;
+  outline: none;
+  margin-top: 14%;
+}
+
+.type-placeholder {
+  border: none;
+  outline: none;
+  margin-left: 13.6%;
+  margin-top: 16%;
+}
+
+.date-placeholder {
+  border: none;
+  outline: none;
+  margin-left: 19.4%;
+  margin-top: 14%;
+}
+
+.edit-media {
+  width: 24px;
+  height: 24px;
+  margin-left: -16%;
+  margin-top: 39%;
+}
+
+.delete-media {
+  width: 24px;
+  height: 24px;
+  margin-left: -206%;
+  margin-top: 100%;
+}

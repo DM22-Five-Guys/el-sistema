@@ -28,6 +28,18 @@ app.use(cors());
 const port = config.port; //I set the port as 8080 because our npm start is running on port 3000. All api calls from the frontend will need to be made to localhost:8080/api. When we do our final build, we will switch the port to 3000 and update the frontend accordingly
 const connection_info = config.database_info;
 
+//---------------------------S3--------------------------------
+
+// const aws = require('aws-sdk')
+//     , fs = require('fs')
+//     , S3FS = require('s3fs')
+
+// var s3fsInstance = new S3FS('personalprojectmedia', {
+//     accessKeyId: config.aws.accessKeyId,
+//     secretAccessKey: config.aws.sectretAccess
+// })
+
+// s3fsInstance.create();
 
 //---------------App.use middleware-----------------------------
 app.use(express.static('../src'))
@@ -91,6 +103,24 @@ app.post('/new-test', (req,res) =>{ res.status(200).json('ok')})
 
 // end point for testing
 app.get('/users', passport.authenticate('jwt', {session:false}), userCtrl.getAllUsers);
+
+
+//------------------S3----------------------
+// app.post('/images', (req,res) => {
+//     var file = req.files;
+//     // var file = req.files.null;
+//     // console.log('--------------------', file.path);
+//     var stream = fs.createReadStream(file.path);
+//     s3fsImp.bucket = 'personalprojectmedia/images';
+//     return s3fsInstance.writeFile(file.originalFilename, stream).then(function(){
+//         fs.unlink(file.path, function(err){
+//             if(err){
+//                 console.log(err);
+//             }
+//         })
+//         res.send('POSTED MEDIA!');
+//     });
+// })
 
 
 app.listen(port, function(){
