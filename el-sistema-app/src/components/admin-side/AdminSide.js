@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Route, Switch} from 'react-router-dom';
 import getToken from './components/login-page/token.service';
-import setAuthorization from './../../reducers/utils/setAuthorizationToken';
+import setAuthorizationToken from './components/login-page/utils/setAuthorizationToken';
 import requireAuth from './components/login-page/AuthenticatedRoute';
 
 import Header from './app-frame/Header';
@@ -24,7 +24,7 @@ import Blog from './components/Blog/Blog';
 import Calendar from './calendar/Calendar';
 
 if(localStorage.id_token){
-  setAuthorization(getToken());
+  setAuthorizationToken(getToken());
 }
 
 

@@ -3,53 +3,36 @@ import Router, { Link } from 'react-router-dom';
 
 export default class NavItem extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       selectorStyle: {
-        width: null,
+        width: props.width,
         height: 14,
         backgroundColor: '#edc93a',
         position: 'absolute',
-        display: null
-      },
-      textStyle: {
-        color: null
+        display: props.selected ? 'block' : 'none',
+        marginTop: props.path === '/home' ? 38.5 : 22
       }
     }
-  }
-
-  giveTextColor(props) {
-    if (props.support)
-      return {
-        color: '#4a4a4a'
-      }
-    else
-      return {
-        color: props.selected ? '#edc93a' : '#fefef6'
-      }
   }
 
 
   componentWillReceiveProps(props) {
 
     var selectorStyle = Object.assign({}, this.state.selectorStyle);
-    selectorStyle.width = props.width;
-    selectorStyle.marginTop = props.path === '/home' ? 38.5 : 22;
     selectorStyle.display = props.selected ? 'block' : 'none';
 
     this.setState({
-      selectorStyle: selectorStyle,
-      textStyle: this.giveTextColor(props)
+      selectorStyle: selectorStyle
     })
   }
 
   render() {
-
     return (
-      <li onClick={() => this.props.updateSelection(this.props.index)}>
-        <Link to={this.props.path} style={this.state.textStyle}>{this.props.name}</Link>
+      <li onClick={() => this.props.updateNavInfo()}>
+        <Link to={this.props.path} style={{color: this.props.textColor}}>{this.props.name}</Link>
         <div style={this.state.selectorStyle}> </div>
       </li>
     )
