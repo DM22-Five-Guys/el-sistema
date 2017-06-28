@@ -9,10 +9,8 @@ export default class Header extends Component {
     }
   }
 
-  toggleSidebar = function () {
-    this.setState({
-      showSide: !this.state.showSide
-    })
+  clickHam = function () {
+    this.props.toggleSide(); 
   }
 
   render() {
@@ -20,7 +18,7 @@ export default class Header extends Component {
       <div>
 
         <div className="top-nav-container">
-          <div className="hamburger" onClick={ (e) => this.props.toggleSide() }>
+          <div className="hamburger" onClick={ (e) => this.clickHam() }>
 
             <div className="ham-bar"></div>
             <div className="ham-bar"></div>
