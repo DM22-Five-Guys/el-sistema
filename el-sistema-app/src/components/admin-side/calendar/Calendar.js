@@ -52,9 +52,15 @@
 //
 //export default DragDropContext(HTML5Backend)(Dnd)
 
+
+
+//-------------------- UNCOMMENT BELOW -----------------
+
 import React, {Component} from 'react';
 import BigCalendar from 'react-big-calendar';
-//import events from './events';
+
+
+
 import moment from 'moment';
 import axios from 'axios';
 
