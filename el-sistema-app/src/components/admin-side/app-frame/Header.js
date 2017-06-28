@@ -11,22 +11,14 @@ export default class Header extends Component {
     }
   }
 
-  toggleSidebar = function () {
-    this.setState({
-      showSide: !this.state.showSide
-    })
+  clickHam = function () {
+    this.props.toggleSide(); 
   }
 
   render() {
     return (
-<<<<<<< HEAD
 
         <div className="container-fluid">
-=======
-      <div>
-
-        <div className="top-nav-container">
->>>>>>> master
           <div className="hamburger" onClick={ (e) => this.props.toggleSide() }>
 
           <h3 className="nav-title"><img src={menu} className='menu-img'></img>El Sistema Pittsburg - Website Administration</h3>
