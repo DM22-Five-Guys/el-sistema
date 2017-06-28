@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
+import menu from '../../../img/menu.png';
+
 
 export default class Header extends Component {
   constructor(){
@@ -15,18 +17,16 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div>
 
-        <div className="top-nav-container">
-          <div className="hamburger" onClick={ (e) => this.clickHam() }>
+        <div className="container-fluid">
+          <div className="hamburger" onClick={ (e) => this.props.toggleSide() }>
 
-            <div className="ham-bar"></div>
-            <div className="ham-bar"></div>
-            <div className="ham-bar"></div>
+          <h3 className="nav-title"><img src={menu} className='menu-img'></img>El Sistema Pittsburg - Website Administration</h3>
+
+
           </div>
-          <h3 className="nav-title">El Sistema Pittsburg - Website Administration</h3>
         </div>
-      </div>
+
     )
   }
 }
