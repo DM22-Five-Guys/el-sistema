@@ -33,6 +33,7 @@
     "redux-promise": "^0.5.3",
     "rxjs": "^5.4.1",
     "s3fs": "^2.5.0",
+    "stripe": "^4.23.1",
     "twilio": "^3.4.0"
   },
   "devDependencies": {
