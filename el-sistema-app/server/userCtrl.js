@@ -32,7 +32,7 @@ var exports = module.exports = {
                 return res.status(200).json({
                     success: true,
                     firstLogin: true,
-                    token: '',
+                    token: null,
                     user: {}
                 })
             }

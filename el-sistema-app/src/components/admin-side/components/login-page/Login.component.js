@@ -45,7 +45,7 @@ class LoginForm extends Component{
         const { handleSubmit } = this.props;
         return(
             <div className="login-container">
-                {this.props.first_login === true?<Redirect to="/admin/first-login"/>:""};
+                {this.props.first_login === true?<Redirect to="/admin/first-login"/>:""}
                 {this.isAuthed() === true?<Redirect to='/admin'/>:''}
                 {/*{this.props.isLoggedIn === true?<Redirect to='/'/>:''}*/}
 
