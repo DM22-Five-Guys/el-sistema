@@ -24,7 +24,7 @@ class UserSide extends Component {
               <Route path='/about' component={AboutPage} />
               <Route path='/media' component={MediaPage} />
               <Route path='/blog' component={BlogPage} />
-              <Route path='/donate' componet={DonatePage} />
+              <Route path='/donate' component={DonatePage} />
               <Route path='/home' component={HomePage} />
               <Redirect from='/' to='/home' />
             </Switch>
