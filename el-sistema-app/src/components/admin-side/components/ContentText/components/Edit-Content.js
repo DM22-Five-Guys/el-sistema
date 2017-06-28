@@ -4,6 +4,7 @@ import '../style.css';
 class EditContent extends Component{
   render(){
     return(
+      <div className='container'>
 <div className='edit-container'>
 <h1 className='add-text-content-header'>Add New Text Content</h1>
 <ul className='edit-catagory-title'>
@@ -41,7 +42,7 @@ class EditContent extends Component{
   </li>
 </ul>
 </div>
-
+</div>
 
 
 </div>

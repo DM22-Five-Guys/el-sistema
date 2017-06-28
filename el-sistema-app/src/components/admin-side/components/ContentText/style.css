@@ -1,7 +1,7 @@
 
-
-.edit-container{
-  margin-left: 50px;
+.container{
+  padding: 0;
+  margin: auto;
 }
 .edit-catagory-title {
   display: inline-flex;
@@ -24,21 +24,27 @@
   font-size: 1em;
   outline: none;
   margin-top: 3px;
+  margin-left: -40%;
 }
 
 .edit-catagory-title {
   margin-top: 4%;
+  display: flex;
 }
 
 .edit-title-li {
   margin-left: 7.4%;
+    display: flex;
+    margin-top: -1%;
 }
 
 .edit-title {
   font-size: 19px;
-  border: none;
-  height: 20px;
-  outline: none;
+      border: none;
+      height: 20px;
+      margin-left: 0%;
+      margin-top:3%;
+      outline: none;
 }
 
 .catagory-title-line {

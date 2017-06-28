@@ -43,9 +43,9 @@ export default class AdminSide extends Component {
 
   render() {
     return (
-      <div>
+      <div className='sidebar-container'>
         <Header toggleSide={this.toggleSide}/>
-        <div className='login-container'>
+
           {
             this.state.showSide
             ?
@@ -53,7 +53,7 @@ export default class AdminSide extends Component {
             :
             null
           }
-            <section className='login-container'>
+        <div>
               <Switch>
                 {/*register is in test mode*/}
                 <Route path="/admin/register" component={requireAuth(RegisterUserForm)}/>
@@ -68,8 +68,8 @@ export default class AdminSide extends Component {
                 <Route path='/admin/blog' component={Blog} />
                 <Route path='/admin' component={Dashboard} />
               </Switch>
-            </section>
-        </div>
+          </div>
+
       </div>
     )
   }

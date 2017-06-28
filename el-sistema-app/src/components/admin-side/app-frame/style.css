@@ -10,9 +10,47 @@ body{
     font-family: 'Roboto';
     font-size: 21px;
 
+
 }
 
-.login-container{
+.container{
   padding: 0;
   margin: auto;
+}
+a{
+  color:inherit;
+  margin-left: 5%;
+}
+aside {
+  display: inline-grid;
+  width: 304px;
+	height: 600px;
+	background-color: #eeeeee;
+
+}
+.create-new-box{
+  background-color: orange;
+	font-family: Roboto;
+	font-size: 15px;
+	color: #ffffff;
+  text-align: center;
+  padding: 23px;
+margin-left: -13%;
+
+}
+.nav-title{
+  padding-left: 5%;
+}
+.nav-link{
+  padding: 23px;
+  margin-left: 7%;
+  	font-family: Roboto;
+  	font-size: 15px;
+  	color: #4d4d4e;
+  text-align: left;
+}
+.menu-img{
+  margin-left: -3%;
+  margin-top: 9.5px;
+  position: absolute;
 }

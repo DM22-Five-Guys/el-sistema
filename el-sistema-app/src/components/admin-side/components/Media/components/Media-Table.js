@@ -7,7 +7,7 @@ import edit from '../../../../../img/pencil.png';
 class MediaTable extends Component {
   render() {
     return (
-      <div className='main-container'>
+      <div className='container'>
         <h1 className='current-content'>Content Text Content</h1>
         <ul className='media-list'>
           <li >

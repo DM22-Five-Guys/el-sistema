@@ -7,7 +7,8 @@ import edit from '../../../../../img/pencil.png';
 class VolunteerTable extends Component {
   render() {
     return (
-      <div className='main-container'>
+      <div className='container'>
+        <div className='row'>
         <h1 className='current-volunteer'>Current Volunteers</h1>
         <ul className='volunteers-list'>
           <li >
@@ -67,6 +68,7 @@ class VolunteerTable extends Component {
 
       </ul>
       </div>
+    </div>
 
     )
   }

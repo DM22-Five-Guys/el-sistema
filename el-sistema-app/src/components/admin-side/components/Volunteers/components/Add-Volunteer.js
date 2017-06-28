@@ -5,7 +5,7 @@ import camera from '../../../../../img/blue-camera.png';
 class AddVolunteer extends Component{
   render(){
     return(
-      <div className='main-container'>
+      <div className='container'>
 
       <div className='add-volunteer-container'>
       <h1 className='add-volunteer'>Add New Volunteer</h1>
@@ -86,8 +86,8 @@ class AddVolunteer extends Component{
 </div>
 </div>
 
-
 </div>
+
 
 
 
