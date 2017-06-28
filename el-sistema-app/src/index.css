@@ -3,22 +3,4 @@
   margin: 0;
   padding: 0;
 }
-<<<<<<< HEAD
-=======
 
-html, body, #root {
-  height: 100%;
-}
-
-body{
-  background-color: #fefef6;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-a:focus {
-  text-decoration: none;
-}
->>>>>>> master

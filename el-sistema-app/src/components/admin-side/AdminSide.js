@@ -51,12 +51,9 @@ class AdminSide extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <div className='sidebar-container'>
-=======
 
-      <div className="container">
->>>>>>> master
+      <div className='sidebar-container'>
+
         <Header toggleSide={this.toggleSide}/>
 
           {
@@ -79,7 +76,6 @@ class AdminSide extends Component {
                 <Route path='/admin/content/text' component={ContentText} />
                 <Route path='/admin/media' component={Media} />
                 <Route path='/admin/blog' component={Blog} />
-                <Route path='/admin/calendar' component={Calendar} />
                 <Route path='/admin' component={Dashboard} />
               </Switch>
           </div>
