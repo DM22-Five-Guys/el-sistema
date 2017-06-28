@@ -1,16 +1,4 @@
 
-
-
-/*.top-nav-container{
-    background-color: #4f89ab;
-    height: 64px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.23);
-    color: white;
-    font-family: 'Roboto';
-    font-size: 21px;
-    display: flex;
-    align-items: center;
-    padding: 0 0 0 26px;*/
 body{
   background-color: white;
 }
@@ -22,7 +10,6 @@ body{
     color: white;
     font-family: 'Roboto';
     font-size: 21px;
-
 
 }
 
@@ -39,6 +26,7 @@ aside {
   width: 304px;
 	height: 600px;
 	background-color: #eeeeee;
+  overflow: hidden;
 
 }
 .create-new-box{

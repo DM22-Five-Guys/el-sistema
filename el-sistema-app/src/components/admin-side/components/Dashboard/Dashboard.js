@@ -14,9 +14,16 @@ if(localStorage.id_token){
 export default class Dashboard extends Component {
   render() {
     return (
-      <div>
-        
-      </div>
+<div className='container'>
+  <ul>
+  <li>
+  <RecentEdits />
+  </li>
+  <li>
+  <Notifications />
+  </li>
+  </ul>
+</div>
 
     )
   }

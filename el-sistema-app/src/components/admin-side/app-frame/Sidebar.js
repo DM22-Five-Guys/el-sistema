@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-//import './app-frame.style.css';
+import './app-frame.style.css';
 import create from '../../../img/ic-add-box-24-px.png';
 import pictures from '../../../img/invalid-name.png';
 import volunteers from '../../../img/ic-face-24-px.png';
