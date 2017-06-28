@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+//import logo from './logo.svg';
+
 import './App.css';
 import AdminSide from './admin-side/AdminSide';
 import UserSide from './user-side/UserSide';
@@ -59,6 +61,8 @@ export default App;
          
            <Link to='/new-test'><button className="app-login-button">NEW-TEST</button></Link>
       </div>
+
+
     )*/
 
 

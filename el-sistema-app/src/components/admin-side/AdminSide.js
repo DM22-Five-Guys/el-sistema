@@ -7,6 +7,7 @@ import requireAuth from './components/login-page/AuthenticatedRoute';
 import {connect} from 'react-redux';
 
 import Header from './app-frame/Header';
+
 import Sidebar from './app-frame/Sidebar';
 
 import './app-frame/style.css';
@@ -22,12 +23,14 @@ import ContentPictures from './components/ContentPictures/ContentPictures';
 import ContentText from './components/ContentText/ContentText';
 import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
+import Calendar from './calendar/Calendar';
 
 if(localStorage.id_token){
   setAuthorizationToken(getToken());
 }
 
 class AdminSide extends Component {
+
   constructor(){
     super();
     this.state={
@@ -48,6 +51,7 @@ class AdminSide extends Component {
 
   render() {
     return (
+
       <div className="container">
         <Header toggleSide={this.toggleSide}/>
         <div className="all-content">
@@ -71,6 +75,7 @@ class AdminSide extends Component {
                 <Route path='/admin/content/text' component={ContentText} />
                 <Route path='/admin/media' component={Media} />
                 <Route path='/admin/blog' component={Blog} />
+                <Route path='/admin/calendar' component={Calendar} />
                 <Route path='/admin' component={Dashboard} />
               </Switch>
             </section>
