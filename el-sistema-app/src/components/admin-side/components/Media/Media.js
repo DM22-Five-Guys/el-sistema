@@ -8,4 +8,4 @@ class Media extends Component {
   }
 }
 
-export default Media;
+export default MediaTable;
