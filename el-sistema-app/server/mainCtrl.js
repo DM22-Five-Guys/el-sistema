@@ -56,6 +56,7 @@ exports.getAllEvents = function(req, res) {
     db.events.getAllEvents()
     .then(results => {
         console.log(results)
+        
         res.status(200).json(results)
     }).catch(err => console.log(err))
 }
