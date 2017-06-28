@@ -18,6 +18,7 @@ export default class Header extends Component {
   render() {
     return (
       <div>
+
         <div className="top-nav-container">
           <div className="hamburger" onClick={ (e) => this.props.toggleSide() }>
 
