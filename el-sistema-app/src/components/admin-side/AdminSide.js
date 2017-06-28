@@ -51,12 +51,9 @@ class AdminSide extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <div className='sidebar-container'>
-=======
 
-      <div className="container">
->>>>>>> master
+      <div className='sidebar-container'>
+
         <Header toggleSide={this.toggleSide}/>
 
           {

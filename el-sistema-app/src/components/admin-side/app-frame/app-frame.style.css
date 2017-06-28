@@ -1,9 +1,8 @@
-<<<<<<< HEAD:el-sistema-app/src/components/admin-side/app-frame/app-frame.style.css
 
 
-.top-nav-container{
+
+/*.top-nav-container{
     background-color: #4f89ab;
-    /* max-width: 1440px; */
     height: 64px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.23);
     color: white;
@@ -11,11 +10,9 @@
     font-size: 21px;
     display: flex;
     align-items: center;
-    padding: 0 0 0 26px;
-=======
+    padding: 0 0 0 26px;*/
 body{
   background-color: white;
->>>>>>> master:el-sistema-app/src/components/admin-side/app-frame/style.css
 }
 
 .container-fluid{
@@ -45,33 +42,13 @@ aside {
 
 }
 .create-new-box{
-<<<<<<< HEAD:el-sistema-app/src/components/admin-side/app-frame/app-frame.style.css
-    background-color: #f6a623;
-    color: white;
-}
-.create-new-box a{
-    color: white;
-}
-.create-new-box:hover{
-    background-color: #e69613;
-}
-.nav-logo{
-    border: 2px solid white;
-    height: 24px;
-    width: 24px;
-    margin-right: 24px;
-    border-radius: 50%;
-}
-=======
   background-color: orange;
 	font-family: Roboto;
 	font-size: 15px;
 	color: #ffffff;
   text-align: center;
   padding: 23px;
-margin-left: -13%;
->>>>>>> master:el-sistema-app/src/components/admin-side/app-frame/style.css
-
+  margin-left: -13%;
 }
 .nav-title{
   padding-left: 5%;

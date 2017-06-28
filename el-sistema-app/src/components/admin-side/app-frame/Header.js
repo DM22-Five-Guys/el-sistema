@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-//import './app-frame.style.css';
-import './style.css';
+import './app-frame.style.css';
 import menu from '../../../img/menu.png';
 
 
