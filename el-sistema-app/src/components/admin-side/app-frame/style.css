@@ -29,6 +29,19 @@ body{
   align-items: center;
   margin-left: 26px;
 }
+.nav-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+.nav-left-side{
+  display: flex;
+}
+.logout{
+  font-family: 'Roboto';
+  margin-right: 15px;
+}
 .nav-title{
   padding-left: 25px;
   margin: 0;
@@ -38,6 +51,8 @@ aside {
   width: 304px;
 	height: calc(100vh - 64px);
 	background-color: #eeeeee;
+  position: absolute;
+  z-index: 1;
 }
 .nav-img{
   color:inherit;
@@ -45,6 +60,7 @@ aside {
 }
 .nav-link{
   height: 12.5%;
+  min-height: 64px;
   padding-left: 26px;
   display: flex;
   align-items: center;
