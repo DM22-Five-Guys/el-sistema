@@ -51,14 +51,10 @@ class AdminSide extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <div className='sidebar-container'>
-=======
 
-      <div className="container">
->>>>>>> master
+      <div>
         <Header toggleSide={this.toggleSide}/>
-
+        <div className='admin-container'>
           {
             this.state.showSide
             ?
@@ -66,7 +62,7 @@ class AdminSide extends Component {
             :
             null
           }
-        <div>
+          <div className="admin-content">
               <Switch>
                 {/*register is in test mode*/}
                 <Route path="/admin/register" component={requireAuth(RegisterUserForm)}/>
@@ -83,7 +79,7 @@ class AdminSide extends Component {
                 <Route path='/admin' component={Dashboard} />
               </Switch>
           </div>
-
+        </div>
       </div>
     )
   }

@@ -3,9 +3,6 @@
   margin: 0;
   padding: 0;
 }
-<<<<<<< HEAD
-=======
-
 html, body, #root {
   height: 100%;
 }
@@ -21,4 +18,3 @@ a:visited {
 a:focus {
   text-decoration: none;
 }
->>>>>>> master
