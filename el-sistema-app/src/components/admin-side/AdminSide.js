@@ -22,7 +22,6 @@ import ContentPictures from './components/ContentPictures/ContentPictures';
 import ContentText from './components/ContentText/ContentText';
 import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
-import Calendar from './calendar/Calendar';
 
 
 if(localStorage.id_token){
@@ -50,12 +49,7 @@ export default class AdminSide extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
-
       <div>
-=======
-      <div className='sidebar-container'>
->>>>>>> master
         <Header toggleSide={this.toggleSide}/>
         <div className='admin-container'>
           {
