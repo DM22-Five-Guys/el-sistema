@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Route, Switch} from 'react-router-dom';
 import getToken from './components/login-page/token.service';
+import hasValidToken from './components/login-page/utils/checkToken';
 import setAuthorizationToken from './components/login-page/utils/setAuthorizationToken';
 import requireAuth from './components/login-page/AuthenticatedRoute';
 
@@ -25,6 +26,7 @@ import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
 import Calendar from './calendar/Calendar';
 
+
 if(localStorage.id_token){
   setAuthorizationToken(getToken());
 }
@@ -42,7 +44,7 @@ class AdminSide extends Component {
   }
 
   toggleSide(){
-    if (this.props.isLoggedIn || getToken() !== null){
+    if (this.props.isLoggedIn || hasValidToken){
       this.setState({
         showSide: !this.state.showSide
       })
