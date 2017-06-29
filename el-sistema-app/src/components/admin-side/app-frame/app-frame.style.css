@@ -2,40 +2,87 @@
 body{
   background-color: white;
 }
-
-.container-fluid{
-    background-color: #4f89ab;
-    height: 64px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.23);
-    color: white;
-    font-family: 'Roboto';
-    font-size: 21px;
-
+.admin-container{
+  display: flex;
 }
-
+.admin-content{
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.container-fluid{
+  background-color: #4f89ab;
+  height: 64px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.23);
+  color: white;
+  font-family: 'Roboto';
+  font-size: 21px;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
 .container{
   padding: 0;
   margin: auto;
 }
-.nav-img{
-  color:inherit;
-  margin-left: 5%;
+.hamburger{
+  display: flex;
+  align-items: center;
+  margin-left: 26px;
+}
+.nav-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+.nav-left-side{
+  display: flex;
+}
+.logout{
+  font-family: 'Roboto';
+  margin-right: 15px;
+}
+.nav-title{
+  padding-left: 25px;
+  margin: 0;
 }
 aside {
   display: inline-grid;
   width: 304px;
-	height: 600px;
+	height: calc(100vh - 64px);
 	background-color: #eeeeee;
   position: absolute;
   z-index: 1;
+<<<<<<< HEAD:el-sistema-app/src/components/admin-side/app-frame/style.css
+}
+.nav-img{
+  color:inherit;
+  margin-left: 25px;
+}
+.nav-link{
+  height: 12.5%;
+  min-height: 64px;
+  padding-left: 26px;
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 18px;
+  color: #4d4d4e;
+  text-align: left;
+=======
   
 
+>>>>>>> master:el-sistema-app/src/components/admin-side/app-frame/app-frame.style.css
 }
 .create-new-box{
   background-color: orange;
-	font-family: Roboto;
-	font-size: 15px;
 	color: #ffffff;
+<<<<<<< HEAD:el-sistema-app/src/components/admin-side/app-frame/style.css
+}
+.nav-link:hover{
+  background-color: #ddd;
+=======
   text-align: center;
   padding: 23px;
   margin-left: -28%;
@@ -47,17 +94,8 @@ aside {
 
 .nav-title{
   padding-left: 5%;
+>>>>>>> master:el-sistema-app/src/components/admin-side/app-frame/app-frame.style.css
 }
-.nav-link{
-  padding: 23px;
-  margin-left: 7%;
-  	font-family: Roboto;
-  	font-size: 15px;
-  	color: #4d4d4e;
-  text-align: left;
-}
-.menu-img{
-  margin-left: -3%;
-  margin-top: 9.5px;
-  position: absolute;
+.create-new-box:hover{
+  background-color: darkorange;
 }

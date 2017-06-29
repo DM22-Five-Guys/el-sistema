@@ -1,7 +1,9 @@
 ul {
   list-style: none;
 }
-
+.row{
+  margin-left: 15px;
+}
 .add-blog-header {
   width: 220px;
   height: 24px;
@@ -65,12 +67,16 @@ ul {
   margin-top: 5%;
 }
 
-.blog-content-placeholder {
+.blog-content-textarea {
   font-size: 19px;
   border: none;
-  height: 20px;
+  height: 400px;
+  width: 85%;
+  max-width: 800px;
   outline: none;
   margin-top: 5%;
+  resize: none;
+  border-bottom: 1px solid gray;  
 }
 
 .blog-content-line {
@@ -80,11 +86,11 @@ ul {
   width: 690px;
   font-size: 1em;
   outline: none;
-  margin-top: 20%;
+  margin-top: 20px;
 }
 
 .rectangles {
-  margin-top: -9%;
+  margin-top: -1%;
 }
 
 .blog-rectangle {
@@ -184,4 +190,10 @@ ul {
   height: 24px;
   margin-left: -206%;
   margin-top: 100%;
+}
+.save-text{
+  padding-top: 0;
+}
+.cancel-text{
+  padding-top: 0;
 }
