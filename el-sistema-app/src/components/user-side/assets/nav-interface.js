@@ -52,17 +52,17 @@ export default {
     }
   ],
 
-  getCurrentPage: function(url) {
+  getCurrentPage: function(path) {
     var current;
     this.toSend.forEach(page => {
-      if (url.includes(page.path))
+      if (path.includes(page.path))
         current = page;
     })
     return current || this.toSend[0];
   },
 
-  giveNavigationState: function(url) {
-    const currentID = this.getCurrentPage(url).id;
+  giveNavigationState: function(path) {
+    const currentID = this.getCurrentPage(path).id;
     return this.toSend.map(page => {
       if (page.id === currentID) {
         page.selected = true;
@@ -74,8 +74,8 @@ export default {
     })
   },
 
-  giveTopMargin: function(url) {
-    const currentID = this.getCurrentPage(url).id;
+  giveTopMargin: function(path) {
+    const currentID = this.getCurrentPage(path).id;
     return currentID === 1 ? 130 : 92.5;
   }
 }
