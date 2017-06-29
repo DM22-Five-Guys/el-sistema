@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import EditContent from './components/Edit-Content';
 
 class ContentText extends Component {
   render() {
     return (
-      <h1>ContentText</h1>
+    <div>
+      <EditContent />
+      </div>
     )
   }
 }

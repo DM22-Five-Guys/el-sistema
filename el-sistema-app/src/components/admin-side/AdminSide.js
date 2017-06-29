@@ -4,10 +4,13 @@ import getToken from './components/login-page/token.service';
 import setAuthorizationToken from './components/login-page/utils/setAuthorizationToken';
 import requireAuth from './components/login-page/AuthenticatedRoute';
 
+import {connect} from 'react-redux';
+
 import Header from './app-frame/Header';
+
 import Sidebar from './app-frame/Sidebar';
 
-import './app-frame/style.css';
+import './adminSide.style.css';
 
 import RegisterUserForm from './components/register-user/register-user.component'
 import Login from './components/login-page/Login.component';
@@ -20,15 +23,18 @@ import ContentPictures from './components/ContentPictures/ContentPictures';
 import ContentText from './components/ContentText/ContentText';
 import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
+import Calendar from './calendar/Calendar';
 
 if(localStorage.id_token){
   setAuthorizationToken(getToken());
 }
 
-export default class AdminSide extends Component {
+class AdminSide extends Component {
+
   constructor(){
     super();
     this.state={
+      canShow: false,
       showSide: false
     }
 
@@ -36,16 +42,20 @@ export default class AdminSide extends Component {
   }
 
   toggleSide(){
-    this.setState({
-      showSide: !this.state.showSide
-    })
+    if (this.props.isLoggedIn || getToken() !== null){
+      this.setState({
+        showSide: !this.state.showSide
+      })
+    }
   }
 
   render() {
     return (
-      <div className="container">
+
+      <div className='sidebar-container'>
+
         <Header toggleSide={this.toggleSide}/>
-        <div className="all-content">
+
           {
             this.state.showSide
             ?
@@ -53,7 +63,7 @@ export default class AdminSide extends Component {
             :
             null
           }
-            <section className="content">
+        <div>
               <Switch>
                 {/*register is in test mode*/}
                 <Route path="/admin/register" component={requireAuth(RegisterUserForm)}/>
@@ -68,9 +78,17 @@ export default class AdminSide extends Component {
                 <Route path='/admin/blog' component={Blog} />
                 <Route path='/admin' component={Dashboard} />
               </Switch>
-            </section>
-        </div>
+          </div>
+
       </div>
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    isLoggedIn: state.user.isLoggedIn
+  }
+}
+
+export default connect(mapStateToProps,null)(AdminSide)

@@ -51,7 +51,15 @@ exports.getPerformances = function(req, res) {
     }).catch(err => console.log(err))
 }
 
-
+exports.getAllEvents = function(req, res) {
+    let db = app.get('db')
+    db.events.getAllEvents()
+    .then(results => {
+        console.log(results)
+        
+        res.status(200).json(results)
+    }).catch(err => console.log(err))
+}
 
 
 //--------USERS FUNCTIONS______________

@@ -1,4 +1,305 @@
-volunteer-container{
-    padding: 100px;
-    background-color: red;
+ul{
+  list-style: none;
+
+}
+.container{
+  padding: 0;
+  margin:auto;
+}
+
+
+.add-volunteer {
+	width: 220px;
+	height: 24px;
+	font-family: Roboto;
+	font-size: 25px;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.first-last-name-ul{
+  display: inline-flex;
+  margin: 0%;
+  padding: 0;
+}
+.first-name{
+font-size: 19px;
+border: none;
+height: 20px;
+}
+
+.first-name-line{
+background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 321px;
+ font-size: 1em;
+ outline: none;
+ margin-top:3px;
+
+}
+
+.first-last-name-container{
+  margin-top: 4%;
+}
+.last-name-li{
+ margin-left: 7.4%;
+}
+.last-name{
+font-size: 19px;
+border: none;
+height: 20px;
+}
+
+.last-name-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 321px;
+ font-size: 1em;
+ outline: none;
+ margin-top:3px;
+}
+.email-address-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 690px;
+ font-size: 1em;
+ margin-top:3px;
+}
+.email-placeholder{
+margin-top: 50px;
+font-size: 19px;
+outline: none;
+font-family: Roboto;
+border: none;
+height: 20px;
+}
+
+.job-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 690px;
+ font-size: 1em;
+ outline: none;
+ margin-top:3px;
+}
+.job-placeholder{
+margin-top: 50px;
+font-size: 19px;
+outline: none;
+font-family: Roboto;
+border: none;
+height: 20px;
+}
+.long-bio-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 690px;
+ font-size: 1em;
+ outline: none;
+ margin-top:105px;
+}
+.long-bio-placeholder{
+margin-top: 50px;
+font-size: 19px;
+font-family: Roboto;
+border: none;
+outline: none;
+width: 39vw;
+height: 20px;
+}
+.short-bio-line{
+  background: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
+ width: 690px;
+ font-size: 1em;
+ outline: none;
+ margin-top:90px;
+}
+.short-bio-placeholder{
+margin-top: 50px;
+font-size: 19px;
+font-family: Roboto;
+border: none;
+outline: none;
+width: 39vw;
+height: 20px;
+}
+.permissions-container{
+  margin-top: 4%;
+}
+.permissions-header{
+  width: 90px;
+	height: 19px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 500;
+	color: #000000;
+
+}
+.all-permissions{
+  display: inline-flex;
+
+}
+.permissions{
+  padding-left: 25px;
+
+}
+.permission{
+  width: 18px;
+	height: 18px;
+}
+.save-button{
+width: 160px;
+height: 35px;
+border-radius: 3px;
+background-color: #4f89ab;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+.save-text{
+  font-family: Roboto;
+ padding-top: 8px;
+	font-size: 16px;
+	text-align: center;
+	color: #ffffff;
+}
+.buttons{
+  margin-top:50px;
+  display: inline-flex;
+}
+.cancel-button {
+	width: 160px;
+	height: 35px;
+	border-radius: 3px;
+	background-color: #eaeaea;
+margin-left: 25%;
+}
+.cancel-text{
+
+  font-family: Roboto;
+ padding-top: 8px;
+	font-size: 16px;
+	text-align: center;
+	color: #a8a8a8;
+
+}
+
+.rectangle {
+	width: 224px;
+	height: 224px;
+	background-color: #ececec;
+  margin-top:150%;
+  margin-left: -9vw;
+}
+.circle{
+  width: 224px;
+	height: 224px;
+	border-radius: 112px;
+	background-color: #ececec;
+  margin-top: 40%;
+  margin-left: -9vw;
+}
+.camera{
+padding-top: 25%;
+}
+.current-volunteer{
+  width: 206.1px;
+height: 24px;
+font-family: Roboto;
+font-size: 20px;
+color: rgba(0, 0, 0, 0.87);
+}
+.volunteers-list{
+  display: inline-flex;
+  margin-top: 5%;
+}
+.line{
+width: 1000.3px;
+height: 2px;
+border: solid 1px #e0e0e0;
+}
+.line2{
+  width: 1008.3px;
+height: 2px;
+border: solid 1px #e0e0e0;
+margin-left: -4.5%;
+}
+.volunteer-titles{
+  padding-left: 170px;
+}
+.checkbox-volunteer{
+  opacity: 0.54;
+  margin-left: -14%;
+  margin-top: 16%;
+
+
+}
+
+.job-volunteer-placeholder{
+  border: none;
+  outline: none;
+  margin-left: 40%;
+  margin-top:11%;
+
+}
+.name-volunteer-placeholder{
+  border: none;
+  outline: none;
+  margin-left: 19.6%;
+    margin-top: 16%;
+}
+.email-volunteer-placeholder{
+  border: none;
+  outline: none;
+  margin-left: 29.4%;
+    margin-top: 14%;
+}
+.edit-volunteer{
+  width: 24px;
+	height: 24px;
+  margin-left: 26%;
+margin-top: 39%;
+}
+.delete-volunteer{
+  width: 24px;
+	height: 24px;
+margin-left: -61%;
+margin-top: 100%;
+}
+.save-button{
+width: 160px;
+height: 35px;
+border-radius: 3px;
+background-color: #4f89ab;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+.save-text{
+  font-family: Roboto;
+ padding-top: 8px;
+	font-size: 16px;
+	text-align: center;
+	color: #ffffff;
+}
+.buttons{
+  margin-top:50px;
+  display: inline-flex;
+}
+.cancel-button {
+	width: 160px;
+	height: 35px;
+	border-radius: 3px;
+	background-color: #eaeaea;
+margin-left: 25%;
+}
+.cancel-text{
+  font-family: Roboto;
+ padding-top: 8px;
+	font-size: 16px;
+	text-align: center;
+	color: #a8a8a8;
+
 }

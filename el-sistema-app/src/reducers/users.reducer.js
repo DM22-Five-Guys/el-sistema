@@ -52,7 +52,7 @@ export function simpleTest(){
 export function login(user){
     const userInfo = user
     const config = {
-        withCredentials: true
+        withCredentials: false
     }
     let data = axios.post('http://localhost:3001/login', userInfo, config)
         .then(response => {
