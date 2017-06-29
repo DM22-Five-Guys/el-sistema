@@ -28,6 +28,7 @@ aside {
 	background-color: #eeeeee;
   position: absolute;
   z-index: 1;
+  
 
 }
 .create-new-box{
@@ -42,9 +43,7 @@ aside {
 
 }
 
-.dropdown .show{
-  z-index: 2;
-}
+
 
 .nav-title{
   padding-left: 5%;
