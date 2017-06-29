@@ -4,11 +4,14 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import getToken from './token.service';
+import hasValidToken from './utils/checkToken';
+// let Decode = require('jwt-decode')
 export default function(ComposedComponent){
     class Authenticate extends Component{
+  
         isAuthed(){
-            if(this.props.isLoggedIn || getToken()!== null){
+              if(this.props.isLoggedIn || hasValidToken){
+                    //console.log('authenticated Route' , true);
                 return true;
             } else {
                 return false;

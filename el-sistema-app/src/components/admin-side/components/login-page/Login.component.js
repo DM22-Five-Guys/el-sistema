@@ -3,7 +3,7 @@ import {Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom'
 import { login } from './../../../../reducers/users.reducer';
-import getToken from './token.service';
+import hasValidToken from './utils/checkToken';
 //import setAuthorizationToken from './../../../reducers/utils/setAuthorizationToken';
 import './Login.component.css';
 
@@ -32,7 +32,7 @@ class LoginForm extends Component{
         this.props.login(values)   
     }
     isAuthed(){
-        if(this.props.isLoggedIn || getToken() !== null){
+            if(this.props.isLoggedIn || hasValidToken){
             return true;
         } else {
             return false;
@@ -41,14 +41,13 @@ class LoginForm extends Component{
     render(){
         // console.log(this.props.first_login)
         // console.log(this.props)
-        console.log(this.isAuthed())
+        //console.log(this.isAuthed())
         const { handleSubmit } = this.props;
         return(
             <div className="login-container">
                 {this.props.first_login === true?<Redirect to="/admin/first-login"/>:""}
                 {this.isAuthed() === true?<Redirect to='/admin'/>:''}
                 {/*{this.props.isLoggedIn === true?<Redirect to='/'/>:''}*/}
-
                 <div className="form-box">
                     <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                         <div className="form-header"><h1 className="form-header-title">Welcome Back</h1></div>

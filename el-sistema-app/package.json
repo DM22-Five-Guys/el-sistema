@@ -13,6 +13,7 @@
     "express-session": "^1.15.3",
     "fs": "0.0.1-security",
     "jsonwebtoken": "^7.4.1",
+    "jwt-decode": "^2.2.0",
     "lodash": "^4.17.4",
     "massive": "^3.0.0-rc1",
     "moment": "^2.18.1",

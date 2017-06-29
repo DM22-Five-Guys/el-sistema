@@ -38,9 +38,26 @@ class Dashboard extends Component {
     
   render() {
     return (
-      <div>
+
+
+<div className='container'>
+  <div className='row'>
+    <div className='col-md-6'>
+  <ul>
+  <li>
+  <RecentEdits />
+  </li>
+  <li>
+  <Notifications />
+  </li>
+  </ul>
+  </div>
+  <div className='col-md-6'>
         <Calendar allEvents={this.state.events} />
+        </div>
+
       </div>
+</div>
 
     )
   }
