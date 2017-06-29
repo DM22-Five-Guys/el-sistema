@@ -22,7 +22,7 @@
 //        }
 //        this.moveEvent = this.moveEvent.bind(this);
 //    }
-//    
+//
 //    moveEvent({ event, start, end }) {
 //    const { events } = this.state;
 //    console.log(events)
@@ -82,7 +82,7 @@ let Cultures = React.createClass({
   getInitialState(){
     return { culture: English}
   },
-    
+
 //  componentDidMount(){
 //    let events = axios.get('http://localhost:8080/api/events/')
 //    .then(results => {this.setState({
@@ -92,11 +92,12 @@ let Cultures = React.createClass({
 
   render(){
     let cultures = [English, Spanish]
-    
-    
+
+
 
     return (
-      <div>
+
+<div>
         <h3 className="callout">
           <label>Select a Language</label>
           {' '}
@@ -120,10 +121,11 @@ let Cultures = React.createClass({
           defaultDate={new Date()}
         />
       </div>
+
+
+
     )
   }
 })
 
 export default Cultures;
-
-
