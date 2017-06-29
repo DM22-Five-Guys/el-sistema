@@ -17,9 +17,23 @@ export default class Sidebar extends Component {
 
         <aside className="sidebar-container">
         <ul className='nav-links'>
-          <li className='create-new-box'><img src={create}></img>Create New
+<li className='create-new-box'>
 
-          </li>
+  <div className="dropdown show">
+    <div className="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <img src={create}></img>Create New
+    </div>
+
+    <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a className="dropdown-item" href="#">Action</a>
+      <a className="dropdown-item" href="#">Another action</a>
+      <a className="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+
+</li>
+
+
 
           <li className='nav-link'><img src={pictures} ></img>
           <Link to='/admin' className='nav-img'>Dashboard</Link>

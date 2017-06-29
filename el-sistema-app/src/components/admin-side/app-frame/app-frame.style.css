@@ -26,7 +26,8 @@ aside {
   width: 304px;
 	height: 600px;
 	background-color: #eeeeee;
-  overflow: hidden;
+  position: absolute;
+  z-index: 1;
 
 }
 .create-new-box{
@@ -36,8 +37,15 @@ aside {
 	color: #ffffff;
   text-align: center;
   padding: 23px;
-  margin-left: -13%;
+  margin-left: -28%;
+  z-index: 20;
+
 }
+
+.dropdown .show{
+  z-index: 2;
+}
+
 .nav-title{
   padding-left: 5%;
 }
