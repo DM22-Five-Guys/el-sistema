@@ -80,15 +80,15 @@ const Spanish = 'es-do';
 let Cultures = React.createClass({
 
   getInitialState(){
-    return { culture: English}
+    return { culture: English, events: {}}
   },
     
-//  componentDidMount(){
-//    let events = axios.get('http://localhost:8080/api/events/')
-//    .then(results => {this.setState({
-//        events: results
-//    })})
-//  },
+  componentDidMount(){
+    let events = axios.get('http://localhost:8080/api/events/')
+    .then(results => {this.setState({
+        events: results
+    })})
+  },
 
   render(){
     let cultures = [English, Spanish]

@@ -36,7 +36,7 @@ export default class Sidebar extends Component {
             <li className='nav-link'><img src={pictures} ></img><Link to='/admin/content/pictures' className='nav-img'>Content Pictures</Link>
 
             </li>
-            <li className='nav-link'><img src={text} ></img><Link to='./admin/content/text' className='nav-img'>Content Text</Link>
+            <li className='nav-link'><img src={text} ></img><Link to='/admin/content/text' className='nav-img'>Content Text</Link>
 
             </li>
 
