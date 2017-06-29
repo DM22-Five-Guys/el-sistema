@@ -1,6 +1,6 @@
 /*regular header styling*/
 
-.reg-header-Root {
+.reg-header {
   background-image: url("./assets/navSmall.png");
   position: fixed;
   width: 100%;
@@ -82,7 +82,7 @@
 
 /*home header styling*/
 
-.home-header-Root {
+.home-header {
   position: fixed;
   width: 100%;
   height: 129px;

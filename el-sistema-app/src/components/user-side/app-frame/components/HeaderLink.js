@@ -7,8 +7,11 @@ export default class NavItem extends Component {
     super(props);
 
     this.state = {
+      displayName: this.props.name,
+      linkPath: this.props.path,
+      textColor: this.giveTextColor(props),
       selectorStyle: {
-        width: props.width,
+        width: props.selectorWidth,
         height: 14,
         backgroundColor: '#edc93a',
         position: 'absolute',
@@ -18,22 +21,36 @@ export default class NavItem extends Component {
     }
   }
 
+  giveTextColor(props) {
+    if (props.support)
+      return '#474747';
+    else
+      return props.selected ? '#edc93a': '#fefef6';
+  }
 
   componentWillReceiveProps(props) {
-
     var selectorStyle = Object.assign({}, this.state.selectorStyle);
     selectorStyle.display = props.selected ? 'block' : 'none';
 
     this.setState({
+      displayName: this.props.name,
+      linkPath: this.props.path,
+      textColor: this.giveTextColor(props),
       selectorStyle: selectorStyle
     })
   }
 
   render() {
     return (
-      <li onClick={() => this.props.updateNavInfo()}>
-        <Link to={this.props.path} style={{color: this.props.textColor}}>{this.props.name}</Link>
-        <div style={this.state.selectorStyle}> </div>
+      <li onClick={() => this.props.updateUserSideState()}>
+
+        <Link
+          to={this.state.linkPath}
+          style={{ color: this.state.textColor}}>
+          {this.state.displayName}
+        </Link>
+
+        <div style={this.state.selectorStyle}></div>
       </li>
     )
   }

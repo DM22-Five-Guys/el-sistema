@@ -59,7 +59,7 @@
 import React, {Component} from 'react';
 import BigCalendar from 'react-big-calendar';
 
-
+import events from './events';
 
 import moment from 'moment';
 import axios from 'axios';
@@ -75,16 +75,25 @@ require('moment/locale/en-gb');
 
 const English = 'en-gb';
 const Spanish = 'es-do';
-let events;
+
 
 let Cultures = React.createClass({
 
   getInitialState(){
-    return { culture: English }
+    return { culture: English}
   },
+    
+//  componentDidMount(){
+//    let events = axios.get('http://localhost:8080/api/events/')
+//    .then(results => {this.setState({
+//        events: results
+//    })})
+//  },
 
   render(){
     let cultures = [English, Spanish]
+    
+    
 
     return (
       <div>
@@ -106,7 +115,7 @@ let Cultures = React.createClass({
         </h3>
         <BigCalendar
           popup
-          events={events}
+          events={events()}
           culture={this.state.culture}
           defaultDate={new Date()}
         />
