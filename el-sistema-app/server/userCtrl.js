@@ -1,21 +1,47 @@
 // var app = require('./index');
 const config = require('./config');
 const jwt = require('jsonwebtoken');
+const userModel = require('./model/createUser.model')
 
 
 var exports = module.exports = {
 
     register: function(req, res){
         let db = req.app.get('db');
-        console.log(req.body);
-        let first_name = req.body.first_name;
-        let last_name = req.body.last_name;
-        let job = req.body.job;
-        let email = req.body.email;
-        let short_bio = req.body.short_bio;
-        let long_bio = req.body.long_bio;
-        res.status(200).json('ok');
-        //console.log('registerFunction ', req.body);
+        let user = Object.assign({}, userModel);
+        if (req.body){
+            let newUser = req.body;
+            for(props in user){
+                if(newUser[prop].hasOwnProperty){
+                    user[prop] = newUser[prop]
+                }
+
+            }
+            db.user.createUser([
+                user.firstname,
+                user.lastname,
+                user.profileimg,
+                user.shortbio,
+                user.longbio,
+                user.caneditvideos,
+                user.caneditclasses,
+                user.caneditperformances,
+                user.caneditcontent,
+                user.caneditblogs,
+                user.superadmin]).then(user => {
+                return res.status(200).json({
+                    success: true,
+                    message: 'New Volunteer has been added.'
+                })
+            }).catch(error => console.error(error))
+        }
+        
+
+     
+        return res.status(501).json({
+            success:false,
+            message: "New Volunteer has not been added."
+        })
        
     },
 
@@ -59,6 +85,7 @@ var exports = module.exports = {
                              canEditVideos: user[0].caneditvideos,
                              canEditClasses: user[0].caneditclasses,
                              canEditPerformances: user[0].caneditperformances,
+                             canEditContent: user[0].caneditcontent,
                              canEditBlogs: user[0].caneditblogs,
                              superAdmin: user[0].superadmin
                         }

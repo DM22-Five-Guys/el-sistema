@@ -93,4 +93,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps,null)(AdminSide)
+export default connect(mapStateToProps)(AdminSide)

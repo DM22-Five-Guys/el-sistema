@@ -19,17 +19,6 @@ if (localStorage.getItem('token_id')){
 
 
 
-
-
-// import getToken from './components/admin-side/login-page/token.service';
-// import setAuthorizationToken from './reducers/utils/setAuthorizationToken';
-
-
-// import requireAuth from './components/admin-side/login-page/AuthenticatedRoute';
-
-// import New_Test from './components/admin-side/login-page/new_test.component';
-
-
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
 
 ReactDOM.render(
@@ -38,18 +27,3 @@ ReactDOM.render(
     </Provider>
 
 , document.getElementById('root'));
-//registerServiceWorker();
-
-
-
-
-/*<BrowserRouter>
-            <div>
-                <Route exact path='/' component={App}></Route>
-                <Route path="/login" component={ Login }></Route>
-                <Route path="/first-login" component={firstLogin}></Route>
-                <Route path="/test" component={requireAuth(testAuth)}></Route>
-                <Route path="/register" component={requireAuth(RegisterUserForm)}/>
-                 <Route path="/new-test" component={New_Test}/>
-            </div> 
-</BrowserRouter>*/
