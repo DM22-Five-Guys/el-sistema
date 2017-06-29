@@ -22,7 +22,6 @@ import ContentPictures from './components/ContentPictures/ContentPictures';
 import ContentText from './components/ContentText/ContentText';
 import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
-import Calendar from './calendar/Calendar';
 
 
 if(localStorage.id_token){
@@ -41,17 +40,13 @@ export default class AdminSide extends Component {
   }
 
   toggleSide(){
-<<<<<<< HEAD
-    this.setState({
-      showSide: !this.state.showSide
-    })
-=======
+
     if (this.props.isLoggedIn || hasValidToken){
       this.setState({
         showSide: !this.state.showSide
       })
     }
->>>>>>> master
+
   }
 
   render() {
