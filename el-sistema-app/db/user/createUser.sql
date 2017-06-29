@@ -1,0 +1,2 @@
+INSERT INTO users(firstname, lastname, profileimg, shortbio, longbio, caneditvideos, caneditclasses, caneditperformances, caneditcontent, caneditblogs, superadmin)
+VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11);
