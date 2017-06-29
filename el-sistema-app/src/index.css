@@ -15,6 +15,9 @@ a:visited {
   text-decoration: none;
 }
 
+a:hover,
+a:visited,
+a:active,
 a:focus {
   text-decoration: none;
 }

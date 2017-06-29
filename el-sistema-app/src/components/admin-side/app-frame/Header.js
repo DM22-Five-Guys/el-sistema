@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.css';
+import './app-frame.style.css';
 import menu from '../../../img/menu.png';
 
 export default class Header extends Component {

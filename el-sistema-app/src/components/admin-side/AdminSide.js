@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import {Route, Switch} from 'react-router-dom';
 import getToken from './components/login-page/token.service';
+import hasValidToken from './components/login-page/utils/checkToken';
 import setAuthorizationToken from './components/login-page/utils/setAuthorizationToken';
 import requireAuth from './components/login-page/AuthenticatedRoute';
-
-import {connect} from 'react-redux';
 
 import Header from './app-frame/Header';
 
 import Sidebar from './app-frame/Sidebar';
 
-import './app-frame/style.css';
+import './app-frame/app-frame.style.css';
 
 import RegisterUserForm from './components/register-user/register-user.component'
 import Login from './components/login-page/Login.component';
@@ -25,16 +24,16 @@ import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
 import Calendar from './calendar/Calendar';
 
+
 if(localStorage.id_token){
   setAuthorizationToken(getToken());
 }
 
-class AdminSide extends Component {
 
+export default class AdminSide extends Component {
   constructor(){
     super();
     this.state={
-      canShow: false,
       showSide: false
     }
 
@@ -42,7 +41,7 @@ class AdminSide extends Component {
   }
 
   toggleSide(){
-    if (this.props.isLoggedIn || getToken() !== null){
+    if (this.props.isLoggedIn || hasValidToken){
       this.setState({
         showSide: !this.state.showSide
       })
@@ -51,8 +50,12 @@ class AdminSide extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
 
       <div>
+=======
+      <div className='sidebar-container'>
+>>>>>>> master
         <Header toggleSide={this.toggleSide}/>
         <div className='admin-container'>
           {
@@ -75,7 +78,6 @@ class AdminSide extends Component {
                 <Route path='/admin/content/text' component={ContentText} />
                 <Route path='/admin/media' component={Media} />
                 <Route path='/admin/blog' component={Blog} />
-                <Route path='/admin/calendar' component={Calendar} />
                 <Route path='/admin' component={Dashboard} />
               </Switch>
           </div>
@@ -84,11 +86,3 @@ class AdminSide extends Component {
     )
   }
 }
-
-function mapStateToProps(state) {
-  return {
-    isLoggedIn: state.user.isLoggedIn
-  }
-}
-
-export default connect(mapStateToProps,null)(AdminSide)
