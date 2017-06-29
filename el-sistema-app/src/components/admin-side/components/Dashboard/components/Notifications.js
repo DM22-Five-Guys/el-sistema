@@ -5,7 +5,7 @@ export default class Notifications extends Component {
     render() {
         return (
 
-            <div container>
+            <div className='container'>
               <div className='text-content-container' >
                 <h1 className='container-fluid-text'>Send: Text Notifications</h1>
 

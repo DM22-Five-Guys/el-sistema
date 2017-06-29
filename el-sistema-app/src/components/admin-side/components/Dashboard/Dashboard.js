@@ -16,6 +16,8 @@ export default class Dashboard extends Component {
     return (
 
 <div className='container'>
+  <div className='row'>
+    <div className='col-md-6'>
   <ul>
   <li>
   <RecentEdits />
@@ -24,12 +26,12 @@ export default class Dashboard extends Component {
   <Notifications />
   </li>
   </ul>
-</div>
-
-      <div>
+  </div>
+  <div className='col-md-6'>
         <Calendar />
+        </div>
       </div>
-
+</div>
 
     )
   }
