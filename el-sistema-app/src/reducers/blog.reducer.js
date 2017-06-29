@@ -4,7 +4,8 @@ import getToken from './../components/admin-side/components/login-page/token.ser
 const ADD_BLOG = 'ADD_BLOG';
 
 let initialState = {
-    blog: null
+    addBlogPic1: null,
+    addBlogPic2: null
 }
 
 export function addBlog(blog) {
@@ -21,7 +22,6 @@ export function addBlog(blog) {
 
 export default function BlogReducer(state = initialState, action ){
     switch(action.type){
-
         case ADD_BLOG:
             console.log(action.payload);
             return state

@@ -3,18 +3,18 @@ import {Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { addBlog } from './../../../../../reducers/blog.reducer';
 
-
-
 import '../style.css';
 import camera from '../../../../../img/blue-camera.png';
 
 class AddBlog extends Component{
+  
   contentPH = 'Write your blog content here!';
   renderTitleField(field){
     return (
       <li className='blog-title-li'>
           <input placeholder='Title' type='text' className='blog-title' {...field.input}></input>
           <div className='blog-title-line'></div>
+          <div className="error-message">{field.meta.touched?field.meta.error:''}</div>
       </li>
     )
   }
@@ -31,18 +31,19 @@ class AddBlog extends Component{
       <div>
         <h2 className='blog-content-header'>Blog Content</h2>
         <textarea placeholder='Write your blog here:' type='text' className='blog-content-textarea' {...field.input}></textarea>
-        {/*<div className='blog-content-line'></div>*/}
+        <div className="error-message">{field.meta.touched?field.meta.error:''}</div>
       </div>
     )
   }
 
   onSubmit(values){
-    console.log(values);
     this.props.addBlog(values);
     this.props.reset(); 
   }
   cancel(){
-    this.props.reset();
+    if(window.confirm("⚠ Are you sure you want to discard all changes?")){
+      this.props.reset();
+    }
   }
 
   render(){
@@ -66,6 +67,7 @@ class AddBlog extends Component{
                 <div className='blog-rectangle'>
                     <img src={camera} className='camera img-responsive' alt=""></img>
                 </div>
+                <input type="file"/>
                 <figcaption className='blog-picute-header'>Add Top Full Picture</figcaption>
 
                 <div className='blog-rectangle'>
@@ -78,10 +80,10 @@ class AddBlog extends Component{
         <div className='buttons-container'>
             <ul className='buttons'>
                 <li className='list-button'>
-                    <button className='save-button save-text'>SAVE</button>
+                    <button type="submit" className='save-button save-text'>SAVE</button>
                 </li>
                 <li className='list-button'>
-                    <button className='cancel-button cancel-text' onClick={(e)=>this.cancel()}>CANCEL</button>
+                    <button type="button" className='cancel-button cancel-text' onClick={(e)=>this.cancel()}>CANCEL</button>
                 </li>
             </ul>
         </div>
@@ -90,9 +92,17 @@ class AddBlog extends Component{
   }
 }
 
-// function validate(values){
-
-// }
+function validate(values){
+  let errors = {};
+  if (!values.title){
+    errors.title = "⚠ Please enter a title for the blog post.";
+  }
+  if (!values.content){
+    errors.content = "⚠ Please enter some content in the blog post."
+  }
+  console.log(errors);  
+  return errors;
+}
 
 function mapStateToProps(state) {
     return {
@@ -100,4 +110,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { addBlog })(reduxForm({form: 'addBlog'})(AddBlog));
+export default connect(mapStateToProps, { addBlog })( reduxForm({ validate, form: 'addBlog' }) ( AddBlog ));
