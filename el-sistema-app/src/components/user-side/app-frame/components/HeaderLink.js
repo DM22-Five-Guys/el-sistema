@@ -42,7 +42,7 @@ export default class NavItem extends Component {
 
   render() {
     return (
-      <li onClick={() => this.props.updateUserSideState()}>
+      <li onClick={() => this.props.updateUserSideState(this.state.linkPath)}>
 
         <Link
           to={this.state.linkPath}
