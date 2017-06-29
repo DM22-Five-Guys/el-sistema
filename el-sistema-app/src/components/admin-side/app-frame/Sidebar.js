@@ -16,6 +16,7 @@ export default class Sidebar extends Component {
     return (
 
         <aside className="sidebar-container">
+<<<<<<< HEAD
         <ul className='nav-links'>
 <li className='create-new-box'>
 
@@ -65,6 +66,20 @@ export default class Sidebar extends Component {
 
 
            </aside>
+=======
+          <ul className='nav-links'>
+            <li className='create-new-box'>Create New</li>
+            <li className='nav-link'>      <Link to='/admin' className='nav-img'>Dashboard</Link></li>
+            <li className='nav-link'>      <Link to='/admin/volunteers' className='nav-img'>Volunteers</Link></li>
+            <li className='nav-link'>      <Link to='/admin/classes' className='nav-img'>Classes</Link></li>
+            <li className='nav-link'>      <Link to='/admin/content/pictures' className='nav-img'>Content Pictures</Link></li>
+            <li className='nav-link'>      <Link to='/admin/content/text' className='nav-img'>Content Text</Link></li>
+            <li className='nav-link'>      <Link to='/admin/media' className='nav-img'>Media</Link></li>
+            <li className='nav-link'>      <Link to='/admin/blog' className='nav-img'>Blog</Link></li>
+            <li className='nav-link'>      <Link to='/admin/register' className='nav-img'>Register-test</Link></li>
+          </ul>
+        </aside>
+>>>>>>> master
 
     )
   }
