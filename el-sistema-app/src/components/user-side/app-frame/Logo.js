@@ -10,8 +10,6 @@ export default class Logo extends Component {
       image: props.isHome ? homeLogo : regLogo,
       className: props.isHome ? "home-logo-container" : "reg-logo-container"
     }
-
-    console.log(this.state);
   }
 
   componentWillReceiveProps(props) {
@@ -19,8 +17,6 @@ export default class Logo extends Component {
       image: props.isHome ? homeLogo : regLogo,
       className: props.isHome ? "home-logo-container" : "reg-logo-container"
     })
-
-    console.log(this.state);
   }
 
   render() {
