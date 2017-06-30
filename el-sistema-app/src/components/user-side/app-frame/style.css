@@ -1,3 +1,44 @@
+/*logo styling*/
+
+.reg-logo-container {
+  z-index: 2;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 194px;
+  height: 93px;
+  width: 271px;
+  background-color: rgba(71, 71, 71, 0.65);
+}
+
+.reg-logo-container img {
+  position: relative;
+  height: 42px;
+  width: 175px;
+}
+
+.home-logo-container {
+  z-index: 2;
+  display: flex;
+  position: sticky;
+  top: 0px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 148px;
+  margin-top: 61px;
+  height: 129px;
+  width: 363px;
+  background-color: rgba(71, 71, 71, 0.65);
+}
+
+.home-logo-container img {
+  width: 291px;
+  height: 73px;
+  margin-top: 2px;
+}
+
 /*regular header styling*/
 
 .reg-header {
@@ -13,24 +54,6 @@
   max-width: 1204px;
   height: 92.5px;
   margin: auto;
-}
-
-.reg-header-LogoContainer {
-  float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  left: 24px;
-  height: 93px;
-  width: 271px;
-  background-color: rgba(71, 71, 71, 0.65);
-}
-
-.reg-header-LogoContainer img {
-  position: relative;
-  height: 42px;
-  width: 175px;
 }
 
 .reg-header-Navigation {
@@ -95,25 +118,6 @@
   max-width: 1206px;
   margin: auto;
   height: 129px;
-}
-
-.home-header-LogoContainer {
-  float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 61px;
-  margin-left: 31px;
-  height: 131px;
-  width: 363px;
-  background-color: rgba(71, 71, 71, 0.65);
-}
-
-.home-header-LogoContainer img {
-  width: 291px;
-  height: 73px;
-  margin-top: 2px;
 }
 
 .home-header-Navigation {

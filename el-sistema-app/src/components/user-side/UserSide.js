@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import navInterface from './assets/nav-interface';
 import Header from './app-frame/Header';
+import Logo from './app-frame/Logo';
 import Footer from './app-frame/Footer';
 import ContentContainer from './app-frame/ContentContainer';
 import HomePage from './components/home-page/HomePage';
@@ -41,10 +42,17 @@ class UserSide extends Component {
     return toSend;
   }
 
+  giveToLogo() {
+    return {
+      isHome: this.state.currentPage.path === '/home'
+    }
+  }
+
   render() {
     return (
       <div className="UserSide-container">
         <Header {...this.giveToHeader()}/>
+        <Logo {...this.giveToLogo()}/>
           <ContentContainer topMargin={this.state.contentTopMargin}>
             <Switch>
               <Route path='/calendar' component={CalendarPage} />
