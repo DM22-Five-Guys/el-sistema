@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
+import { StripeProvider } from 'react-stripe-elements'
 
 import './App.css';
 import AdminSide from './admin-side/AdminSide';
@@ -24,7 +25,9 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path='/admin' component={AdminSide} />
-          <Route path='/' component={UserSide} />
+          <StripeProvider apiKey='pk_test_nLm9j7f3xI9kKqHVB6YxlEWh'>
+            <Route path='/' component={UserSide} />
+          </StripeProvider>
         </Switch>
       </BrowserRouter>
 

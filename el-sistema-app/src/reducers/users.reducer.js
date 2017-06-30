@@ -68,6 +68,7 @@ export function login(user){
 }
 
 export function register(user){
+    console.log('register function from users.reducer ',user);
     const userInfo = user
     const config = {
         withCredentials: false,
@@ -90,7 +91,7 @@ export function firstLogin(user){
     let data = axios.post('http://localhost:3001/update-password', userInfo)
         .then(response => {
             return response.data
-        })
+        }).catch(error => console.log(error));
     return {
         type: FIRST_LOGIN,
         payload: data
@@ -98,14 +99,14 @@ export function firstLogin(user){
 }
 
 
-export function new_test_func(){
-    let data = axios.post('http://localhost:3001/new-test')
-        .then(response => response).catch(error => error)
-    return {
-        type: NEW_TEST,
-        payload: data
-    }
-}
+// export function new_test_func(){
+//     let data = axios.post('http://localhost:3001/new-test')
+//         .then(response => response).catch(error => error)
+//     return {
+//         type: NEW_TEST,
+//         payload: data
+//     }
+// }
 
 export default function UserReducer(state = initialState, action ){
     switch(action.type){
@@ -121,13 +122,14 @@ export default function UserReducer(state = initialState, action ){
             }
             return Object.assign({}, state, {isLoggedIn:action.payload.isLoggedIn, first_login: action.payload.firstLogin, token: action.payload.token, user: action.payload.user});
         case FIRST_LOGIN:
-            return Object.assign({}, state, {user: action.payload.user});
-        case REGISTER:
             console.log(action.payload)
+            return Object.assign({}, state, {isLoggedIn:action.payload.isLoggedIn, first_login: action.payload.firstLogin, token: action.payload.token, user: action.payload.user});
+        case REGISTER:
+            //console.log(action.payload)
             return Object.assign({}, state, action.payload);
         case LOGOUT:
             clearLocalStorage();
-            console.log(action.payload);
+            //console.log(action.payload);
             return Object.assign({},state, action.payload);
         default:
             return state;

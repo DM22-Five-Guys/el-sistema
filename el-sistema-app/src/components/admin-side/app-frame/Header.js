@@ -11,8 +11,10 @@ export default class Header extends Component {
     }
   }
 
-  clickHam = function () {
-    this.props.toggleSide(); 
+  toggleSidebar = function () {
+    this.setState({
+      showSide: !this.state.showSide
+    })
   }
 
   render() {

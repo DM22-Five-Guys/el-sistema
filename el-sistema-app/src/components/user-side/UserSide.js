@@ -26,13 +26,11 @@ class UserSide extends Component {
     this.updateState = this.updateState.bind(this);
   }
 
-  updateState() {
-    const url = window.location.href;
-
+  updateState(newPath) {
     this.setState({
-      currentPage: navInterface.getCurrentPage(url),
-      navigationState: navInterface.giveNavigationState(url),
-      contentTopMargin: navInterface.giveTopMargin(url)
+      currentPage: navInterface.getCurrentPage(newPath),
+      navigationState: navInterface.giveNavigationState(newPath),
+      contentTopMargin: navInterface.giveTopMargin(newPath)
     })
   }
 
@@ -53,13 +51,13 @@ class UserSide extends Component {
               <Route path='/about' component={AboutPage} />
               <Route path='/media' component={MediaPage} />
               <Route path='/blog' component={BlogPage} />
-              <Route path='/donate' component={DonatePage} />
+              <Route path='/support' component={DonatePage} />
               <Route path='/home' component={HomePage} />
               <Redirect from='/' to='/home' />
               <Redirect from='*' to='/home' />
             </Switch>
           </ContentContainer>
-        <Footer />
+        <Footer updateUserSideState={this.updateState}/>
       </div>
     )
   }

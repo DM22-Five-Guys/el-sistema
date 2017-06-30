@@ -4,14 +4,13 @@ import getToken from './components/login-page/token.service';
 import hasValidToken from './components/login-page/utils/checkToken';
 import setAuthorizationToken from './components/login-page/utils/setAuthorizationToken';
 import requireAuth from './components/login-page/AuthenticatedRoute';
-
-import {connect} from 'react-redux';
+import { connect } from 'react-redux'
 
 import Header from './app-frame/Header';
 
 import Sidebar from './app-frame/Sidebar';
 
-import './adminSide.style.css';
+import './app-frame/app-frame.style.css';
 
 import RegisterUserForm from './components/register-user/register-user.component'
 import Login from './components/login-page/Login.component';
@@ -31,12 +30,11 @@ if(localStorage.id_token){
   setAuthorizationToken(getToken());
 }
 
-class AdminSide extends Component {
 
+class AdminSide extends Component {
   constructor(){
     super();
     this.state={
-      canShow: false,
       showSide: false
     }
 
@@ -44,6 +42,7 @@ class AdminSide extends Component {
   }
 
   toggleSide(){
+
     if (this.props.isLoggedIn || hasValidToken){
       this.setState({
         showSide: !this.state.showSide
@@ -53,9 +52,7 @@ class AdminSide extends Component {
 
   render() {
     return (
-
       <div className='sidebar-container'>
-
         <Header toggleSide={this.toggleSide}/>
 
           {
@@ -94,3 +91,4 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(AdminSide)
+

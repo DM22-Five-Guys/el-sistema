@@ -60,6 +60,7 @@ massive(connection_info).then(instance => {
 const mainCtrl = require('./mainCtrl')
 const twilioCtrl = require('./twilioCtrl')
 const userCtrl = require('./userCtrl');
+const paymentCtrl = require('./model/paymentCtrl');
 //const nodemailerCtrl = require('./nodemailerCtrl')
 
 
@@ -99,10 +100,14 @@ app.post('/login', userCtrl.login);
 
 app.post('/update-password', userCtrl.changePassword);
 
-app.post('/new-test', (req,res) =>{ res.status(200).json('ok')})
+app.post('/new-test', (req,res) => { res.status(200).json('ok')})
 
 // end point for testing
 app.get('/users', passport.authenticate('jwt', {session:false}), userCtrl.getAllUsers);
+
+// testing stripe for donations
+
+app.post('/charge', paymentCtrl.charge)
 
 
 //------------------S3----------------------

@@ -22,7 +22,7 @@
 //        }
 //        this.moveEvent = this.moveEvent.bind(this);
 //    }
-//    
+//
 //    moveEvent({ event, start, end }) {
 //    const { events } = this.state;
 //    console.log(events)
@@ -64,7 +64,11 @@ import events from './events';
 import moment from 'moment';
 import axios from 'axios';
 
+
+
 import 'react-big-calendar/lib/css/react-big-calendar.css'
+import './calendar.style.css';
+
 
 BigCalendar.setLocalizer(
     BigCalendar.momentLocalizer(moment)
@@ -82,7 +86,7 @@ let Cultures = React.createClass({
   getInitialState(){
     return { culture: English}
   },
-    
+
 //  componentDidMount(){
 //    let events = axios.get('http://localhost:8080/api/events/')
 //    .then(results => {this.setState({
@@ -92,11 +96,12 @@ let Cultures = React.createClass({
 
   render(){
     let cultures = [English, Spanish]
-    
-    
+
+
 
     return (
-      <div>
+
+<div>
         <h3 className="callout">
           <label>Select a Language</label>
           {' '}
@@ -120,10 +125,11 @@ let Cultures = React.createClass({
           defaultDate={new Date()}
         />
       </div>
+
+
+
     )
   }
 })
 
 export default Cultures;
-
-
