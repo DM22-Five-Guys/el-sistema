@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Hero1 from './components/HomeHero1';
+import UpcomingEvents from './components/UpcomingEvents'
 
 class HomePage extends Component {
 
@@ -8,6 +9,7 @@ class HomePage extends Component {
     return (
       <div className="home-page">
         <Hero1 />
+        <UpcomingEvents />
       </div>
     )
   }
