@@ -1,5 +1,80 @@
-.hero1-bg-img{
-  background: url('../../../../img/elsistema.jpg')center center no-repeat;
-  background-size: cover;
+.home-page {
+  max-width: 1440px;
+  margin: auto;
+  font-family: 'Nunito';
+}
 
+.home-hero-1 {
+  height: 510px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.home-hero-1 img {
+  position: relative;
+  width: 100%;
+}
+
+.home-hero-1 aside {
+  background-color: rgba(54,54,54,0.83);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 512px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.home-hero-1 aside .social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 234px;
+}
+
+.home-hero-1 aside .social-icons img {
+  height: 52px;
+  width: 52px;
+}
+
+.home-hero-1 aside figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 377px;
+  position: relative;
+  top: -25px;
+}
+
+.home-hero-1 aside figure blockquote {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 22px;
+  line-height: 2;
+  letter-spacing: .2px;
+  margin-bottom: 53px;
+}
+
+.home-hero-1 aside figure figcaption {
+  text-align: center;
+}
+
+.home-hero-1 aside figure figcaption span {
+  display: block;
+}
+
+.home-hero-1 aside figure figcaption span:first-child {
+  font-size: 24px;
+  letter-spacing: .6px;
+}
+
+.home-hero-1 aside figure figcaption span:last-child {
+  font-size: 16px;
+  letter-spacing: 1.2px;
 }
