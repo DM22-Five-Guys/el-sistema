@@ -54,14 +54,13 @@ aside {
 	background-color: #eeeeee;
   position: absolute;
   z-index: 1;
-<<<<<<< HEAD:el-sistema-app/src/components/admin-side/app-frame/style.css
 }
 .nav-img{
   color:inherit;
   margin-left: 25px;
 }
 .nav-link{
-  height: 12.5%;
+  height: 10%;
   min-height: 64px;
   padding-left: 26px;
   display: flex;
@@ -70,31 +69,17 @@ aside {
   font-size: 18px;
   color: #4d4d4e;
   text-align: left;
-=======
-  
-
->>>>>>> master:el-sistema-app/src/components/admin-side/app-frame/app-frame.style.css
 }
 .create-new-box{
   background-color: orange;
 	color: #ffffff;
-<<<<<<< HEAD:el-sistema-app/src/components/admin-side/app-frame/style.css
 }
 .nav-link:hover{
   background-color: #ddd;
-=======
   text-align: center;
   padding: 23px;
-  margin-left: -28%;
   z-index: 20;
 
-}
-
-
-
-.nav-title{
-  padding-left: 5%;
->>>>>>> master:el-sistema-app/src/components/admin-side/app-frame/app-frame.style.css
 }
 .create-new-box:hover{
   background-color: darkorange;

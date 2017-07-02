@@ -7,8 +7,43 @@ import '../style.css';
 import camera from '../../../../../img/blue-camera.png';
 
 class AddBlog extends Component{
-  
-  contentPH = 'Write your blog content here!';
+  constructor(){
+    super();
+    this.state = {
+      file: '',
+      imagePreviewUrl: ''
+    }
+  }
+
+  handleImageChange(e) {
+    e.preventDefault();
+
+    let reader = new FileReader();
+    let file = e.target.files[0];
+
+    reader.onloadend = () => {
+      this.setState({
+        file: file,
+        imagePreviewUrl: reader.result
+      });
+    }
+    reader.readAsDataURL(file)
+  }
+
+  renderField(field){
+    const {meta: {touched, error}} =field;
+    const classN = field.name === "title" ? 'blog-title' : field.name === 'caption'? 'blog-caption' : 'nothing';
+    const className = `form-group ${touched && error ? 'has-danger' : ""}`;
+
+    return (
+      <div>
+        <label></label>
+        <input className={classN} type={field.type} {...field.input} />
+        <div className="error-message">{touched ? error:''}</div>
+        
+      </div>
+    )
+  }
   renderTitleField(field){
     return (
       <li className='blog-title-li'>
@@ -35,8 +70,17 @@ class AddBlog extends Component{
       </div>
     )
   }
+  renderFile(field){
+    return(
+      <input type="file" {...field.input} />
+    )
+  }
+
 
   onSubmit(values){
+    console.log("Values:");
+    values.image1 = this.state.imagePreviewUrl;
+    console.log(values);
     this.props.addBlog(values);
     this.props.reset(); 
   }
@@ -45,9 +89,17 @@ class AddBlog extends Component{
       this.props.reset();
     }
   }
-
   render(){
     const { handleSubmit } = this.props;
+
+    let { imagePreviewUrl } = this.state;
+    let $imagePreview = null;
+    if ( imagePreviewUrl ) {
+      $imagePreview = (<div className='blog-rectangle'><img src={imagePreviewUrl} className='camera img-responsive' alt=""></img></div>);
+    } else {
+      $imagePreview = (<div className='blog-rectangle'><img src={camera} className='camera img-responsive' alt=""></img></div>);
+    }
+
     return(
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))} className='container'>
         <div className='row'>
@@ -64,16 +116,19 @@ class AddBlog extends Component{
 
             <div className='col-md-2 rectangles'>
 
-                <div className='blog-rectangle'>
+                {/*<div className='blog-rectangle'>
                     <img src={camera} className='camera img-responsive' alt=""></img>
-                </div>
-                <input type="file"/>
+                </div>*/}
+                {$imagePreview}
+                {/*<Field name="picture1" component={this.renderFile}/>*/}
+                <Field name="picture1" type="file" component={this.renderField} onChange={(e)=>this.handleImageChange(e)}/>
                 <figcaption className='blog-picute-header'>Add Top Full Picture</figcaption>
 
                 <div className='blog-rectangle'>
                     <img src={camera} className='camera img-responsive' alt=""></img>
 
                 </div>
+                <Field name="picture2" component={this.renderFile}/>                
                 <figcaption className='blog-picute-header'>Add 2nd Full Picture</figcaption>
             </div>
         </div>
@@ -100,7 +155,6 @@ function validate(values){
   if (!values.content){
     errors.content = "⚠ Please enter some content in the blog post."
   }
-  console.log(errors);  
   return errors;
 }
 
@@ -109,5 +163,4 @@ function mapStateToProps(state) {
       user: state.user
     }
 }
-
 export default connect(mapStateToProps, { addBlog })( reduxForm({ validate, form: 'addBlog' }) ( AddBlog ));

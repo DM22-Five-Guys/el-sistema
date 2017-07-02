@@ -54,7 +54,7 @@ export function login(user){
     const config = {
         withCredentials: false
     }
-    let data = axios.post('http://localhost:3001/login', userInfo, config)
+    let data = axios.post('http://localhost:8080/login', userInfo, config)
         .then(response => {
             //console.log(response.data)
             return response.data;
@@ -73,7 +73,7 @@ export function register(user){
         withCredentials: false,
         headers: {'Authorization': getToken()}
     }
-    let data = axios.post('http://localhost:3001/register', userInfo, config)
+    let data = axios.post('http://localhost:8080/register', userInfo, config)
         .then(response => {
             return response.data;
         })
@@ -87,7 +87,7 @@ export function register(user){
 // after fist successful login user will be redirected to a new form where they will create their own password.
 export function firstLogin(user){
     const userInfo = user;
-    let data = axios.post('http://localhost:3001/update-password', userInfo)
+    let data = axios.post('http://localhost:8080/update-password', userInfo)
         .then(response => {
             return response.data
         })
@@ -99,7 +99,7 @@ export function firstLogin(user){
 
 
 export function new_test_func(){
-    let data = axios.post('http://localhost:3001/new-test')
+    let data = axios.post('http://localhost:8080/new-test')
         .then(response => response).catch(error => error)
     return {
         type: NEW_TEST,

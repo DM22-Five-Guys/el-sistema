@@ -5,8 +5,8 @@ const session = require('express-session')
 const cors = require('cors')
 const passport = require('passport')
 const config = require('./config')
-
-
+// const multiparty = require('connect-multiparty')
+// const multipartyMiddleware = multiparty();
 
 const app = module.exports = express()
 
@@ -43,7 +43,11 @@ const connection_info = config.database_info;
 
 //---------------App.use middleware-----------------------------
 app.use(express.static('../src'))
-app.use(bodyParser.json())
+// app.use(multipartyMiddleware)
+// app.use(bodyParser.json());
+app.use(bodyParser.json({limit: "50mb"}));
+app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -115,7 +119,7 @@ app.get('/users', passport.authenticate('jwt', {session:false}), userCtrl.getAll
 //     // var file = req.files.null;
 //     // console.log('--------------------', file.path);
 //     var stream = fs.createReadStream(file.path);
-//     s3fsImp.bucket = 'personalprojectmedia/images';
+//     s3fsImp.bucket = 'elsistematest/blog';
 //     return s3fsInstance.writeFile(file.originalFilename, stream).then(function(){
 //         fs.unlink(file.path, function(err){
 //             if(err){
