@@ -7,7 +7,7 @@ const aws = require('aws-sdk')
     , fs = require('fs')
     , S3FS = require('s3fs')
 // var s3fsInstance = new S3FS('elsitematest', {
-//     region: 'us-west-1',
+//     region: 'us-west-2',
 //     accessKeyId: config.aws.accessKeyId,
 //     secretAccessKey: config.aws.sectretAccess
 // })
@@ -36,7 +36,8 @@ exports.addBlog = function (req, res) {
     var params = {
         Bucket: 'elsitematest/blog',
         Key: 'imagename',
-        Body: buf,
+        Body: pic1,
+        region: 'us-west-2',    
         // Content: 'image/jpeg',
         ACL: 'public-read'
     }
