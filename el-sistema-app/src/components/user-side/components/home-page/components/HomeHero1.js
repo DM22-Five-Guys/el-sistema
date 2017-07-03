@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import heroImage from './../assets/elsistema.jpg';
-import quoteContent from './../assets/hero1quote.js';
+import heroImage from './../assets/home-hero-1.jpg';
+import content from './../assets/content';
 import facebookIcon from './../assets/facebook.png';
 import twitterIcon from './../assets/twitter.png';
 import linkedinIcon from './../assets/linkedin.png';
-
 import './../style.css';
 
 class Hero1 extends Component {
@@ -13,9 +12,9 @@ class Hero1 extends Component {
 
     this.state = {
       image: heroImage,
-      quote: quoteContent.quote,
-      quoteAuthor: quoteContent.author,
-      quoteAuthorTitle: quoteContent.authorTitle
+      quote: content.hero1.quote,
+      quoteAuthor: content.hero1.author,
+      quoteAuthorTitle: content.hero1.authorTitle
     }
   }
 
@@ -42,4 +41,5 @@ class Hero1 extends Component {
     )
   }
 }
+
 export default Hero1;
