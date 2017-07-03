@@ -60,7 +60,11 @@ massive(connection_info).then(instance => {
 const mainCtrl = require('./mainCtrl')
 const twilioCtrl = require('./twilioCtrl')
 const userCtrl = require('./userCtrl');
+
 const paymentCtrl = require('./model/paymentCtrl');
+
+const blogCtrl = require('./blogCtrl');
+
 //const nodemailerCtrl = require('./nodemailerCtrl')
 
 
@@ -92,7 +96,10 @@ app.get('/api/events/', mainCtrl.getAllEvents)
 
 app.get('/api/users', mainCtrl.getAllUsers)
 
+//---------------------Blog----------------------------
+app.post('/blog/add', blogCtrl.addBlog);
 
+//------------------Login/Auth--------------------------
 
 app.post('/register', passport.authenticate('jwt', {session:false}), userCtrl.register);
 

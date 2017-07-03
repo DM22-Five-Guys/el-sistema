@@ -60,7 +60,6 @@ class LoginForm extends Component{
             </div>
         )
     }
-
 }
 
 //  if(this.props.isLoggedIn){

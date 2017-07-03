@@ -23,7 +23,9 @@ import ContentPictures from './components/ContentPictures/ContentPictures';
 import ContentText from './components/ContentText/ContentText';
 import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
+
 //import Calendar from './calendar/Calendar';
+
 
 
 if(localStorage.id_token){
@@ -52,9 +54,9 @@ class AdminSide extends Component {
 
   render() {
     return (
-      <div className='sidebar-container'>
+      <div>
         <Header toggleSide={this.toggleSide}/>
-
+        <div className='admin-container'>
           {
             this.state.showSide
             ?
@@ -62,7 +64,7 @@ class AdminSide extends Component {
             :
             null
           }
-        <div>
+          <div className="admin-content">
               <Switch>
                 {/*register is in test mode*/}
                 <Route path="/admin/register" component={requireAuth(RegisterUserForm)}/>
@@ -78,7 +80,7 @@ class AdminSide extends Component {
                 <Route path='/admin' component={Dashboard} />
               </Switch>
           </div>
-
+        </div>
       </div>
     )
   }

@@ -11,57 +11,36 @@ import blog from '../../../img/shape.png';
 
 
 export default class Sidebar extends Component {
-
   render() {
     return (
-
         <aside className="sidebar-container">
-        <ul className='nav-links'>
-<li className='create-new-box'>
-
-  <div className="dropdown show">
-    <div className="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <img src={create}></img>Create New
-    </div>
-
-    <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a className="dropdown-item" >Action</a>
-      <a className="dropdown-item" >Another action</a>
-      <a className="dropdown-item" >Something else here</a>
-    </div>
-  </div>
-
-</li>
-          <li className='nav-link'><img src={pictures} alt={pictures}></img>
-          <Link to='/admin' className='nav-img'>Dashboard</Link>
-
-          </li>
-
-
-          <li className='nav-link'><img src={volunteers} alt={volunteers}></img><Link to='/admin/volunteers' className='nav-img'>Volunteers</Link>
-
-          </li>
-            <li className='nav-link'>  <img src={classes} alt={classes}></img><Link to='/admin/classes' className='nav-img'>Classes</Link>
-
-            </li>
-            <li className='nav-link'><img src={pictures} alt={pictures}></img><Link to='/admin/content/pictures' className='nav-img'>Content Pictures</Link>
-
-            </li>
-            <li className='nav-link'><img src={text} alt={text}></img><Link to='/admin/content/text' className='nav-img'>Content Text</Link>
-
-            </li>
-
-              <li className='nav-link'><img src={media} alt={media}></img><Link to='/admin/media' className='nav-img'>Media</Link>
-
-              </li>
-              <li className='nav-link'><img src={blog} alt={blog}></img><Link to='/admin/blog' className='nav-img'>Blog</Link>
-
-              </li>
-
-        </ul>
-
-
-           </aside>
+            <ul className='nav-links'>
+                <li className='nav-link create-new-box'><img src={create}></img>
+                    <span className='nav-img'>Create New</span>
+                </li>
+                <Link to='/admin' className='nav-link'>
+                  <img src={pictures} alt={pictures}></img><li className='nav-img'>Dashboard</li>
+                </Link>
+                <Link to='/admin/volunteers' className='nav-link'>
+                  <img src={volunteers} alt={volunteers}></img><li className='nav-img'>Volunteers</li>
+                </Link>
+                <Link to='/admin/classes' className='nav-link'>
+                  <img src={classes} alt={classes}></img><li className='nav-img'>Classes</li>
+                </Link>
+                <Link to='/admin/content/pictures' className='nav-link'>
+                  <img src={pictures} alt={pictures}></img><li className='nav-img'>Content Pictures</li>
+                </Link>
+                <Link to='/admin/content/text' className='nav-link'>
+                  <img src={text} alt={text}></img><li className='nav-img'>Content Text</li>
+                </Link>
+                <Link to='/admin/media' className='nav-link'>
+                  <img src={media} alt={media}></img><li className='nav-img'>Media</li>
+                </Link>
+                <Link to='/admin/blog' className='nav-link'>
+                  <img src={blog} alt={blog}></img><li className='nav-img'>Blog</li>
+                </Link>
+            </ul>
+        </aside>
     )
 
   }

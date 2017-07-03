@@ -1,15 +1,13 @@
 .UserSide-container {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;*/
   height: 100%;
-  overflow: scroll;
 }
 
 .UserSide-content {
   width: 100%;
   max-width: 1440px;
   margin: auto;
-  flex: 1 0 auto;
   height: 100vh;
 }
