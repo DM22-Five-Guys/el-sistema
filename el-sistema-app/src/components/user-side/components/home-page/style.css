@@ -1,5 +1,258 @@
-.hero1-bg-img{
-  background: url('../../../../img/elsistema.jpg')center center no-repeat;
-  background-size: cover;
+.home-page {
+  max-width: 1440px;
+  margin: auto;
+  font-family: 'Nunito';
+}
 
+/*home hero 1*/
+
+.home-hero-1 {
+  height: 510px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.home-hero-1 img {
+  position: relative;
+  width: 100%;
+}
+
+.home-hero-1 aside {
+  background-color: rgba(54,54,54,0.83);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 512px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.home-hero-1 aside .social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 234px;
+}
+
+.home-hero-1 aside .social-icons img {
+  height: 52px;
+  width: 52px;
+}
+
+.home-hero-1 aside figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 377px;
+  position: relative;
+  top: -25px;
+}
+
+.home-hero-1 aside figure blockquote {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 22px;
+  line-height: 2;
+  letter-spacing: .2px;
+  margin-bottom: 53px;
+}
+
+.home-hero-1 aside figure figcaption {
+  text-align: center;
+}
+
+.home-hero-1 aside figure figcaption span {
+  display: block;
+}
+
+.home-hero-1 aside figure figcaption span:first-child {
+  font-size: 24px;
+  letter-spacing: .6px;
+}
+
+.home-hero-1 aside figure figcaption span:last-child {
+  font-size: 16px;
+  letter-spacing: 1.2px;
+}
+
+/*upcoming events */
+
+.upcoming-events {
+  padding: 80px 0 250px;
+  width: 100%;
+  color: #4a4a4a;
+}
+
+.upcoming-events .container {
+  max-width: 1017px;
+  margin: 0 auto;
+}
+
+.upcoming-events .container header {
+  margin-bottom: 34px;
+}
+
+.upcoming-events .container header h2 {
+  size: 36px;
+  padding-right: 24px;
+  margin-right: 24px;
+  border-right: 1px solid #7c8e99;
+  display: inline;
+  letter-spacing: .2px;
+  line-height: 0;
+}
+
+.upcoming-events .container header input[type="button"] {
+  height: 41px;
+  width: 129px;
+  position: relative;
+  top: -4px;
+  border-style: none;
+  background-color: #edc93a;
+  font-size: 16px;
+  border-radius: 2px;
+  letter-spacing: .4px;
+  color: #fff;
+}
+
+.upcoming-events .container ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upcoming-events .container ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upcoming-events .container ul li img {
+  height: 274px;
+  width: 304px;
+}
+
+.upcoming-events .container ul li span {
+  font-size: 24px;
+  letter-spacing: .1px;
+  letter-spacing: .1px;
+  margin-top: 8px;
+}
+
+.upcoming-events .container ul li span:last-child {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+/*home hero 2*/
+
+.home-hero-2 {
+  max-width: 1208px;
+  height: 386px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 300px;
+}
+
+.home-hero-2 .hero-image-container {
+  width: 100%;
+  height: 386px;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-hero-2 img {
+  width: 100%;
+  position: relative;
+}
+
+.home-hero-2 p {
+  position: absolute;
+  top: -71px;
+  right: 0;
+  background-color: #6c8a9b;
+  padding: 20px;
+  border-radius: 2px;
+  max-width: 722px;
+  color: #fefef6;
+  height: 142px;
+  font-size: 18px;
+  letter-spacing: .1px;
+}
+
+/*info graphics section*/
+
+.info-graphics {
+  border: 1px solid black;
+  width: 100%;
+  height: 1500px;
+  padding: 0 8%;
+}
+
+.info-graphics-leftside {
+  float: left;
+  width: 50%;
+  border: 1px solid black;
+  height: 100%;
+}
+
+.info-graphics-leftside .image-1 {
+  width: 100%;
+  float: left;
+  margin-left: 9%;
+  height: 353px;
+  background-color: green;
+}
+
+.info-graphics-leftside .donation-card {
+  width: 72%;
+  height: 326px;
+  position: relative;
+  z-index: 1;
+  background-color: yellow;
+  top: -52px;
+  margin-bottom: 108px;
+}
+
+.info-graphics-leftside .registration-card {
+  width: 96%;
+  height: 290px;
+  background-color: purple;
+}
+
+.info-graphics-rightside {
+  float: right;
+  width: 50%;
+  border: 1px solid black;
+  height: 100%;
+}
+
+.info-graphics-rightside .vision-card {
+  float: right;
+  width: 90%;
+  height: 360px;
+  background-color: purple;
+  margin-top: 211px;
+}
+
+.info-graphics-rightside .image-2 {
+  height: 375.8px;
+  width: 130%;
+  float: right;
+  background-color: green;
+  margin-top: 160px;
+}
+
+.info-graphics-rightside .core-values {
+  height: 314px;
+  width: 95%;
+  float: left;
+  position: relative;
+  top: -49px;
+  background-color: yellow;
 }
