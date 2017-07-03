@@ -19,28 +19,29 @@ export default class Sidebar extends Component {
                     <span className='nav-img'>Create New</span>
                 </li>
                 <Link to='/admin' className='nav-link'>
-                  <img src={pictures}></img><li className='nav-img'>Dashboard</li>
+                  <img src={pictures} alt={pictures}></img><li className='nav-img'>Dashboard</li>
                 </Link>
                 <Link to='/admin/volunteers' className='nav-link'>
-                  <img src={volunteers}></img><li className='nav-img'>Volunteers</li>
+                  <img src={volunteers} alt={volunteers}></img><li className='nav-img'>Volunteers</li>
                 </Link>
                 <Link to='/admin/classes' className='nav-link'>
-                  <img src={classes}></img><li className='nav-img'>Classes</li>
+                  <img src={classes} alt={classes}></img><li className='nav-img'>Classes</li>
                 </Link>
                 <Link to='/admin/content/pictures' className='nav-link'>
-                  <img src={pictures}></img><li className='nav-img'>Content Picutres</li>
+                  <img src={pictures} alt={pictures}></img><li className='nav-img'>Content Pictures</li>
                 </Link>
                 <Link to='/admin/content/text' className='nav-link'>
-                  <img src={text}></img><li className='nav-img'>Content Text</li>
+                  <img src={text} alt={text}></img><li className='nav-img'>Content Text</li>
                 </Link>
                 <Link to='/admin/media' className='nav-link'>
-                  <img src={media}></img><li className='nav-img'>Media</li>
+                  <img src={media} alt={media}></img><li className='nav-img'>Media</li>
                 </Link>
                 <Link to='/admin/blog' className='nav-link'>
-                  <img src={blog}></img><li className='nav-img'>Blog</li>
+                  <img src={blog} alt={blog}></img><li className='nav-img'>Blog</li>
                 </Link>
             </ul>
         </aside>
     )
+
   }
 }

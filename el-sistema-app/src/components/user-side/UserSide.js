@@ -42,11 +42,13 @@ class UserSide extends Component {
     return toSend;
   }
 
+
   giveToLogo() {
     return {
       isHome: this.state.currentPage.path === '/home'
     }
   }
+
 
   render() {
     return (

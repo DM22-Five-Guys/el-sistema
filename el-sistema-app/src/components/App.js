@@ -23,8 +23,8 @@ class App extends Component {
      return (
       <BrowserRouter>
         <Switch>
-          <Route path='/admin' component={AdminSide} />
-          <Route path='/' component={UserSide} />
+          <Route path='/admin' component={AdminSide}/>
+            <Route path='/' component={UserSide}/>
         </Switch>
       </BrowserRouter>
 

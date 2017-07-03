@@ -1,6 +1,7 @@
-exports.createUserModel = { 
+exports.userModel = { 
   firstname: '',
   lastname: '',
+  email: '',
   profileimg: '',
   shortbio: '',
   longbio: '',

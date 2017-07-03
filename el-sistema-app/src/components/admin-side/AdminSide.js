@@ -4,6 +4,7 @@ import getToken from './components/login-page/token.service';
 import hasValidToken from './components/login-page/utils/checkToken';
 import setAuthorizationToken from './components/login-page/utils/setAuthorizationToken';
 import requireAuth from './components/login-page/AuthenticatedRoute';
+import { connect } from 'react-redux'
 
 import Header from './app-frame/Header';
 
@@ -23,13 +24,16 @@ import ContentText from './components/ContentText/ContentText';
 import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
 
+//import Calendar from './calendar/Calendar';
+
+
 
 if(localStorage.id_token){
   setAuthorizationToken(getToken());
 }
 
 
-export default class AdminSide extends Component {
+class AdminSide extends Component {
   constructor(){
     super();
     this.state={
@@ -40,6 +44,7 @@ export default class AdminSide extends Component {
   }
 
   toggleSide(){
+
     if (this.props.isLoggedIn || hasValidToken){
       this.setState({
         showSide: !this.state.showSide
@@ -80,3 +85,12 @@ export default class AdminSide extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    isLoggedIn: state.user.isLoggedIn
+  }
+}
+
+export default connect(mapStateToProps)(AdminSide)
+

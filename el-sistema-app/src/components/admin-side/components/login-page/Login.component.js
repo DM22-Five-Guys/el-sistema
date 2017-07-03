@@ -67,7 +67,6 @@ class LoginForm extends Component{
 //     }
 
 function validate(values){
-    //console.log(values);
     const errors = {}
     function emailValidator(str){
         let reg = /(\w+|\d+)\.?(\w+|\d+)@\w+\.\w{2,}/
@@ -81,14 +80,10 @@ function validate(values){
     return errors;
 }
 function mapStateToProps(state){
-    //console.log(state.user)
-    if(state.user.first_login){
-        //console.log(state.user.first_login)
-    }
     return {
         first_login: state.user.first_login,
         isLoggedIn: state.user.isLoggedIn
     }
 }
 
-export default connect(mapStateToProps, { login })(reduxForm({validate,form: 'loginForm'})(LoginForm));
+export default connect(mapStateToProps, { login })(reduxForm({validate, form: 'loginForm'})(LoginForm));

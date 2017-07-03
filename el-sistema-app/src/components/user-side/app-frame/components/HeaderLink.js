@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Router, { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class NavItem extends Component {
 
