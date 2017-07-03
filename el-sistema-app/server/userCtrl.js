@@ -1,21 +1,54 @@
 // var app = require('./index');
 const config = require('./config');
 const jwt = require('jsonwebtoken');
+const userModel = require('./model/createUser.model')
 
 
 var exports = module.exports = {
 
     register: function(req, res){
         let db = req.app.get('db');
-        console.log(req.body);
-        let first_name = req.body.first_name;
-        let last_name = req.body.last_name;
-        let job = req.body.job;
-        let email = req.body.email;
-        let short_bio = req.body.short_bio;
-        let long_bio = req.body.long_bio;
-        res.status(200).json('ok');
-        //console.log('registerFunction ', req.body);
+        let user = Object.assign({}, userModel);
+        console.log('usermodel ' ,userModel);
+        let newUser = null
+        if (req.body){
+            //console.log(req.body)
+            newUser = req.body;
+            for(props in user.userModel){
+                if(newUser.hasOwnProperty(props)){
+                    user.userModel[props] = newUser[props]
+                }
+                console.log(user.userModel)
+            }
+            
+            db.user.createUser([
+                user.userModel.firstname,
+                user.userModel.lastname,
+                user.userModel.email,
+                user.userModel.profileimg,
+                user.userModel.shortbio,
+                user.userModel.longbio,
+                user.userModel.caneditvideos,
+                user.userModel.caneditclasses,
+                user.userModel.caneditperformances,
+                user.userModel.caneditcontent,
+                user.userModel.caneditblogs,
+                user.userModel.superadmin]).then(user => {
+                return res.status(200).json({
+                    success: true,
+                    message: 'New Volunteer has been added.'
+                })
+
+            }).catch(error => console.error(error))
+        } else {
+        
+
+     
+        return res.status(501).json({
+            success:false,
+            message: "New Volunteer has not been added."
+        })
+        }
        
     },
 
@@ -30,10 +63,9 @@ var exports = module.exports = {
                 //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
                 db.user.setFirstLogin([false, user[0].id]);
                 return res.status(200).json({
+                    isLoggedIn: false,
                     success: true,
-                    firstLogin: true,
-                    token: null,
-                    user: {}
+                    firstLogin: true
                 })
             }
             if(user){
@@ -59,6 +91,7 @@ var exports = module.exports = {
                              canEditVideos: user[0].caneditvideos,
                              canEditClasses: user[0].caneditclasses,
                              canEditPerformances: user[0].caneditperformances,
+                             canEditContent: user[0].caneditcontent,
                              canEditBlogs: user[0].caneditblogs,
                              superAdmin: user[0].superadmin
                         }
@@ -77,7 +110,8 @@ var exports = module.exports = {
         const email = req.body.email;
         let password = req.body.createPassword;
         db.user.getUserByEmail([email]).then(user => {
-            if(user){
+            //console.log(user)
+            if(!user[0].firstlogin && user[0].userpassword === req.body.password){
             //console.log('user', user);
             password = config.hashPassword(password);
             db.user.updateUserPassword([password,user[0].id]).then(updatedUser => {
@@ -96,11 +130,11 @@ var exports = module.exports = {
                                 firstname: user[0].firstname,
                                 lastname: user[0].lastname,
                                 email: user[0].email,
-                                canEditVideos: caneditvideos,
-                                canEditClasses: caneditclasses,
-                                canEditPerformances: caneditperformances,
-                                canEditBlogs: caneditblogs,
-                                superAdmin: superadmin
+                                canEditVideos: user[0].caneditvideos,
+                                canEditClasses: user[0].caneditclasses,
+                                canEditPerformances: user[0].caneditperformances,
+                                canEditBlogs: user[0].caneditblogs,
+                                superAdmin: user[0].superadmin
                         }
                     })
                        
@@ -110,12 +144,14 @@ var exports = module.exports = {
                         msg: 'Wrong username/password'
                     })
                 }
-            }).catch(error => console.log(error));
+            }).catch(error => {
+                console.log(error)
+                
+            });
             
         }
         
-        }
-        ).catch(error => console.log(error))
+        }).catch(error => console.log(error))
     },
 
     getAllUsers: function(req,res){

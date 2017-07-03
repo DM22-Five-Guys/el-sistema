@@ -1,28 +1,60 @@
 import React, { Component } from 'react';
 import '../style.css';
 import camera from '../../../../../img/blue-camera.png';
+import { connect } from 'react-redux'
+import {Field, reduxForm } from 'redux-form'
+import { register } from './../../../../../reducers/users.reducer'
 
 class AddVolunteer extends Component{
+  
+        renderTextField(field){
+        return(
+            <div>
+                <input placeholder={field.placeholder} className={field.className} {...field.input} type="text" />
+            </div>
+        )
+    }
+    renderEmailField(field){
+        return(
+            <div>
+                <input placeholder={field.placeholder} {...field.input} className={field.className} type="email"/>
+            </div>
+        )
+    }
+    renderBoolFields(field){
+        return(
+        <div>
+            <label htmlFor={field.name}>{field.label}</label>
+            <input type="checkbox" {...field.input} className='permission'/>
+        </div>
+        )
+    }
+    onSubmit(values){
+        this.props.register(values)
+        this.props.reset()
+    }
+
+  // change.
   render(){
+     const { handleSubmit } = this.props;
     return(
       <div className='container'>
 
       <div className='add-volunteer-container'>
-      <h1 className='add-volunteer'>Add New Volunteer</h1>
-
-</div>
-
+          <h1 className='add-volunteer'>Add New Volunteer</h1>
+      </div>
+<form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 <div className='container '>
   <div className='row'>
     <div className='col-md-9'>
 <div className='first-last-name-container'>
 <ul className='first-last-name-ul'>
 <li className='first-name-li'>
-<input placeholder='First name' type='text' className='first-name'></input>
+<Field name="firstname" placeholder='First name' className='first-name' component={this.renderTextField}></Field>
 <div className='first-name-line' ></div>
 </li>
 <li className='last-name-li'>
-<input placeholder='Last name' type='text' className='last-name'></input>
+<Field name="lastname" placeholder='Last name' className='last-name' component={this.renderTextField}></Field>
 <div className='last-name-line'></div>
 </li>
 </ul>
@@ -30,21 +62,21 @@ class AddVolunteer extends Component{
 
 
 
-  <input placeholder='Email Address' type='email' className='email-placeholder'></input>
+  <Field name="email" placeholder='Email Address' className='email-placeholder' component={this.renderEmailField}></Field>
   <div className='email-address-line'></div>
 
 
 
-  <input placeholder='Job' type='text' className='job-placeholder'></input>
+  <Field name="job" placeholder='Job' className='job-placeholder' component={this.renderTextField}></Field>
   <div className='job-line'></div>
 
 
-  <input placeholder='Short Bio' type='text' className='short-bio-placeholder'></input>
+  <Field name="shortbio" placeholder='Short Bio' className='short-bio-placeholder' component={this.renderTextField}></Field>
   <div className='short-bio-line'></div>
 
 
 
-  <input placeholder='Long Bio' type='text' className='long-bio-placeholder'></input>
+  <Field name="longbio" placeholder='Long Bio' className='long-bio-placeholder' component={this.renderTextField}></Field>
   <div className='long-bio-line'></div>
 
 
@@ -52,22 +84,23 @@ class AddVolunteer extends Component{
   <h1 className='permissions-header'>Permissions</h1>
 <div className='checkbox-container'>
 <ul className='all-permissions'>
-<li className='permissions'><input placeholder='Blog' type='checkbox' className='permission'></input>       Blog</li>
-  <li className='permissions'><input placeholder='Videos' type='checkbox' className='permission'></input>     Videos</li>
-    <li className='permissions'><input placeholder='Classes' type='checkbox' className='permission'></input>     Classes</li>
-      <li className='permissions'><input placeholder='Performance' type='checkbox' className='permission'></input>        Performance</li>
-        <li className='permissions'><input placeholder='Content' type='checkbox' className='permission'></input>    Content</li>
+<li className='permissions'><Field name="superadmin" placeholder='All' component={this.renderBoolFields}></Field>       All</li>
+<li className='permissions'><Field name="caneditblogs" placeholder='Blog'  component={this.renderBoolFields}></Field>       Blog</li>
+  <li className='permissions'><Field name="caneditvideos" placeholder='Videos' component={this.renderBoolFields}></Field>     Videos</li>
+    <li className='permissions'><Field name="caneditclasses" placeholder='Classes'  component={this.renderBoolFields}></Field>     Classes</li>
+      <li className='permissions'><Field name="caneditperformances" placeholder='Performance'  component={this.renderBoolFields}></Field>        Performance</li>
+        <li className='permissions'><Field name="caneditcontent" placeholder='Content'  component={this.renderBoolFields}></Field>    Content</li>
 </ul>
 <div className='buttons-container'>
 <ul className='buttons'>
   <li className='list-button'>
     <div className='save-button'>
-      <p className='save-text'>SAVE</p>
+      <button className='save-text' type="submit">SAVE</button>
     </div>
     </li>
   <li className='list-button'>
     <div className='cancel-button' >
-    <p className='cancel-text'>CANCEL</p>
+    <button onClick={()=> this.props.reset()} type='button' className='cancel-text'>CANCEL</button>
     </div>
   </li>
 </ul>
@@ -85,7 +118,7 @@ class AddVolunteer extends Component{
 </div>
 </div>
 </div>
-
+</form>
 </div>
 
 
@@ -95,4 +128,4 @@ class AddVolunteer extends Component{
     )
   }
 }
-export default AddVolunteer;
+export default connect(null, { register })(reduxForm({form: 'registerUserForm'})(AddVolunteer))
