@@ -42,7 +42,7 @@ const connection_info = config.database_info;
 // s3fsInstance.create();
 
 //---------------App.use middleware-----------------------------
-app.use(express.static('../src'))
+app.use(express.static('../build'))
 // app.use(multipartyMiddleware)
 // app.use(bodyParser.json());
 app.use(bodyParser.json({limit: "50mb"}));
