@@ -107,7 +107,7 @@ app.get('/users', passport.authenticate('jwt', {session:false}), userCtrl.getAll
 
 // testing stripe for donations
 
-app.post('/charge', paymentCtrl.charge)
+app.post('/donate', paymentCtrl.charge)
 
 
 //------------------S3----------------------

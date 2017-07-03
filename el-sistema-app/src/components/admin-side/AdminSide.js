@@ -23,7 +23,7 @@ import ContentPictures from './components/ContentPictures/ContentPictures';
 import ContentText from './components/ContentText/ContentText';
 import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
-import Calendar from './calendar/Calendar';
+//import Calendar from './calendar/Calendar';
 
 
 if(localStorage.id_token){

@@ -40,7 +40,7 @@ class UserSide extends Component {
     delete toSend.contentTopMargin;
     return toSend;
   }
-
+  
   render() {
     return (
       <div className="UserSide-container">

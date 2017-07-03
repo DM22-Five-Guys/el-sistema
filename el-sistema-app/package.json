@@ -27,6 +27,7 @@
     "react-dnd-html5-backend": "^2.4.1",
     "react-dom": "^15.6.1",
     "react-fontawesome": "^1.6.1",
+    "react-iframe": "^1.0.7",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
     "react-stripe-elements": "0.0.2",
@@ -35,6 +36,7 @@
     "redux-promise": "^0.5.3",
     "rxjs": "^5.4.1",
     "s3fs": "^2.5.0",
+    "scriptly": "0.0.7",
     "stripe": "^4.23.1",
     "twilio": "^3.4.0"
   },

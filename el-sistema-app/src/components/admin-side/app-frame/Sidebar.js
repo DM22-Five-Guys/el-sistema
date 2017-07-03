@@ -25,36 +25,36 @@ export default class Sidebar extends Component {
     </div>
 
     <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a className="dropdown-item" href="#">Action</a>
-      <a className="dropdown-item" href="#">Another action</a>
-      <a className="dropdown-item" href="#">Something else here</a>
+      <a className="dropdown-item" >Action</a>
+      <a className="dropdown-item" >Another action</a>
+      <a className="dropdown-item" >Something else here</a>
     </div>
   </div>
 
 </li>
-          <li className='nav-link'><img src={pictures} ></img>
+          <li className='nav-link'><img src={pictures} alt={pictures}></img>
           <Link to='/admin' className='nav-img'>Dashboard</Link>
 
           </li>
 
 
-          <li className='nav-link'><img src={volunteers} ></img><Link to='/admin/volunteers' className='nav-img'>Volunteers</Link>
+          <li className='nav-link'><img src={volunteers} alt={volunteers}></img><Link to='/admin/volunteers' className='nav-img'>Volunteers</Link>
 
           </li>
-            <li className='nav-link'>  <img src={classes} ></img><Link to='/admin/classes' className='nav-img'>Classes</Link>
+            <li className='nav-link'>  <img src={classes} alt={classes}></img><Link to='/admin/classes' className='nav-img'>Classes</Link>
 
             </li>
-            <li className='nav-link'><img src={pictures} ></img><Link to='/admin/content/pictures' className='nav-img'>Content Pictures</Link>
+            <li className='nav-link'><img src={pictures} alt={pictures}></img><Link to='/admin/content/pictures' className='nav-img'>Content Pictures</Link>
 
             </li>
-            <li className='nav-link'><img src={text} ></img><Link to='/admin/content/text' className='nav-img'>Content Text</Link>
+            <li className='nav-link'><img src={text} alt={text}></img><Link to='/admin/content/text' className='nav-img'>Content Text</Link>
 
             </li>
 
-              <li className='nav-link'><img src={media} ></img><Link to='/admin/media' className='nav-img'>Media</Link>
+              <li className='nav-link'><img src={media} alt={media}></img><Link to='/admin/media' className='nav-img'>Media</Link>
 
               </li>
-              <li className='nav-link'><img src={blog} ></img><Link to='/admin/blog' className='nav-img'>Blog</Link>
+              <li className='nav-link'><img src={blog} alt={blog}></img><Link to='/admin/blog' className='nav-img'>Blog</Link>
 
               </li>
 
