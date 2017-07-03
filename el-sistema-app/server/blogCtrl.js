@@ -2,24 +2,29 @@ const config = require('./config')
 
 var exports = module.exports = {}
 
+
 const aws = require('aws-sdk')
     , fs = require('fs')
     , S3FS = require('s3fs')
-// var s3fsInstance = new S3FS('elsistematest', {
+// var s3fsInstance = new S3FS('elsitematest', {
+//     region: 'us-west-1',
 //     accessKeyId: config.aws.accessKeyId,
 //     secretAccessKey: config.aws.sectretAccess
 // })
 // s3fsInstance.create();
 
 aws.config.update({
-    accessKeyId: config.aws.accessKeyId,
-    secretAccessKey: config.aws.secretAccess
+    aws_access_key_id: config.aws.accessKeyId,
+    aws_secret_access_key: config.aws.secretAccess
 })
+
+console.log(aws.config);
 
 var s3 = new aws.S3()
 
 exports.addBlog = function (req, res) {
     let db = req.app.get('db');
+
     let pic1 = req.body.image1;
 
     let buf = new Buffer(pic1.replace(/^data:image\/\w+;base64,/, ""), 'base64');
@@ -29,41 +34,44 @@ exports.addBlog = function (req, res) {
     // var stream = fs.createReadStream(buf);
     // s3fsImp.bucket = 'elsistematest/blog';
     var params = {
-        Bucket: 'elsistematest/blog',
+        Bucket: 'elsitematest/blog',
         Key: 'imagename',
         Body: buf,
-        Content: 'image/jpeg',
+        // Content: 'image/jpeg',
         ACL: 'public-read'
     }
 
-    s3.upload(params, function (err, data){
+    s3.putObject(params, function (err, data){
         if(err){
+            console.log(err)
             return res.status(500).send(err)
         } else {
+            console.log('YAY!!!')
             return res.json(data)
         }
     })
 
-
-    // s3fsInstance.writeFile('file.originalFilename', stream)
+    //  return s3fsInstance.writeFile('file.originalFilename', stream)
     // .then((response)=>{
     //     console.log(response);
     //     fs.unlink(buf, function(err){
-    //         console.log(err)
-    //     })})
-
-
+    //         if (err){
+    //             console.log(err)
+    //         }
+    //     })
+    //     res.status(200).send('Yay');
+    // })
 
     // console.log('Ciao: '+req.body.image1.slice(0,100));
     
-    db.blog.add_blog([req.body.title, req.body.caption, req.body.content, "req.body.image1"]).then((blog)=>{
-        console.log(blog);
-        res.status(200).send('Blog Recieved.');
+    // db.blog.add_blog([req.body.title, req.body.caption, req.body.content, "req.body.image1"]).then((blog)=>{
+    //     console.log(blog);
+    //     res.status(200).send('Blog Recieved.');
     
-    }).catch((error)=>{
-        console.log(error);
-        res.status(400).send(error);        
-    })
+    // }).catch((error)=>{
+    //     console.log(error);
+    //     res.status(400).send(error);        
+    // })
 }
 
 // app.post('/images', (req,res) => {

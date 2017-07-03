@@ -5,8 +5,8 @@ const session = require('express-session')
 const cors = require('cors')
 const passport = require('passport')
 const config = require('./config')
-// const multiparty = require('connect-multiparty')
-// const multipartyMiddleware = multiparty();
+const multiparty = require('connect-multiparty')
+const multipartyMiddleware = multiparty();
 
 const app = module.exports = express()
 
