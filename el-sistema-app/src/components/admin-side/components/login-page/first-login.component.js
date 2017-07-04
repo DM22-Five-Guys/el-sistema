@@ -43,7 +43,7 @@ class FirstLoginForm extends Component{
         this.props.firstLogin(values)
     }
     isAuthed(){
-        if(this.props.isLoggedIn || hasValidToken){
+        if(this.props.isLoggedIn || hasValidToken()){
             return true;
         }else{
             return false;

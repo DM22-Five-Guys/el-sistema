@@ -13,6 +13,11 @@ class Header extends Component {
       redirect: false
     }
   }
+  componentWillReceiveProps(){
+    if(!this.props.loggedin && !this.props.validtoken()){
+        this.loggedOut();
+    }
+  }
   
   clickHam = function () {
     this.props.toggleSide(); 
@@ -23,8 +28,9 @@ class Header extends Component {
    this.setState({redirect:false}, ()=> console.log(this.state.redirect))
       return (
         <Redirect to='/admin/login'/>
-        )
-      }
+      )
+        
+    }
   
 
   render() {
@@ -37,8 +43,9 @@ class Header extends Component {
             </div>
             <h3 className="nav-title">El Sistema Pittsburg - Website Administration</h3>
           </div>
+          
           <div className="logout">
-            <h4 onClick={() => { this.props.logout(), this.setState({redirect: true})}}>Logout</h4>
+            <h4 onClick={() => { this.props.logout(), this.setState({redirect: true}), ()=> console.log('clicked')}}>{(this.props.loggedin || this.props.validtoken)?"Logout":''}</h4>
               {this.state.redirect === true? this.loggedOut():''}
           </div>
         </div>        
@@ -48,3 +55,8 @@ class Header extends Component {
 }
 
 export default connect(null, { logout })(Header)
+
+{/*<div className="logout">
+            <h4 onClick={() => { this.props.logout(), this.setState({redirect: true}), ()=> console.log('clicked')}}>{(this.props.loggedin || this.props.validtoken)?"Logout":''}</h4>
+              {this.state.redirect === true? this.loggedOut():''}
+          </div>*/}
