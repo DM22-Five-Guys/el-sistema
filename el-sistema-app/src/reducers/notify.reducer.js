@@ -13,10 +13,10 @@ export function sendNotification(notification) {
         headers: {'Authorization': getToken()}
     }
     let data = axios.post('http://localhost:8080/sms/bulk/'+notification.type, notification, config);
-    // return {
-    //     type: SEND_NOTIFICATION,
-    //     payload: notification
-    // }
+    return {
+        type: SEND_NOTIFICATION,
+        payload: notification
+    }
 }
 
 export default function BlogReducer(state = initialState, action ){

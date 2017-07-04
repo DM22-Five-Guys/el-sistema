@@ -63,12 +63,13 @@ exports.bulkText = function (req, res) {
 
 exports.getRecipList = function (req, res) {
     let db = req.app.get('db');
-
+    let msg = req.body.message;
+    console.log(msg)
     if (req.params.type === 'all'){
         db.notifications.get_all_recipients().then((response)=>{
             console.log(response);
             let newArr = response.map((record)=>record.phone);
-            bulkTexts(newArr, "Postman messenger!")
+            bulkTexts(newArr, msg)
             res.status(200).send("Message(s) sent.");
         })
         .catch(err=>{
@@ -78,7 +79,7 @@ exports.getRecipList = function (req, res) {
         db.notifications.get_recipients([req.params.type]).then((response)=>{
             console.log(response);
             let newArr = response.map((record)=>record.phone);
-            bulkTexts(newArr, "Postman messenger!")
+            bulkTexts(newArr, msg)
             res.status(200).send("Message(s) sent.");
         })
         .catch(err=>{
