@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import '../style.css';
 import readmore from '../../../../../img/read-more-button.png';
+import oval from '../../../../../img/oval-2.png';
+import arrow from '../../../../../img/chevron-right.png';
+import snoopy from '../../../../../img/snoopy.png';
+import patty from '../../../../../img/peanut2.png';
+import lucy from '../../../../../img/peanut5.png';
+import frank from '../../../../../img/Franklin_link.png';
+import linus from '../../../../../img/linus.png';
+import charlie from '../../../../../img/charlie.png';
+import blackBook from '../../../../../img/fill-183.png';
+import blackTwit from '../../../../../img/fill-184.png';
+import blackLinked from '../../../../../img/fill-209.png';
 
 class WhoWeAre extends Component {
   render() {
@@ -48,20 +59,68 @@ class WhoWeAre extends Component {
   <div className='row'>
     <div className='col-md-4 volunteer-box'>
       <div className='blue-bg'></div>
-<div className='white-bg'></div>
+        <ul className='volunteer-prof-button'>
+          <li><img src={charlie} className='head-prof'></img></li>
+          <li><img src={oval} className='oval'></img></li>
+          <li><img src={arrow} className='arrow-button'></img></li>
+        </ul>
+
+       <div className='white-bg'>
+         <div className='volunteer-name'>
+           <h1>Charlie Brown</h1>
+           <p>Volunteer Block Head</p>
+         </div>
+         <ul className='black-icons'>
+           <li className='black-icon'><img src={blackBook}></img></li>
+           <li className='black-icon'><img src={blackTwit}></img></li>
+           <li className='black-icon'><img src={blackLinked}></img></li>
+         </ul>
+       </div>
+
 
 
     </div>
+
     <div className='col-md-4 volunteer-box'>
       <div className='gray-bg'></div>
-      <div className='white-bg'></div>
+      <ul className='volunteer-prof-button'>
+        <li><img src={patty} className='head-prof'></img></li>
+        <li><img src={oval} className='oval'></img></li>
+        <li><img src={arrow} className='arrow-button'></img></li>
+      </ul>
+      <div className='white-bg'>
+        <div className='volunteer-name'>
+          <h1>Peppermint Patty</h1>
+          <p>Volunteer Accountant</p>
+        </div>
+        <ul className='black-icons'>
+          <li className='black-icon'><img src={blackBook}></img></li>
+          <li className='black-icon'><img src={blackTwit}></img></li>
+          <li className='black-icon'><img src={blackLinked}></img></li>
+        </ul>
+      </div>
 
 
 
     </div>
    <div className='col-md-4 volunteer-box'>
      <div className='blue-bg'></div>
-     <div className='white-bg'></div>
+       <ul className='volunteer-prof-button'>
+         <li><img src={lucy} className='head-prof'></img></li>
+         <li><img src={oval} className='oval'></img></li>
+         <li><img src={arrow} className='arrow-button'></img></li>
+       </ul>
+     <div className='white-bg'>
+       <div className='volunteer-name'>
+         <h1>Lucy van Pelt</h1>
+         <p>Volunteer Student Aid</p>
+       </div>
+       <ul className='black-icons'>
+         <li className='black-icon'><img src={blackBook}></img></li>
+         <li className='black-icon'><img src={blackTwit}></img></li>
+         <li className='black-icon'><img src={blackLinked}></img></li>
+       </ul>
+     </div>
 
 
 
@@ -71,7 +130,22 @@ class WhoWeAre extends Component {
   <div className='row'>
     <div className='col-md-4 volunteer-box'>
         <div className='gray-bg'></div>
-      <div className='white-bg'></div>
+          <ul className='volunteer-prof-button'>
+            <li><img src={frank} className='head-prof'></img></li>
+            <li><img src={oval} className='oval'></img></li>
+            <li><img src={arrow} className='arrow-button'></img></li>
+          </ul>
+      <div className='white-bg'>
+        <div className='volunteer-name'>
+        <h1>Franklin</h1>
+        <p>Volunteer Music Teacher</p>
+      </div>
+      <ul className='black-icons'>
+        <li className='black-icon'><img src={blackBook}></img></li>
+        <li className='black-icon'><img src={blackTwit}></img></li>
+        <li className='black-icon'><img src={blackLinked}></img></li>
+      </ul>
+        </div>
 
 
 
@@ -79,14 +153,44 @@ class WhoWeAre extends Component {
     </div>
     <div className='col-md-4 volunteer-box'>
       <div className='blue-bg'></div>
-      <div className='white-bg'></div>
+        <ul className='volunteer-prof-button'>
+          <li><img src={snoopy} className='head-prof'></img></li>
+          <li><img src={oval} className='oval'></img></li>
+          <li><img src={arrow} className='arrow-button'></img></li>
+        </ul>
+      <div className='white-bg'>
+        <div className='volunteer-name'>
+          <h1>Snoopy</h1>
+          <p>Volunteer Fighter Pilot</p>
+        </div>
+        <ul className='black-icons'>
+          <li className='black-icon'><img src={blackBook}></img></li>
+          <li className='black-icon'><img src={blackTwit}></img></li>
+          <li className='black-icon'><img src={blackLinked}></img></li>
+        </ul>
+      </div>
 
 
 
     </div>
    <div className='col-md-4 volunteer-box'>
      <div className='gray-bg'></div>
-     <div className='white-bg'></div>
+       <ul className='volunteer-prof-button'>
+         <li><img src={linus} className='head-prof'></img></li>
+         <li><img src={oval} className='oval'></img></li>
+         <li><img src={arrow} className='arrow-button'></img></li>
+       </ul>
+     <div className='white-bg'>
+       <div className='volunteer-name'>
+         <h1>Linus van Pelt</h1>
+         <p>Volunteer UX Designer</p>
+       </div>
+       <ul className='black-icons'>
+         <li className='black-icon'><img src={blackBook}></img></li>
+         <li className='black-icon'><img src={blackTwit}></img></li>
+         <li className='black-icon'><img src={blackLinked}></img></li>
+       </ul>
+     </div>
 
 
 

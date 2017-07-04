@@ -135,4 +135,51 @@
   width: 305px;
 	height: 198px;
 	background-color: #ffffff;
+  margin-top: -21.2%;
+}
+.head-prof{
+  margin-top: -57%;
+width: 117.2px;
+height: 118px;
+margin-left: 81%;
+}
+.volunteer-prof-button{
+display: inline-flex;
+}
+.oval{
+  margin-left: 113px;
+margin-top: -25px;
+}
+.arrow-button{
+  margin-left: -30px;
+  margin-top: -18px
+}
+.figcaption{
+  color:black;
+}
+.volunteer-name{
+text-align: center;
+padding-top: 12%;
+}
+.volunteer-name h1{
+	height: 33px;
+	font-family: Nunito;
+	font-size: 24px;
+	font-weight: 900;
+	color: #4f89ab;
+}
+.volunteer-name p{
+  height: 25px;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 500;
+	color: #4a4a4a;
+}
+.black-icons{
+  display: inline-flex;
+  margin-left: 16%;
+
+}
+.black-icon{
+  padding-left: 20px;
 }
