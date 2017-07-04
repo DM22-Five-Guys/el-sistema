@@ -10,13 +10,31 @@ class Notifications extends Component {
     constructor(){
         super();
         this.state = {
-            type: 1
+            type: null
         }
+        this.checkboxChange = this.checkboxChange.bind(this);
     }
     renderMessage(field){
         return(
             <textarea name="message" {...field.input}></textarea>
         )
+    }
+
+    renderCheckbox(field){
+        return(
+            <div>
+                <input type="checkbox" {...field.input} onChange={(e)=>{field.checkboxChange(e.target.value, field.input.name)}}></input>
+                <label>{field.label}</label>
+            </div>
+        )
+    }
+
+    checkboxChange(val, type){
+        console.log(type);
+        this.setState({
+            type: type
+        })
+        console.log(this.state.type);
     }
 
     onSubmit(values){
@@ -41,19 +59,10 @@ class Notifications extends Component {
                             <input type="text" name=""></input>
                             <br/>
                             <Field name="message" component={this.renderMessage}/>
-                            <hr/> 
-                            <div>
-                                <label>All</label>
-                                <input type="checkbox"></input>
-                            </div>
-                            <div>
-                                <label>1</label>
-                                <input type="checkbox"></input>
-                            </div>
-                            <div>
-                                <label>2</label>
-                                <input type="checkbox"></input>
-                            </div>
+                            <hr/>
+                            <Field name='all' label="All" checkboxChange={this.checkboxChange} component={this.renderCheckbox}/> 
+                            <Field name='1' label="1" checkboxChange={this.checkboxChange} component={this.renderCheckbox}/> 
+                            <Field name='2' label="2" checkboxChange={this.checkboxChange} component={this.renderCheckbox}/> 
                             <hr/> 
                             <div> 
                                 <div className='list-button'> 

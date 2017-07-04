@@ -8,6 +8,8 @@ let initialState = {
 }
 
 export function sendNotification(notification) {
+    console.log("-------Check here-------");
+    console.log(notification.message);
      const config = {
         withCredentials: false,
         headers: {'Authorization': getToken()}
@@ -19,10 +21,10 @@ export function sendNotification(notification) {
     }
 }
 
-export default function BlogReducer(state = initialState, action ){
+export default function notifyReducer(state = initialState, action ){
     switch(action.type){
         case SEND_NOTIFICATION:
-            console.log(action.payload);
+            // console.log(action.payload);
             return state
         default:
             return state;

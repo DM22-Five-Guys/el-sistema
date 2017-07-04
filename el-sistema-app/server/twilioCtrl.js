@@ -63,6 +63,7 @@ exports.bulkText = function (req, res) {
 
 exports.getRecipList = function (req, res) {
     let db = req.app.get('db');
+    console.log(req.body);
     let msg = req.body.message;
     console.log(msg)
     if (req.params.type === 'all'){
