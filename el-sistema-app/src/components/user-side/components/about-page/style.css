@@ -146,7 +146,7 @@ margin-left: 81%;
 .volunteer-prof-button{
 display: inline-flex;
 }
-.oval{
+.oval-button{
   margin-left: 113px;
 margin-top: -25px;
 }
@@ -182,4 +182,57 @@ padding-top: 12%;
 }
 .black-icon{
   padding-left: 20px;
+}
+.interested-volunteer{
+text-align: center;
+	height: 49px;
+	font-family: Roboto;
+	font-size: 36px;
+	font-weight: 300;
+	color: #4a4a4a;
+  margin-top: 10%;
+}
+.connect-volunteer{
+  margin-top: 5%;
+  margin-left: 43%;
+}
+.location{
+width: 258px;
+height: 49px;
+margin-top:13%;
+font-family: Roboto;
+font-size: 36px;
+font-weight: 300;
+letter-spacing: 3px;
+color: #4c4c4c;
+}
+.street-address1{
+	font-family: Roboto;
+	font-size: 36px;
+	font-weight: 300;
+	line-height: 1.19;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #4a4a4a;
+}
+.street-address2{
+
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.19;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #4a4a4a;
+}
+.street-address-container{
+  margin-top: 13%;
+}
+.oval-thing{
+  margin-left: 39%;
+  margin-top: -9%;
+border-radius: 350px;
+width: 250px;
+height: 260px;
+border: solid 19px #edc93a;
 }

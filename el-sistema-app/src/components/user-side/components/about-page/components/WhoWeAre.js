@@ -12,6 +12,7 @@ import charlie from '../../../../../img/charlie.png';
 import blackBook from '../../../../../img/fill-183.png';
 import blackTwit from '../../../../../img/fill-184.png';
 import blackLinked from '../../../../../img/fill-209.png';
+import connect from '../../../../../img/button-yellow.png';
 
 class WhoWeAre extends Component {
   render() {
@@ -61,7 +62,7 @@ class WhoWeAre extends Component {
       <div className='blue-bg'></div>
         <ul className='volunteer-prof-button'>
           <li><img src={charlie} className='head-prof'></img></li>
-          <li><img src={oval} className='oval'></img></li>
+          <li><img src={oval} className='oval-button'></img></li>
           <li><img src={arrow} className='arrow-button'></img></li>
         </ul>
 
@@ -85,7 +86,7 @@ class WhoWeAre extends Component {
       <div className='gray-bg'></div>
       <ul className='volunteer-prof-button'>
         <li><img src={patty} className='head-prof'></img></li>
-        <li><img src={oval} className='oval'></img></li>
+        <li><img src={oval} className='oval-button'></img></li>
         <li><img src={arrow} className='arrow-button'></img></li>
       </ul>
       <div className='white-bg'>
@@ -107,7 +108,7 @@ class WhoWeAre extends Component {
      <div className='blue-bg'></div>
        <ul className='volunteer-prof-button'>
          <li><img src={lucy} className='head-prof'></img></li>
-         <li><img src={oval} className='oval'></img></li>
+         <li><img src={oval} className='oval-button'></img></li>
          <li><img src={arrow} className='arrow-button'></img></li>
        </ul>
      <div className='white-bg'>
@@ -132,7 +133,7 @@ class WhoWeAre extends Component {
         <div className='gray-bg'></div>
           <ul className='volunteer-prof-button'>
             <li><img src={frank} className='head-prof'></img></li>
-            <li><img src={oval} className='oval'></img></li>
+            <li><img src={oval} className='oval-button'></img></li>
             <li><img src={arrow} className='arrow-button'></img></li>
           </ul>
       <div className='white-bg'>
@@ -155,7 +156,7 @@ class WhoWeAre extends Component {
       <div className='blue-bg'></div>
         <ul className='volunteer-prof-button'>
           <li><img src={snoopy} className='head-prof'></img></li>
-          <li><img src={oval} className='oval'></img></li>
+          <li><img src={oval} className='oval-button'></img></li>
           <li><img src={arrow} className='arrow-button'></img></li>
         </ul>
       <div className='white-bg'>
@@ -177,7 +178,7 @@ class WhoWeAre extends Component {
      <div className='gray-bg'></div>
        <ul className='volunteer-prof-button'>
          <li><img src={linus} className='head-prof'></img></li>
-         <li><img src={oval} className='oval'></img></li>
+         <li><img src={oval} className='oval-button'></img></li>
          <li><img src={arrow} className='arrow-button'></img></li>
        </ul>
      <div className='white-bg'>
@@ -191,12 +192,31 @@ class WhoWeAre extends Component {
          <li className='black-icon'><img src={blackLinked}></img></li>
        </ul>
      </div>
-
-
-
-
    </div>
   </div>
+<div className='interested-volunteer'>
+  <h1>Interested in becoming a volunteer?</h1>
+  </div>
+  <div className='connect-volunteer'>
+    <img src={connect}></img>
+  </div>
+  <div className='location'>
+    <h1>Our Location</h1>
+  </div>
+  <div className='street-address-container'>
+<div className='street-address1'>
+  <h1>6 Loop St, # 4 </h1>
+</div>
+<div className='street-address2'>
+  <h1>
+Pittsburgh, PA 15215</h1>
+
+</div>
+<div className='oval-thing'>
+
+</div>
+</div>
+
   </div>
 </div>
 
