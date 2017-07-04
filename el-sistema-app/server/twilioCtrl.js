@@ -9,6 +9,22 @@ var client = new twilio(accountSid, authToken);
 
 var exports = module.exports = {}
 
+function bulkTexts(numberArr, message) {
+    for (let i = 0; i < numberArr.length; i++) {
+        client.messages.create({
+            body: message,
+            to: numberArr[i],
+            from: fromNumber
+        })
+        .then((message) => {
+            console.log(`Message sent to: ${numberArr[i]}`);
+        })
+        .catch(err=>{
+            console.log(err);
+        })   
+    }
+}
+
 exports.textTest = function (req, res) {
     let message = req.params.message;
     client.messages.create({
@@ -43,4 +59,30 @@ exports.bulkText = function (req, res) {
         })   
     }
     res.status(200).send("Notification sent to recipients");
+}
+
+exports.getRecipList = function (req, res) {
+    let db = req.app.get('db');
+
+    if (req.params.type === 'all'){
+        db.notifications.get_all_recipients().then((response)=>{
+            console.log(response);
+            let newArr = response.map((record)=>record.phone);
+            bulkTexts(newArr, "Postman messenger!")
+            res.status(200).send("Message(s) sent.");
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    } else {
+        db.notifications.get_recipients([req.params.type]).then((response)=>{
+            console.log(response);
+            let newArr = response.map((record)=>record.phone);
+            bulkTexts(newArr, "Postman messenger!")
+            res.status(200).send("Message(s) sent.");
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    }
 }
