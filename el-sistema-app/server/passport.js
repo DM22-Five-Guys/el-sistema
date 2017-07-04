@@ -16,8 +16,8 @@ module.exports = function(passport){
             db.user.getUserById([jwt_payload.id])
                 .then(user => {
                     if(user){
-                        //console.log('passport User: ', user)
-                        return done(null,user)
+                        //console.log('passport User: ', user[0])
+                        return done(null, user[0])
                     }else{
                         return done(null, false)
                     }
