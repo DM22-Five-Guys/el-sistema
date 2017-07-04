@@ -1,0 +1,138 @@
+
+.who-we-are-header{
+  padding: 3%;
+}
+.who-we-are-header h1{
+  width: 228px;
+	height: 80px;
+	font-family: Roboto;
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 1.19;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+}
+.who-we-are-header p{
+  width: 1036px;
+	height: 262px;
+	font-family: Roboto;
+	font-size: 20px;
+	line-height: 1.45;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+}
+.curriculum-header{
+  padding-bottom: 5%;
+}
+.mission-header{
+  padding-bottom: 5%;
+}
+.volunteers-header{
+  padding-bottom: 5%;
+}
+.curriculum-header h1{
+  width: 895px;
+  height: 116px;
+  font-family: Roboto;
+  font-size: 30px;
+  line-height: 1.45;
+  letter-spacing: 2px;
+  color: black;
+  margin-left: 4%;
+    padding-top: 3%;
+}
+.mission-header h1{
+  width: 895px;
+	height: 116px;
+	font-family: Roboto;
+	font-size: 30px;
+	line-height: 1.45;
+	letter-spacing: 2px;
+	color: black;
+  margin-left: 4%;
+    padding-top: 3%;
+}
+.volunteers-header h1{
+  width: 895px;
+  height: 116px;
+  font-family: Roboto;
+  font-size: 30px;
+  line-height: 1.45;
+  letter-spacing: 2px;
+  color: black;
+  margin-left: 4%;
+    padding-top: 3%;
+}
+.who-we-are-header p{
+  width: 1036px;
+	height: 262px;
+	font-family: Roboto;
+	font-size: 20px;
+	line-height: 1.45;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+}
+.curriculum-header p{
+  width: 895px;
+	height: 116px;
+	font-family: Roboto;
+	font-size: 20px;
+	line-height: 1.45;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+  margin-left: 10%
+}
+.mission-header p{
+  width: 895px;
+	height: 116px;
+	font-family: Roboto;
+	font-size: 20px;
+	line-height: 1.45;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+  margin-left: 10%
+}
+.volunteers-header p{
+  width: 895px;
+  	height: 108px;
+  	font-family: Roboto;
+  	font-size: 20px;
+  	color: #4a4a4a;
+    letter-spacing: .5px;
+  margin-left: 10%
+}
+.readmore{
+  margin-left: 43%;
+  margin-top: 2%;
+}
+.parallax{
+  background: url('../../../../img/pittsburgh.jpg')center no-repeat ;
+  height: 60vh;
+  background-attachment: fixed;
+}
+.volunteer-box{
+  width: 304px;
+	height: 358px;
+  margin-top: 25px;
+  margin-left: 32px;
+	background-color: #d8d8d8;
+	box-shadow: 3px 2px 4px 0 rgba(0, 0, 0, 0.27);
+  padding-left: 0px;
+}
+.blue-bg{
+  width: 305px;
+	height: 160px;
+	background-color: #529cc5;
+
+}
+.gray-bg{
+  width: 305px;
+	height: 160px;
+	background-color: #4a4a4a;
+
+}
+.white-bg{
+  width: 305px;
+	height: 198px;
+	background-color: #ffffff;
+}
