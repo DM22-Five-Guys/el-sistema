@@ -3,7 +3,6 @@ import { Field, reduxForm} from 'redux-form'
 import { connect } from 'react-redux'
 import { completeCheckout } from './../../../../../reducers/donate.reducer';
 import './DonateMoney.style.css'
-import Iframe from 'react-iframe'
 
 class DonateMoney extends Component{  
     constructor(){
