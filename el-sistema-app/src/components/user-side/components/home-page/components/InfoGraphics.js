@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import placeholderImage1 from './../assets/violinKid.jpg';
 import placeholderImage2 from './../assets/jazzband.jpg';
-import eightNote from './../assets/8th-note.png';
+import eighthNote from './../assets/8th-note.png';
 import content from './../assets/content';
 import { Link } from 'react-router-dom';
 
@@ -42,7 +42,7 @@ class InfoGraphics extends Component {
 
           <div className="donation-card">
             <p>{this.state.donationCard}</p>
-            <Link to="/about">
+            <Link to="/support" onClick={() => this.props.updateUserSideState('/support')}>
               <input type="button" value="Support Us" />
             </Link>
           </div>
@@ -53,7 +53,9 @@ class InfoGraphics extends Component {
             <p>{this.state.registrationCard.howTo}</p>
             <p>{this.state.registrationCard.fyi}</p>
           </div>
+
         </div>
+
 
         <div className="info-graphics-rightside">
 
@@ -73,11 +75,14 @@ class InfoGraphics extends Component {
             <h4>El Sistema-Inspired Core Values</h4>
             <ul>
               {
-                this.state.coreValues.map(value => <li><img src={eightNote} alt="Eighth Note" /><span>{value}</span></li>)
+                this.state.coreValues.map(value => <li><img src={eighthNote} alt="Eighth Note" /><span>{value}</span></li>)
               }
             </ul>
-            <Link to="/about"><input type="button" value="Read More" /></Link>
+            <Link to="/about" onClick={() => this.props.updateUserSideState('/about')}>
+              <input type="button" value="Read More" />
+            </Link>
           </div>
+
         </div>
 
       </section>
