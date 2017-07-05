@@ -1,0 +1,238 @@
+
+.who-we-are-header{
+  padding: 3%;
+}
+.who-we-are-header h1{
+  width: 228px;
+	height: 80px;
+	font-family: Roboto;
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 1.19;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+}
+.who-we-are-header p{
+  width: 1036px;
+	height: 262px;
+	font-family: Roboto;
+	font-size: 20px;
+	line-height: 1.45;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+}
+.curriculum-header{
+  padding-bottom: 5%;
+}
+.mission-header{
+  padding-bottom: 5%;
+}
+.volunteers-header{
+  padding-bottom: 5%;
+}
+.curriculum-header h1{
+  width: 895px;
+  height: 116px;
+  font-family: Roboto;
+  font-size: 30px;
+  line-height: 1.45;
+  letter-spacing: 2px;
+  color: black;
+  margin-left: 4%;
+    padding-top: 3%;
+}
+.mission-header h1{
+  width: 895px;
+	height: 116px;
+	font-family: Roboto;
+	font-size: 30px;
+	line-height: 1.45;
+	letter-spacing: 2px;
+	color: black;
+  margin-left: 4%;
+    padding-top: 3%;
+}
+.volunteers-header h1{
+  width: 895px;
+  height: 116px;
+  font-family: Roboto;
+  font-size: 30px;
+  line-height: 1.45;
+  letter-spacing: 2px;
+  color: black;
+  margin-left: 4%;
+    padding-top: 3%;
+}
+.who-we-are-header p{
+  width: 1036px;
+	height: 262px;
+	font-family: Roboto;
+	font-size: 20px;
+	line-height: 1.45;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+}
+.curriculum-header p{
+  width: 895px;
+	height: 116px;
+	font-family: Roboto;
+	font-size: 20px;
+	line-height: 1.45;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+  margin-left: 10%
+}
+.mission-header p{
+  width: 895px;
+	height: 116px;
+	font-family: Roboto;
+	font-size: 20px;
+	line-height: 1.45;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+  margin-left: 10%
+}
+.volunteers-header p{
+  width: 895px;
+  	height: 108px;
+  	font-family: Roboto;
+  	font-size: 20px;
+  	color: #4a4a4a;
+    letter-spacing: .5px;
+  margin-left: 10%
+}
+.readmore{
+  margin-left: 43%;
+  margin-top: 2%;
+}
+.parallax{
+  background: url('../../../../img/pittsburgh.jpg')center no-repeat ;
+  height: 60vh;
+  background-attachment: fixed;
+}
+.volunteer-box{
+  width: 304px;
+	height: 358px;
+  margin-top: 25px;
+  margin-left: 32px;
+	background-color: #d8d8d8;
+	box-shadow: 3px 2px 4px 0 rgba(0, 0, 0, 0.27);
+  padding-left: 0px;
+}
+.blue-bg{
+  width: 305px;
+	height: 160px;
+	background-color: #529cc5;
+
+}
+.gray-bg{
+  width: 305px;
+	height: 160px;
+	background-color: #4a4a4a;
+
+}
+.white-bg{
+  width: 305px;
+	height: 198px;
+	background-color: #ffffff;
+  margin-top: -21.2%;
+}
+.head-prof{
+  margin-top: -57%;
+width: 117.2px;
+height: 118px;
+margin-left: 81%;
+}
+.volunteer-prof-button{
+display: inline-flex;
+}
+.oval-button{
+  margin-left: 113px;
+margin-top: -25px;
+}
+.arrow-button{
+  margin-left: -30px;
+  margin-top: -18px
+}
+.figcaption{
+  color:black;
+}
+.volunteer-name{
+text-align: center;
+padding-top: 12%;
+}
+.volunteer-name h1{
+	height: 33px;
+	font-family: Nunito;
+	font-size: 24px;
+	font-weight: 900;
+	color: #4f89ab;
+}
+.volunteer-name p{
+  height: 25px;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 500;
+	color: #4a4a4a;
+}
+.black-icons{
+  display: inline-flex;
+  margin-left: 16%;
+
+}
+.black-icon{
+  padding-left: 20px;
+}
+.interested-volunteer{
+text-align: center;
+	height: 49px;
+	font-family: Roboto;
+	font-size: 36px;
+	font-weight: 300;
+	color: #4a4a4a;
+  margin-top: 10%;
+}
+.connect-volunteer{
+  margin-top: 5%;
+  margin-left: 43%;
+}
+.location{
+width: 258px;
+height: 49px;
+margin-top:13%;
+font-family: Roboto;
+font-size: 36px;
+font-weight: 300;
+letter-spacing: 3px;
+color: #4c4c4c;
+}
+.street-address1{
+	font-family: Roboto;
+	font-size: 36px;
+	font-weight: 300;
+	line-height: 1.19;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #4a4a4a;
+}
+.street-address2{
+
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.19;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #4a4a4a;
+}
+.street-address-container{
+  margin-top: 13%;
+}
+.oval-thing{
+  margin-left: 39%;
+  margin-top: -9%;
+border-radius: 350px;
+width: 250px;
+height: 260px;
+border: solid 19px #edc93a;
+}

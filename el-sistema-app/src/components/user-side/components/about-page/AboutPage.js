@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import WhoWeAre from './components/WhoWeAre';
 
 class AboutPage extends Component {
   render() {
     return (
-      <h1> About Page </h1>
+      <WhoWeAre />
     )
   }
 }

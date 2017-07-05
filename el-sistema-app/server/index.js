@@ -99,6 +99,10 @@ app.get('/api/users', mainCtrl.getAllUsers)
 //---------------------Blog----------------------------
 app.post('/blog/add', blogCtrl.addBlog);
 
+//---------------------Create-Content------------------
+
+app.post('/create-content', passport.authenticate('jwt', {session: false}), mainCtrl.createContent)
+
 //------------------Login/Auth--------------------------
 
 app.post('/register', passport.authenticate('jwt', {session:false}), userCtrl.register);
