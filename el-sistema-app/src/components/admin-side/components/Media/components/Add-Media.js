@@ -12,16 +12,16 @@ class AddMedia extends Component{
     constructor(){
         super();
         this.state = {
-            type: "photo",
-            video: ""
+            type: "picture",
+            fileurl: null
         }
     }
     
 
     setType(value){
-        if(value == "photo"){
+        if(value == "picture"){
             this.setState({
-                type: "photo"
+                type: "picture"
             })
         } else {
             this.setState({
@@ -33,7 +33,7 @@ class AddMedia extends Component{
     setVideo(value){
         var url = value.replace("watch?v=", "embed/");
         this.setState({
-            video: url
+            fileurl: url
         })
     }
 
@@ -50,7 +50,7 @@ class AddMedia extends Component{
     return (
       <li className='blog-caption-li'>
           <select type='text' className='category-selector' {...field.input}>
-            <option value="photo">Photo</option>
+            <option value="picture">Picture</option>
             <option value="video">Video</option>
           </select>
           <div className='blog-caption-line'></div>
@@ -61,15 +61,23 @@ class AddMedia extends Component{
     return (
       <div>
         <h2 className='blog-content-header'>Media Description</h2>
-        <textarea placeholder='Write your description here:' type='text' className='blog-content-textarea' {...field.input}></textarea>
+        <textarea placeholder='Write your description here:' type='text' className='media-description-textarea' {...field.input}></textarea>
         <div className="error-message">{field.meta.touched?field.meta.error:''}</div>
       </div>
     )
   }
 
   onSubmit(values){
-    this.props.addBlog(values);
-    this.props.reset(); 
+//    if(this.state.type === 'video' && this.state.video){
+//        this.props.addVideo(values)
+//    } else {
+//        this.props.addPicture(values);
+//    }
+//    this.props.reset(); 
+      values.fileurl = this.state.fileurl
+      if(this.state.type === 'video'){values.mediatypeid = 2}
+      if(this.state.type === 'picture'){values.mediatypeid = 1}
+      console.log(values)
   }
   cancel(){
     if(window.confirm("⚠ Are you sure you want to discard all changes?")){
@@ -89,14 +97,14 @@ class AddMedia extends Component{
                         <Field name="title" component={this.renderTitleField}/>
                         <Field name="caption" onChange={(e) => this.setType(e.target.value)} component={this.renderCaptionField}/>
                     </ul>
-                    <Field name="content" component={this.renderContentField}/>
+                    <Field name="desc" component={this.renderContentField}/>
                     
                     <div className='blog-rectangle'>
                         <figcaption className='video-icon-text'>
-                            {this.state.type === "photo" ? "Photo" : "Video"}
+                            {this.state.type === "picture" ? "Picture" : "Video"}
                         </figcaption>
                         {
-                            this.state.type ==="photo" ? <img src={camera} className='camera img-responsive' alt=""></img> : <Iframe url={this.state.video}
+                            this.state.type === "picture" ? <img src={camera} className='camera img-responsive' alt=""></img> : <Iframe url={this.state.fileurl}
                                 width="100%"
                                 height="90%"
                                 display="initial"
@@ -105,7 +113,7 @@ class AddMedia extends Component{
                         }
                     </div>
                     {
-                        this.state.type === "photo" ? <input type="file"/> : <input onChange={(e) => this.setVideo(e.target.value)} placeholder="YouTube URL here" type="url"/>
+                        this.state.type === "picture" ? <input type="file"/> : <input onChange={(e) => this.setVideo(e.target.value)} placeholder="YouTube URL here" type="url"/>
                     }
                 </div>
             </div>
@@ -136,12 +144,12 @@ class AddMedia extends Component{
 function validate(values){
   let errors = {};
   if (!values.title){
-    errors.title = "⚠ Please enter a title for the blog post.";
+    errors.title = "⚠ Please enter a title for the media.";
   }
-  if (!values.content){
-    errors.content = "⚠ Please enter some content in the blog post."
+  if (!values.desc){
+    errors.desc = "⚠ Please enter some description of the media."
   }
-  console.log(errors);  
+//  console.log(errors);  
   return errors;
 }
 
