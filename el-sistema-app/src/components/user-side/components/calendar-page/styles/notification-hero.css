@@ -1,0 +1,56 @@
+.notification-hero {
+  width: 100%;
+  height: 360px;
+  position: relative;
+  background-color: blue;
+  z-index: 0;
+}
+
+.notification-hero .image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.notification-hero .image-container img {
+  width: 100%;
+}
+
+.notification-hero aside {
+  display: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(74,74,74,0.85);
+  height: 100%;
+  width: 474px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 65px;
+}
+
+.notification-hero aside h3 {
+  font-size: 24px;
+  margin: 52px 0 16px;
+}
+
+.notification-hero aside p {
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  opacity: .95;
+  margin-bottom: 34px;
+}
+
+.notification-hero aside input[type="button"] {
+  box-sizing: content-box;
+  height: 37px;
+  width: 126px;
+  border: solid 3px #edc93a;
+  color: #edc93a;
+  font-size: 20px;
+  opacity: .97;
+  background-color: rgba(74,74,74,0);
+  align-self: center;
+}

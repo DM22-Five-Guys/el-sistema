@@ -24,14 +24,14 @@ class UpcomingEvents extends Component {
           date: 'July 30th',
           title: 'Family Night Performance'
         }
-      ]
+      ],
     }
   }
 
   giveEvents() {
     return this.state.events.map(event => {
       return (
-        <Link to="/calendar">
+        <Link to="/calendar" onClick={() => this.props.updateUserSideState('/calendar')}>
           <li className="event">
             <img src={event.image} alt="Event" />
             <span className="event-date">{event.date}</span>
@@ -48,7 +48,7 @@ class UpcomingEvents extends Component {
         <div className="container">
           <header>
             <h2>Upcoming Events</h2>
-            <Link to="/calendar">
+            <Link to="/calendar" onClick={() => this.props.updateUserSideState('/calendar')}>
               <input type="button" value="See More" />
             </Link>
           </header>
