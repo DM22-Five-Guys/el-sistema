@@ -15,10 +15,12 @@ class Hero2 extends Component {
   render() {
     return (
       <section className="home-hero-2">
-        <div className="hero-image-container">
-          <img src={this.state.image} alt="Home Hero 2" />
+        <div className="content-container">
+          <div className="hero-image-container">
+            <img src={this.state.image} alt="Home Hero 2" />
+          </div>
+          <p>{this.state.about}</p>
         </div>
-        <p>{this.state.about}</p>
       </section>
     )
   }
