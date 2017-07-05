@@ -1,3 +1,7 @@
+.row{
+  padding: 0;
+  margin: 0;
+}
 .media-container{
   margin: auto;
   padding: 0;
@@ -42,18 +46,19 @@
 }
 .media-blocks-container{
   margin-left: 10%;
+  margin-top: 5%;
 }
 
 .five-row-block{
   display: inline-flex;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 .four-row-block{
   display: inline-flex;
-margin-left: 15%;
+margin-left: 13%;
 }
 .media-blocks{
-  width: 168px;
+width: 168px;
 height: 212px;
 border-radius: 2px;
 background-color: #ffffff;
@@ -63,4 +68,40 @@ border-style: solid;
 border-width: 0.5px;
 border-image-source: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) 80%, rgba(0, 0, 0, 0.02) 95%, rgba(0, 0, 0, 0.04));
 border-image-slice: 1;
+background-color: white;
+padding:0px;
+}
+.media-picture{
+  width: 168px;
+	height: 164px;
+}
+.media-block-header{
+  display: inline-flex;
+font-family: Roboto;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+color: #8c8c8c;
+  margin-top: 15px;
+  margin-left: 25%;
+}
+.share-img{
+  margin-top: -6px;
+  padding-left: 15%;
+}
+
+.media-buttons{
+  display: inline-flex;
+}
+.load-top-buttons-container{
+  height: 150px;
+  margin-top: 10%;
+  margin-left: 38%;
+
+}
+.back-to-top{
+  margin-left: 100%;
 }
