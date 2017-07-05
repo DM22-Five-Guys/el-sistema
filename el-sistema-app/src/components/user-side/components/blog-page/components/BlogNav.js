@@ -129,6 +129,7 @@ class BlogNav extends Component {
           <div className='notes-container'>
             <img src={notes} className='notes-img'></img>
           </div>
+          
 
 </div>
 
