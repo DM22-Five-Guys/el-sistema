@@ -66,8 +66,9 @@ exports.getRecipList = function (req, res) {
     console.log(req.body);
     let msg = req.body.message;
     console.log(msg)
-    if (req.params.type === 'all'){
-        db.notifications.get_all_recipients().then((response)=>{
+    console.log(req.body.list)
+    if (req.body.list.length === 1){
+        db.notifications.get_recipients([req.body.list[0]]).then((response)=>{
             console.log(response);
             let newArr = response.map((record)=>record.phone);
             bulkTexts(newArr, msg)
@@ -77,13 +78,18 @@ exports.getRecipList = function (req, res) {
             console.log(err);
         })
     } else {
-        db.notifications.get_recipients([req.params.type]).then((response)=>{
+        let selectArr = req.body.list.map((e)=>`typeid = ${e}`);
+        let selectString = selectArr.join(' OR ');
+        selectString = 'SELECT * FROM subscribers WHERE ' + selectString;
+        console.log('Sting param ',selectString);
+        db.run(selectString).then((response)=>{
             console.log(response);
             let newArr = response.map((record)=>record.phone);
             bulkTexts(newArr, msg)
             res.status(200).send("Message(s) sent.");
         })
         .catch(err=>{
+            console.log('Error:');
             console.log(err);
         })
     }

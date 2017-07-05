@@ -9,12 +9,15 @@ let initialState = {
 
 export function sendNotification(notification) {
     console.log("-------Check here-------");
-    console.log(notification.message);
+    let body = {};
+    body.list = notification.type;
+    body.message = notification.message;
+    console.log(body);
      const config = {
         withCredentials: false,
         headers: {'Authorization': getToken()}
     }
-    let data = axios.post('http://localhost:8080/sms/bulk/'+notification.type, notification, config);
+    let data = axios.post('http://localhost:8080/sms/bulk', body, config);
     return {
         type: SEND_NOTIFICATION,
         payload: notification
