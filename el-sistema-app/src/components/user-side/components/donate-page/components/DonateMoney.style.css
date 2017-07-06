@@ -7,3 +7,90 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 
 }
+
+.donate-money-title{
+    margin: 0px 0px 0px 40px;
+    padding-top: 25px;
+    color: #4a4a4a;
+}
+
+.amount-field{
+    display: flex;
+    background-color: pink;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.donate-money-amount{
+    margin-left: 40px; 
+	width: 99px;
+	height: 52px;
+	border-radius: 4px;
+	border: solid 1px #c6cfda;
+}
+.donate-money-slider{
+    align-self: center;
+    width: 191px;
+}
+.donate-money-amount::placeholder{
+    padding: 5px;
+    width: 50px;
+	height: 33px;
+	font-family: Avenir;
+	font-size: 24px;
+	font-weight: 300;
+	color: #4a4a4a;
+}
+
+
+.email-field{
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.donate-money-email-label{
+    margin-left: 40px;
+	font-family: Avenir;
+	font-size: 18px;
+	font-weight: 300;
+	color: #4a4a4a;
+}
+.donate-money-email{
+    margin-left: 40px;
+	width: 483px;
+	height: 52px;
+	border-radius: 4px;
+	border: solid 1px #c6cfda;
+}
+
+.donate-money-email::placeholder{
+    padding: 5px;
+    width: 50px;
+	height: 33px;
+	font-family: Avenir;
+	font-size: 24px;
+	font-weight: 300;
+	color: #4a4a4a;
+}
+
+
+.card-field{
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.donate-money-card-label{
+    margin-left: 40px;
+	font-family: Avenir;
+	font-size: 18px;
+	font-weight: 300;
+	color: #4a4a4a;
+}
+
+.donate-money-card{
+    margin-left: 40px;
+	width: 483px;
+	height: 52px;
+	border-radius: 4px;
+	border: solid 1px #c6cfda;
+}
