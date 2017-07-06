@@ -25,7 +25,7 @@ import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
 
 import NewVolunteers from './components/Volunteers/components/Add-Volunteer';
-import NewPerformances from './components/Performances/components/Add-Performance';
+import NewPerformance from './components/Performances/components/Add-Performance';
 import NewClass from './components/Classes/components/Add-Class'; // Need to make add class component?
 // import NewContent from './components/ContentText/components/'; //???????????????????
 import NewMedia from './components/Media/components/Add-Media';
@@ -74,7 +74,7 @@ class AdminSide extends Component {
                 <Route path='/admin/blog/new' component={NewBlog} />
                 <Route path='/admin/media/new' component={NewMedia} />
                 <Route path='/admin/volunteers/new' component={NewVolunteers} />
-                <Route path='/admin/performance/new' component={NewPerformances} />
+                <Route path='/admin/performance/new' component={NewPerformance} />
                 <Route path='/admin/classes/new' component={NewClass} />
 
                 <Route path="/admin/register" component={requireAuth(RegisterUserForm)}/>
