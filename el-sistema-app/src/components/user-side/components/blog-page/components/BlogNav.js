@@ -20,7 +20,7 @@ class BlogNav extends Component {
         </div>
         <div className='recent-container'>
           <div className='col-md-4 shadow-box'>
-            <img src={JazzBand} className='jazz-band'></img>
+            <img src={JazzBand} className='jazz-band' alt=""></img>
 
             <div className='details-box'>
               <ul className='shadow-box-ul'>
@@ -32,20 +32,20 @@ class BlogNav extends Component {
                   <p className='box-date shadow-box-date'>June 5th, 2017</p>
                 </li>
                 <li>
-                  <img src={share} className='share-img'></img>
+                  <img src={share} className='share-img' alt=""></img>
                 </li>
               </ul>
               <div className='box-link'>
                 El Sistema Brass Brings The Heat
               </div>
               <div className='button'>
-                <img src={oval} className='oval'></img>
-                <img src={arrow} className='arrow'></img>
+                <img src={oval} className='oval' alt=""></img>
+                <img src={arrow} className='arrow' alt=""></img>
               </div>
               <div className='profile-box'>
                 <ul className='shadow-box-ul'>
                   <li>
-                    <img src={profile} className='profile'></img>
+                    <img src={profile} className='profile' alt=""></img>
                   </li>
                   <li className='profile-name'>
                     Greg McCann
@@ -56,7 +56,7 @@ class BlogNav extends Component {
 
           </div>
           <div className='col-md-4 shadow-box'>
-            <img src={JazzBand} className='jazz-band'></img>
+            <img src={JazzBand} className='jazz-band' alt=""></img>
             <div className='details-box'>
               <ul className='shadow-box-ul'>
                 <li className='shadow-box-title shadow-box-title'>Jazz Band Fired Up</li>
@@ -67,20 +67,20 @@ class BlogNav extends Component {
                   <p className='box-date shadow-box-date'>June 5th, 2017</p>
                 </li>
                 <li>
-                  <img src={share} className='share-img'></img>
+                  <img src={share} className='share-img' alt=""></img>
                 </li>
               </ul>
               <div className='box-link'>
                 El Sistema Brass Brings The Heat
               </div>
               <div className='button'>
-                <img src={oval} className='oval'></img>
-                <img src={arrow} className='arrow'></img>
+                <img src={oval} className='oval' alt=""></img>
+                <img src={arrow} className='arrow' alt=""></img>
               </div>
               <div className='profile-box'>
                 <ul className='shadow-box-ul'>
                   <li>
-                    <img src={profile} className='profile'></img>
+                    <img src={profile} className='profile' alt=""></img>
                   </li>
                   <li className='profile-name'>
                     Greg McCann
@@ -92,7 +92,7 @@ class BlogNav extends Component {
           </div>
 
           <div className='col-md-4 shadow-box'>
-            <img src={JazzBand} className='jazz-band'></img>
+            <img src={JazzBand} className='jazz-band' alt=""></img>
             <div className='details-box'>
               <ul className='shadow-box-ul'>
                 <li className='shadow-box-title shadow-box-title'>Jazz Band Fired Up</li>
@@ -103,20 +103,20 @@ class BlogNav extends Component {
                   <p className='box-date shadow-box-date'>June 5th, 2017</p>
                 </li>
                 <li>
-                  <img src={share} className='share-img'></img>
+                  <img src={share} className='share-img' alt=""></img>
                 </li>
               </ul>
               <div className='box-link'>
                 El Sistema Brass Brings The Heat
               </div>
               <div className='button'>
-                <img src={oval} className='oval'></img>
-                <img src={arrow} className='arrow'></img>
+                <img src={oval} className='oval' alt=""></img>
+                <img src={arrow} className='arrow' alt=""></img>
               </div>
               <div className='profile-box'>
                 <ul className='shadow-box-ul'>
                   <li>
-                    <img src={profile} className='profile'></img>
+                    <img src={profile} className='profile' alt=""></img>
                   </li>
                   <li className='profile-name'>
                     Greg McCann
@@ -127,7 +127,7 @@ class BlogNav extends Component {
           </div>
 
           <div className='notes-container'>
-            <img src={notes} className='notes-img'></img>
+            <img src={notes} className='notes-img' alt=""></img>
           </div>
 
 </div>

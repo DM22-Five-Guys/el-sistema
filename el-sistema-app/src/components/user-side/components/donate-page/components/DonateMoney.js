@@ -12,7 +12,7 @@ class DonateMoney extends Component{
     renderEmailField(field){
         return(
             <div>
-                <input type="email" placeholder={field.placeholder} {...field.input} type="email"/>
+                <input type="email" placeholder={field.placeholder} {...field.input}/>
             </div>
         )
     }

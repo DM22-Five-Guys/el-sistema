@@ -19,7 +19,7 @@ export default class Header extends Component {
         <div className="nav-content">
           <div className="nav-left-side">
             <div className="hamburger" onClick={ (e) => this.props.toggleSide() }>
-              <img src={menu} className='menu-img'></img>
+              <img src={menu} className='menu-img' alt=""></img>
             </div>
             <h3 className="nav-title">El Sistema Pittsburg - Website Administration</h3>
           </div>
