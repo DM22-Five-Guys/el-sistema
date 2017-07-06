@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import './app-frame.style.css';
 import menu from '../../../img/menu.png';
 import { logout } from './../../../reducers/users.reducer';
@@ -13,7 +13,7 @@ class Header extends Component {
       redirect: false
     }
   }
-  componentWillReceiveProps(){
+  componentDidMount(){
     if(!this.props.loggedin && !this.props.validtoken()){
         this.loggedOut();
     }
