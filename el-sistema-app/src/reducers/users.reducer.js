@@ -130,6 +130,7 @@ export default function UserReducer(state = initialState, action ){
         case LOGOUT:
             clearLocalStorage();
             //console.log(action.payload);
+            console.log(Object.assign({},state, action.payload))
             return Object.assign({},state, action.payload);
         default:
             return state;
