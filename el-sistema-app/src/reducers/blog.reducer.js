@@ -13,7 +13,8 @@ export function addBlog(blog) {
         withCredentials: false,
         headers: {'Authorization': getToken()}
     }
-    let data = axios.post('http://localhost:3001/blog/add', blog, config);
+    let data = axios.post('http://localhost:8080/blog/add', blog, config);
+    console.log(data);
     return {
         type: ADD_BLOG,
         payload: blog

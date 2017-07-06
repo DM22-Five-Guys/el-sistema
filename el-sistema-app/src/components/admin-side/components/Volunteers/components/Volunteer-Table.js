@@ -36,10 +36,10 @@ class VolunteerTable extends Component {
             <input placeholder='Job' type='text' className='job-volunteer-placeholder'></input>
           </li>
           <li className='col-md-2'>
-            <img src={edit} className='edit-volunteer'></img>
+            <img src={edit} className='edit-volunteer' alt=""></img>
           </li>
           <li className='col-md-1'>
-            <img src={trash} className='delete-volunteer'></img>
+            <img src={trash} className='delete-volunteer' alt=""></img>
           </li>
 
 
@@ -60,10 +60,10 @@ class VolunteerTable extends Component {
           <input placeholder='Job' type='text' className='job-volunteer-placeholder'></input>
         </li>
         <li className='col-md-2'>
-          <img src={edit} className='edit-volunteer'></img>
+          <img src={edit} className='edit-volunteer' alt=""></img>
         </li>
         <li className='col-md-1'>
-          <img src={trash} className='delete-volunteer'></img>
+          <img src={trash} className='delete-volunteer' alt=""></img>
         </li>
 
       </ul>

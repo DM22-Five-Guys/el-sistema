@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-
+import BlogNav from './components/BlogNav';
 class BlogPage extends Component {
   render() {
     return (
-      <h1> Blog Page </h1>
+      <div>
+        <BlogNav />
+      </div>
     )
   }
 }

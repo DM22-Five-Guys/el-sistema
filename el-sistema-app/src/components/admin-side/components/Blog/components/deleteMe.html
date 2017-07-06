@@ -1,34 +1,22 @@
-<aside className="sidebar-container">
-    <ul className='nav-links'>
-        <li className='nav-link'><img src={create}></img>Create New
-        </li>
-
-        <li className='nav-link'><img src={pictures}></img>
-            <Link to='/admin' className='nav-img'>Dashboard</Link>
-        </li>
-
-        <li className='nav-link'><img src={volunteers}></img>
-            <Link to='/admin/volunteers' className='nav-img'>Volunteers</Link>
-        </li>
-
-        <li className='nav-link'> <img src={classes}></img>
-            <Link to='/admin/classes' className='nav-img'>Classes</Link>
-        </li>
-
-        <li className='nav-link'><img src={pictures}></img>
-            <Link to='/admin/content/pictures' className='nav-img'>Content Pictures</Link>
-        </li>
-
-        <li className='nav-link'><img src={text}></img>
-            <Link to='./admin/content/text' className='nav-img'>Content Text</Link>
-        </li>
-
-        <li className='nav-link'><img src={media}></img>
-            <Link to='/admin/media' className='nav-img'>Media</Link>
-        </li>
-        
-        <li className='nav-link'><img src={blog}></img>
-            <Link to='/admin/blog' className='nav-img'>Blog</Link>
-        </li>
-    </ul>
-</aside>
+<div className='container'>
+    <div className='text-content-container'>
+        <h1 className='container-fluid-text'>Send: Text Notifications</h1>
+        <div className="notification-body">
+            <form>
+                <input type="text" name=""></input>
+                <br/>
+                <textarea name="message"></textarea>
+                <hr/> {/*
+                <input type="checkbox"></input>*/}
+                <div>
+                    <label>1=></label>
+                    <input type="checkbox"></input>
+                </div>
+                <div>
+                    <label>2=></label>
+                    <input type="checkbox"></input>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

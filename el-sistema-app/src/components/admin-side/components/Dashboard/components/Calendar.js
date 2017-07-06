@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
+import createReactClass from 'create-react-class';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
-import axios from 'axios';
+// import axios from 'axios';
 
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 
@@ -16,7 +17,7 @@ const English = 'en-gb';
 const Spanish = 'es-do';
 
 
-let Calendar = React.createClass({
+let Calendar = createReactClass({
 
   getInitialState(){
     return { culture: English, events: []}

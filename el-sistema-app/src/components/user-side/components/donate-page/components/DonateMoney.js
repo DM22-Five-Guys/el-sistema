@@ -3,7 +3,6 @@ import { Field, reduxForm} from 'redux-form'
 import { connect } from 'react-redux'
 import { completeCheckout } from './../../../../../reducers/donate.reducer';
 import './DonateMoney.style.css'
-import Iframe from 'react-iframe'
 
 class DonateMoney extends Component{  
     constructor(){
@@ -13,7 +12,7 @@ class DonateMoney extends Component{
     renderEmailField(field){
         return(
             <div>
-                <input type="email" placeholder={field.placeholder} {...field.input} type="email"/>
+                <input type="email" placeholder={field.placeholder} {...field.input}/>
             </div>
         )
     }
