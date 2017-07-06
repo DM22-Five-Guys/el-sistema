@@ -7,13 +7,25 @@ import InfoGraphics from './components/InfoGraphics';
 
 class HomePage extends Component {
 
+  giveToUpcomingEvents() {
+    return {
+      updateUserSideState: this.props.updateUserSideState
+    }
+  }
+
+  giveToInfoGraphics() {
+    return {
+      updateUserSideState: this.props.updateUserSideState
+    }
+  }
+
   render() {
     return (
       <div className="home-page">
         <Hero1 />
-        <UpcomingEvents />
+        <UpcomingEvents {...this.giveToUpcomingEvents()}/>
         <Hero2 />
-        <InfoGraphics />
+        <InfoGraphics {...this.giveToInfoGraphics()}/>
       </div>
     )
   }
