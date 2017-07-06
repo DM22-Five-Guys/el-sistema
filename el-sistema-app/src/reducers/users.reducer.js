@@ -122,7 +122,8 @@ export default function UserReducer(state = initialState, action ){
             }
             return Object.assign({}, state, {isLoggedIn:action.payload.isLoggedIn, first_login: action.payload.firstLogin, token: action.payload.token, user: action.payload.user});
         case FIRST_LOGIN:
-            console.log(action.payload)
+            //console.log(action.payload)
+            storeUserData(action.payload.token, action.payload.user);
             return Object.assign({}, state, {isLoggedIn:action.payload.isLoggedIn, first_login: action.payload.firstLogin, token: action.payload.token, user: action.payload.user});
         case REGISTER:
             //console.log(action.payload)
