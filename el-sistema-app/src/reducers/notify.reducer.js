@@ -18,6 +18,7 @@ export function sendNotification(notification) {
         headers: {'Authorization': getToken()}
     }
     let data = axios.post('http://localhost:8080/sms/bulk', body, config);
+    console.log(data);
     return {
         type: SEND_NOTIFICATION,
         payload: notification

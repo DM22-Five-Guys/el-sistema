@@ -1,4 +1,4 @@
-import _ from 'lodash'
+// import _ from 'lodash'
 import {GET_EVENTS} from '../actions'
 
 export default function(state = {}, action){

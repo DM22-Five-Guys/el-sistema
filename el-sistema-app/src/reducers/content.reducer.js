@@ -1,15 +1,15 @@
 import axios from 'axios'
-import getToken from './../components/admin-side/components/login-page/token.service';
+// import getToken from './../components/admin-side/components/login-page/token.service';
 const CREATE_CONTENT = 'CREATE_CONTENT';
 const initialState = {}
 
 
 //action creator
 export function createContent(content){
-    const config = {
-        withCredentials: false,
-        headers: {'Authorization': getToken()}
-    }
+    // const config = {
+    //     withCredentials: false,
+    //     headers: {'Authorization': getToken()}
+    // }
     const data = axios.post('http://localhost:8080/create-content', content)
         .then((content) => content)
         .catch((err) => err)
