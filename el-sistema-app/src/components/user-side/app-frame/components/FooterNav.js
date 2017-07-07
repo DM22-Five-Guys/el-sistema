@@ -50,7 +50,9 @@ export default class Committed extends Component {
             )
           })}
         </ul>
-        <input type="button" value="Contact Us" className="contact-us" />
+          <input type="button" value="Contact Us" className="contact-us" />
+        
+        
       </section>
     )
   }
