@@ -2,6 +2,7 @@
   margin: auto;
   padding: 0;
   max-width: 1250px;
+  min-height: 3500px;
 }
 
 .blog-nav-header{
@@ -12,6 +13,7 @@
 	font-size: 36px;
 	font-weight: 500;
 	color: #4a4a4a;
+
 }
 .recent-post-header{
   margin-left: 6%;
@@ -46,7 +48,7 @@ color: #4a4a4a;
 .details-box{
   width: 395px;
 	height: 116px;
-	background-color: #f1f1f1;
+	background-color: #e6e6e6;
 }
 .shadow-box-title{
   font-family: Roboto;
@@ -115,4 +117,92 @@ color: #4a4a4a;
     height: 246px;
     margin-left: 42%;
     padding-top: 4%;
+}
+.recent-post-boxes{
+  height: 423px;
+  margin-top: -10%;
+  padding-top: 18%;
+}
+.year-box{
+  padding-top: 21%;
+  width: 395px;
+	height: 358px;
+	background-color: #f1f1f1;
+	box-shadow: 3px 2px 4px 0 rgba(0, 0, 0, 0.27);
+}
+.year-number{
+	opacity: 0.61;
+	font-family: Roboto;
+	font-size: 144px;
+	letter-spacing: -0px;
+	text-align: center;
+	color: #4f89ab;
+}
+.blue-tree{
+  width: 395px;
+	height: 317px;
+  margin-top: 5%;
+}
+.violin{
+  width: 395px;
+  height: 509px;;
+  margin-top: 41%
+}
+.blog-trumpet-kid{
+  width: 395px;
+  height: 317px;
+  margin-top: -8%;
+}
+.music-notes{
+width: 395px;
+height: 453px;
+margin-top: 26%;
+}
+.devmtn{
+  width:395px;
+  height: 243px;
+margin-top: 26%;
+}
+.hair{
+  width: 395px;
+  height: 317px;
+  margin-top: 40%;
+}
+.pitts{
+  width: 395px;
+  height: 317px;
+  margin-top: 290px;
+}
+.music{
+  width: 395px;
+  height: 317px;
+  margin-top: 440px;
+}
+.violin-kid{
+  width: 395px;
+  height: 317px;
+  margin-top: -33px;
+}
+.year-box-2016{
+  margin-top: 140px;
+  padding-top: 21%;
+width: 395px;
+height: 358px;
+background-color: #f1f1f1;
+-webkit-box-shadow: 3px 2px 4px 0 rgba(0, 0, 0, 0.27);
+box-shadow: 3px 2px 4px 0 rgba(0, 0, 0, 0.27);
+}
+.venezuela{
+  width: 395px;
+  height: 317px;
+}
+.conduct{
+  width: 395px;
+  height: 317px;
+  margin-top: 125px;
+}
+.sistema-image{
+  width: 395px;
+  height: 400px;
+  margin-top: 270px;
 }
