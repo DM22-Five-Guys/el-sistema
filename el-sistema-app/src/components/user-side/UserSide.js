@@ -49,6 +49,12 @@ class UserSide extends Component {
     }
   }
 
+  giveToHome() {
+    return {
+      updateUserSideState: this.updateState
+    }
+  }
+
 
   render() {
     return (
@@ -57,12 +63,12 @@ class UserSide extends Component {
         <Logo {...this.giveToLogo()}/>
           <ContentContainer topMargin={this.state.contentTopMargin}>
             <Switch>
-              <Route path='/calendar' component={CalendarPage} />
+              <Route path='/calendar' render={() => <CalendarPage></CalendarPage>} />
               <Route path='/about' component={AboutPage} />
               <Route path='/media' component={MediaPage} />
               <Route path='/blog' component={BlogPage} />
               <Route path='/support' component={DonatePage} />
-              <Route path='/home' component={HomePage} />
+              <Route path='/home' render={() => <HomePage {...this.giveToHome()}></HomePage>} />
               <Redirect from='/' to='/home' />
               <Redirect from='*' to='/home' />
             </Switch>

@@ -1,3 +1,13 @@
+.donate-page-container{
+    min-height: 100vh
+}
+
+.donate-money-outter-container{
+    margin: auto;
+    width: 80%;
+}
+
+
 .donate-title{
     color: white;
 }

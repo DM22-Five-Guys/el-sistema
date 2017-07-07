@@ -1,0 +1,15 @@
+.calendar-page {
+  width: 85%;
+  max-width: 1160px;
+  margin: 80px auto 45px;
+  font-family: 'Nunito';
+
+}
+
+.calendar-page h2 {
+  color: #4a4a4a;
+  font-size: 36px;
+  margin-left: 9%;
+  margin-bottom: 45px;
+  margin: 0 0 45px 9%;
+}

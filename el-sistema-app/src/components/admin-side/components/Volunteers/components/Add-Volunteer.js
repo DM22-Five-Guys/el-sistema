@@ -110,10 +110,10 @@ class AddVolunteer extends Component{
 </div>
 <div className='col-md-1'>
   <div className='circle'>
-    <img src={camera} className='camera img-responsive'></img>
+    <img src={camera} className='camera img-responsive' alt=""></img>
   </div>
   <div className='rectangle'>
-    <img src={camera} className='camera img-responsive'></img>
+    <img src={camera} className='camera img-responsive' alt=""></img>
   </div>
 </div>
 </div>
