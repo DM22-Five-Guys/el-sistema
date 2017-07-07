@@ -19,7 +19,7 @@ class AddMedia extends Component{
     
 
     setType(value){
-        if(value == "picture"){
+        if(value === "picture"){
             this.setState({
                 type: "picture"
             })

@@ -45,7 +45,12 @@ class Header extends Component {
           </div>
           
           <div className="logout">
-            <h4 onClick={() => { this.props.logout(), this.setState({redirect: true}), ()=> console.log('clicked')}}>{(this.props.loggedin || this.props.validtoken)?"Logout":''}</h4>
+            <h4 onClick={() => { 
+              this.props.logout();
+              this.setState({redirect: true});
+              }}>
+              {(this.props.loggedin || this.props.validtoken())?"Logout":null}
+            </h4>
               {this.state.redirect === true? this.loggedOut():''}
           </div>
         </div>        
@@ -55,8 +60,3 @@ class Header extends Component {
 }
 
 export default connect(null, { logout })(Header)
-
-{/*<div className="logout">
-            <h4 onClick={() => { this.props.logout(), this.setState({redirect: true}), ()=> console.log('clicked')}}>{(this.props.loggedin || this.props.validtoken)?"Logout":''}</h4>
-              {this.state.redirect === true? this.loggedOut():''}
-          </div>*/}
