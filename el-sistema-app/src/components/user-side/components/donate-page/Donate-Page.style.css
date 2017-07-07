@@ -2,12 +2,76 @@
     min-height: 100vh
 }
 
-.donate-money-outter-container{
-    margin: auto;
-    width: 80%;
-}
 
+.donate-page-header{
+    margin: auto;
+    width: 75vw;
+}
 
 .donate-title{
-    color: white;
+    margin-top: 90px;
+	font-family: Avenir;
+	font-size: 36px;
+	font-weight: 300;
+	color: #4a4a4a;
 }
+
+
+.donate-first-p-title{
+    padding: 60px 0px 20px 0px;
+    font-family: Avenir;
+	font-size: 20px;
+	font-weight: 500;
+	color: rgba(74, 74, 74, 0.87);
+}
+.donate-first-paragraph{
+    font-family: Avenir;
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+}
+
+.donate-second-p-title{
+    padding: 40px 0px 20px 0px;
+    font-family: Avenir;
+	font-size: 20px;
+	font-weight: 500;
+	color: rgba(74, 74, 74, 0.87);
+}
+
+.donate-second-paragraph{
+    font-family: Avenir;
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	color: #4a4a4a;
+}
+
+.donate-money-outter-container{
+    margin: 10vh auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    max-height: 94.9vh;
+}
+
+.donate-money-outter-right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.help-info{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.help-info-text{
+    font-family: Avenir;
+	font-size: 20px;
+	font-weight: 500;
+	text-align: center;
+	color: rgba(74, 74, 74, 0.87);
+}
+
+
