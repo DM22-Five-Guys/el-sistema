@@ -61,3 +61,29 @@ margin-top: 39%;
 margin-left: -206%;
 margin-top: 100%;
 }
+
+.category-selector{
+    font-size: 19px;
+    border: none;
+    height: 20px;
+    outline: none;
+    width: 100%;
+}
+
+.video-icon-text{
+    text-align: center;
+    margin-top: 6%;
+    background-color: white;
+    font-weight: bold;
+}
+
+.media-description-textarea{
+    font-size: 19px;
+    border: none;
+    width: 85%;
+    max-width: 800px;
+    outline: none;
+    resize: none;
+    height: 100px;
+    border-bottom: 1px solid gray;
+}
