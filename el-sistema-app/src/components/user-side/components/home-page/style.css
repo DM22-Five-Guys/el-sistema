@@ -1,5 +1,413 @@
-.hero1-bg-img{
-  background: url('../../../../img/elsistema.jpg')center center no-repeat;
-  background-size: cover;
+.home-page {
+  max-width: 1440px;
+  margin: auto;
+  font-family: 'Nunito';
+}
 
+/*home hero 1*/
+
+.home-hero-1 {
+  height: 510px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.home-hero-1 img {
+  position: relative;
+  width: 100%;
+}
+
+.home-hero-1 aside {
+  background-color: rgba(54,54,54,0.83);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 512px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.home-hero-1 aside .social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 234px;
+}
+
+.home-hero-1 aside .social-icons img {
+  height: 52px;
+  width: 52px;
+}
+
+.home-hero-1 aside figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 377px;
+  position: relative;
+  top: -25px;
+}
+
+.home-hero-1 aside figure blockquote {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 22px;
+  line-height: 2;
+  letter-spacing: .2px;
+  margin-bottom: 53px;
+}
+
+.home-hero-1 aside figure figcaption {
+  text-align: center;
+}
+
+.home-hero-1 aside figure figcaption span {
+  display: block;
+}
+
+.home-hero-1 aside figure figcaption span:first-child {
+  font-size: 24px;
+  letter-spacing: .6px;
+}
+
+.home-hero-1 aside figure figcaption span:last-child {
+  font-size: 16px;
+  letter-spacing: 1.2px;
+}
+
+/*upcoming events */
+
+.upcoming-events {
+  padding: 80px 0 130px;
+  width: 100%;
+  color: #4a4a4a;
+}
+
+.upcoming-events .container {
+  max-width: 1017px;
+  margin: 0 auto;
+}
+
+.upcoming-events .container header {
+  margin-bottom: 34px;
+}
+
+.upcoming-events .container header h2 {
+  size: 36px;
+  padding-right: 24px;
+  margin-right: 24px;
+  border-right: 1px solid #7c8e99;
+  display: inline;
+  letter-spacing: .2px;
+  line-height: 0;
+}
+
+.upcoming-events .container header input[type="button"] {
+  height: 41px;
+  width: 129px;
+  position: relative;
+  top: -4px;
+  border-style: none;
+  background-color: #edc93a;
+  font-size: 16px;
+  border-radius: 2px;
+  letter-spacing: .4px;
+  color: #fff;
+}
+
+.upcoming-events .container ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upcoming-events .container ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upcoming-events .container ul li img {
+  height: 274px;
+  width: 304px;
+}
+
+.upcoming-events .container ul li span {
+  font-size: 24px;
+  letter-spacing: .1px;
+  letter-spacing: .1px;
+  margin-top: 8px;
+}
+
+.upcoming-events .container ul li span:last-child {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+/*home hero 2*/
+
+.home-hero-2 {
+  width: 100%;
+  height: 686px;
+  position: relative;
+  margin-bottom: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4a4a4a;
+}
+
+.home-hero-2 .content-container {
+  width: 90%;
+  position: relative;
+}
+
+.home-hero-2 .hero-image-container {
+  width: 100%;
+  height: 386px;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-hero-2 .content-container img {
+  width: 100%;
+  position: relative;
+}
+
+.home-hero-2 .content-container p {
+  position: absolute;
+  top: -71px;
+  right: 0;
+  background-color: #6c8a9b;
+  padding: 20px;
+  border-radius: 2px;
+  max-width: 722px;
+  color: #fefef6;
+  height: 142px;
+  font-size: 18px;
+  letter-spacing: .1px;
+}
+
+/*info graphics section*/
+
+.info-graphics {
+  width: 100%;
+  height: 1500px;
+  padding: 0 5%;
+  margin-bottom: 100px;
+}
+
+.info-graphics-leftside {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  padding-bottom: 10px;
+}
+
+.info-graphics-leftside .image-1 {
+  width: 603px;
+  margin-left: 9%;
+  align-self: flex-start;
+  height: 353px;
+  overflow: hidden;
+}
+
+.info-graphics-leftside .image-1 img {
+  width: 100%;
+}
+
+.info-graphics-leftside .donation-card {
+  width: 435px;
+  align-self: flex-start;
+  position: relative;
+  z-index: 0;
+  background-color: #fff;
+  top: -52px;
+  padding: 24px;
+  margin-bottom: 108px;
+  box-shadow: 0 1px 3px 0 #6c6c6c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-graphics-leftside .donation-card p {
+  font-size: 17px;
+  letter-spacing: .6px;
+  color: #4a4a4a;
+  line-height: 1.6;
+  opacity: .8;
+}
+
+.info-graphics-leftside .donation-card input[type="button"] {
+  box-sizing: content-box;
+  background-color: inherit;
+  border: 1px solid #edc93a;
+  border-radius: 2px;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #edc93a;
+  width: 129px;
+  height: 41px;
+}
+
+.info-graphics-leftside .registration-card {
+  width: 468px;
+  height: 290px;
+  border: solid 3px #4f89ab;
+  background-color: inherit;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 139px;
+  align-self: flex-start;
+  padding: 27.5px 18.5px;
+  color: #4f89ab;
+}
+
+.info-graphics-leftside .registration-card h4 {
+  font-size: 26px;
+  letter-spacing: .1px;
+  margin: 0;
+}
+
+.info-graphics-leftside .registration-card span {
+  display: block;
+  font-size: 17px;
+  letter-spacing: .4px;
+  margin-bottom: 24px;
+  opacity: .9;
+}
+
+.info-graphics-leftside .registration-card p {
+  font-size: 16px;
+  letter-spacing: .4px;
+  opacity: .85;
+  margin-bottom: 8px;
+}
+
+.info-graphics-rightside {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+.info-graphics-rightside .vision-card-space {
+  align-self: flex-end;
+  height: 520px;
+  margin-top: 211px;
+}
+
+.info-graphics-rightside .vision-card {
+  height: 360px;
+  width: 442px;
+  padding: 22px 25px 22px 19px;
+  position: sticky;
+  top: 139px;
+  border: solid 3px #4f89ab;
+  background-color: inherit;
+  color: #4f89ab;
+}
+
+.info-graphics-rightside .vision-card h4 {
+  font-size: 24px;
+  letter-spacing: .1px;
+  margin: 0;
+}
+
+.info-graphics-rightside .vision-card span {
+  display: block;
+  font-size: 17px;
+  letter-spacing: .4px;
+  margin-bottom: 8.5px;
+  opacity: .9;
+}
+
+.info-graphics-rightside .vision-card p {
+  font-size: 16px;
+  letter-spacing: .4px;
+  opacity: .85;
+}
+
+.info-graphics-rightside .image-2 {
+  margin-top: 10px;
+  height: 375.8px;
+  width: 626px;
+  align-self: flex-end;
+  overflow: hidden;
+}
+
+.info-graphics-rightside .image-2 img {
+  width: 100%;
+}
+
+.info-graphics-rightside .core-values {
+  height: 314px;
+  width: 467.6px;
+  align-self: flex-start;
+  position: relative;
+  top: -49px;
+  left: -13%;
+  background-color: #fff;
+  box-shadow: 0 2px 3px 0 rgba(108, 108, 108, 0.5);
+  padding: 20px;
+  color: #4a4a4a;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-graphics-rightside .core-values h4 {
+  font-size: 24px;
+  letter-spacing: .1px;
+  align-self: flex-start;
+  margin-bottom: 17px;
+}
+
+.info-graphics-rightside .core-values ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 169px;
+}
+
+.info-graphics-rightside .core-values ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.info-graphics-rightside .core-values ul li img {
+  height: 32px;
+  width: 32px;
+}
+
+.info-graphics-rightside .core-values ul li span {
+  font-size: 17px;
+  letter-spacing: .6px;
+  opacity: .8;
+  margin-left: 5px;
+}
+
+.info-graphics-rightside .core-values a {
+  align-self: center;
+}
+
+.info-graphics-rightside .core-values input[type="button"] {
+  box-sizing: content-box;
+  background-color: inherit;
+  border: 1px solid #edc93a;
+  border-radius: 2px;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #edc93a;
+  width: 129px;
+  height: 41px;
 }

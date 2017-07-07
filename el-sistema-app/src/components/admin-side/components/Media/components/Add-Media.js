@@ -160,3 +160,4 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, null)( reduxForm({ validate, form: 'addMedia' }) ( AddMedia ));
+

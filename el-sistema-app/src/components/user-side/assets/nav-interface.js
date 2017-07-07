@@ -1,5 +1,3 @@
-
-
 export default {
   toSend: [
     {
@@ -76,6 +74,6 @@ export default {
 
   giveTopMargin: function(path) {
     const currentID = this.getCurrentPage(path).id;
-    return currentID === 1 ? 130 : 92.5;
+    return currentID === 1 ? -61 : 92.5;
   }
 }

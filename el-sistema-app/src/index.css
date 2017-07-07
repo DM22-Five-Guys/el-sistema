@@ -11,13 +11,11 @@ body{
   background-color: #fefef6;
 }
 
-a:visited {
-  text-decoration: none;
-}
-
+a,
 a:hover,
 a:visited,
 a:active,
 a:focus {
   text-decoration: none;
+  color: inherit;
 }

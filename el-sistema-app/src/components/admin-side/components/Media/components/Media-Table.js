@@ -37,10 +37,10 @@ class MediaTable extends Component {
             <input placeholder='title' type='text' className='title-placeholder'></input>
           </li>
           <li className='col-md-2'>
-            <img src={edit} className='edit-media'></img>
+            <img src={edit} className='edit-media' alt=""></img>
           </li>
           <li className='col-md-1'>
-            <img src={trash} className='delete-media'></img>
+            <img src={trash} className='delete-media' alt=""></img>
           </li>
 
 
@@ -61,10 +61,10 @@ class MediaTable extends Component {
           <input placeholder='title' type='text' className='title-placeholder'></input>
         </li>
         <li className='col-md-2'>
-          <img src={edit} className='edit-media'></img>
+          <img src={edit} className='edit-media' alt=""></img>
         </li>
         <li className='col-md-1'>
-          <img src={trash} className='delete-media'></img>
+          <img src={trash} className='delete-media' alt=""></img>
         </li>
 </ul>
       </div>

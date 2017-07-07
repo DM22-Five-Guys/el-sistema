@@ -24,9 +24,13 @@ import ContentText from './components/ContentText/ContentText';
 import Media from './components/Media/Media';
 import Blog from './components/Blog/Blog';
 
+import NewVolunteers from './components/Volunteers/components/Add-Volunteer';
+import NewPerformance from './components/Performances/components/Add-Performance';
+import NewClass from './components/Classes/components/Add-Class'; // Need to make add class component?
+// import NewContent from './components/ContentText/components/'; //???????????????????
+import NewMedia from './components/Media/components/Add-Media';
+import NewBlog from './components/Blog/components/Add-Blog';
 //import Calendar from './calendar/Calendar';
-
-
 
 if(localStorage.id_token){
   setAuthorizationToken(getToken());
@@ -45,7 +49,7 @@ class AdminSide extends Component {
 
   toggleSide(){
 
-    if (this.props.isLoggedIn || hasValidToken){
+    if (this.props.isLoggedIn || hasValidToken()){
       this.setState({
         showSide: !this.state.showSide
       })
@@ -55,18 +59,24 @@ class AdminSide extends Component {
   render() {
     return (
       <div>
-        <Header toggleSide={this.toggleSide}/>
+        <Header loggedin={this.props.isLoggedIn} validtoken={hasValidToken} toggleSide={this.toggleSide}/>
         <div className='admin-container'>
           {
             this.state.showSide
             ?
-            <Sidebar />
+            <Sidebar toggleSide={this.toggleSide}/>
             :
             null
           }
           <div className="admin-content">
               <Switch>
                 {/*register is in test mode*/}
+                <Route path='/admin/blog/new' component={NewBlog} />
+                <Route path='/admin/media/new' component={NewMedia} />
+                <Route path='/admin/volunteers/new' component={NewVolunteers} />
+                <Route path='/admin/performance/new' component={NewPerformance} />
+                <Route path='/admin/classes/new' component={NewClass} />
+
                 <Route path="/admin/register" component={requireAuth(RegisterUserForm)}/>
                 <Route path='/admin/first-login' component={FirstLogin}/>
                 <Route path="/admin/login" component={Login}/>
@@ -77,7 +87,10 @@ class AdminSide extends Component {
                 <Route path='/admin/content/text' component={ContentText} />
                 <Route path='/admin/media' component={Media} />
                 <Route path='/admin/blog' component={Blog} />
+
                 <Route path='/admin' component={Dashboard} />
+                {/*<Route path='/admin/content/new' component={NewContent} />*/}
+
               </Switch>
           </div>
         </div>

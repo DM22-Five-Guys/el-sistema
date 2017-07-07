@@ -1,13 +1,12 @@
 .UserSide-container {
   width: 100%;
   display: flex;
-  flex-direction: column;*/
-  height: 100%;
+  flex-direction: column;
 }
 
 .UserSide-content {
   width: 100%;
-  max-width: 1440px;
   margin: auto;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: #fefef6;
 }

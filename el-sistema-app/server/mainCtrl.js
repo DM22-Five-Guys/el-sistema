@@ -62,7 +62,28 @@ exports.getAllEvents = function(req, res) {
 }
 
 
-//--------USERS FUNCTIONS______________
+//-------Create-Content-Function--------
+//ref title, contenttypeid, description, author
+exports.createContent = function(req, res){
+    let db = req.app.get('db')
+    const author = `${req.user.firstname} ${req.user.lastname}`;
+    const title = req.body.title;
+    const description = req.body.description;
+    const type = req.body.type
+    db.content.getContentTypes([type])
+        .then((type) => {
+           db.content.createContent([title, type[0].id, description, author])
+                .then((content) => content)
+                .catch((err) => console.error(err));
+            })
+        .catch((err) => console.log(err))
+    //console.log(req.body)
+
+    res.status(200).json('ok')
+}
+
+
+//--------USERS FUNCTIONS----------------
 exports.getAllUsers = function(req, res) {
     let db = app.get('db')
     db.events.getAllUsers()
