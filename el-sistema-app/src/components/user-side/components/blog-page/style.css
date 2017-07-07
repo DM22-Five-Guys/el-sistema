@@ -52,7 +52,7 @@ color: #4a4a4a;
 }
 .shadow-box-title{
   font-family: Roboto;
-  	font-size: 20px;
+  	font-size: 17px;
   	font-weight: 900;
   	color: #4a4a4a;
 }
@@ -80,6 +80,8 @@ color: #4a4a4a;
 
 }
 .box-link{
+  width: 72%;
+height: 25px;
   padding-left: 14px;
 	font-family: Nunito;
 	font-size: 18px;
@@ -145,8 +147,9 @@ color: #4a4a4a;
 }
 .violin{
   width: 395px;
-  height: 509px;;
-  margin-top: 41%
+  height: 509px;
+  margin-top: 41%;
+  image-rendering: pixelated;
 }
 .blog-trumpet-kid{
   width: 395px;
