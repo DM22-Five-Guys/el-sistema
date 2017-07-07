@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import MediaNav from './components/MediaNav';
+
 
 class MediaPage extends Component {
   render() {
     return (
-      <h1> Media Page </h1>
+    <div>
+      <MediaNav />
+    </div>
     )
   }
 }

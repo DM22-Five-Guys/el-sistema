@@ -12,6 +12,6 @@ let hasValidToken = (function(){
         //console.log('error from hasValidToken func ', error)
         return false;
     }
-})()
+})
 
 export default hasValidToken;

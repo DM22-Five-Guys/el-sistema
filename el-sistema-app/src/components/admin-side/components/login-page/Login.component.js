@@ -32,7 +32,7 @@ class LoginForm extends Component{
         this.props.login(values)   
     }
     isAuthed(){
-            if(this.props.isLoggedIn || hasValidToken){
+            if(this.props.isLoggedIn || hasValidToken()){
             return true;
         } else {
             return false;

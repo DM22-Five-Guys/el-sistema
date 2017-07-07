@@ -49,7 +49,7 @@ class AdminSide extends Component {
 
   toggleSide(){
 
-    if (this.props.isLoggedIn || hasValidToken){
+    if (this.props.isLoggedIn || hasValidToken()){
       this.setState({
         showSide: !this.state.showSide
       })
@@ -59,7 +59,7 @@ class AdminSide extends Component {
   render() {
     return (
       <div>
-        <Header toggleSide={this.toggleSide}/>
+        <Header loggedin={this.props.isLoggedIn} validtoken={hasValidToken} toggleSide={this.toggleSide}/>
         <div className='admin-container'>
           {
             this.state.showSide

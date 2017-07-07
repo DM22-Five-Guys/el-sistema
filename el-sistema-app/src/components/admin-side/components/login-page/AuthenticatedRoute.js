@@ -10,7 +10,7 @@ export default function(ComposedComponent){
     class Authenticate extends Component{
   
         isAuthed(){
-              if(this.props.isLoggedIn || hasValidToken){
+              if(this.props.isLoggedIn || hasValidToken()){
                     //console.log('authenticated Route' , true);
                 return true;
             } else {
