@@ -15,7 +15,6 @@ import Image11 from '../../../../../img/musicNotes.jpeg';
 import Image12 from '../../../../../img/Penguins.png';
 import Image13 from '../../../../../img/violinKid.jpg';
 import Image14 from '../../../../../img/love.jpg';
-<<<<<<< HEAD
 import Image15 from '../../../../../img/hair.jpeg';
 import pitts from '../../../../../img/Pitts.jpg';
 import music from '../../../../../img/Music.png';
@@ -24,14 +23,9 @@ import venezuela from '../../../../../img/venezuela.jpg';
 import conduct from '../../../../../img/conduct.jpg';
 import devmtn from '../../../../../img/maxresdefault.jpg';
 import sistema from '../../../../../img/elsistema.jpg';
-=======
-// import Image15 from '../../../../../img/hair.jpeg';
-
->>>>>>> master
 import shareButton from '../../../../../img/share.png';
 import loadPhotos from '../../../../../img/read-more-button.png';
 import backToTop from '../../../../../img/return-to-top.png';
-
 
 class MediaNav extends Component {
   render() {
@@ -52,362 +46,365 @@ class MediaNav extends Component {
         </div>
         <div className='media-blocks-container'>
           <div className='row'>
-          <ul className='five-row-block'>
-            <li className='media-block-list-one'><div className='media-blocks  col-md-2'>
-<img alt="" src={Image1} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>3 Days</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-two'><div className='media-blocks col-md-2'>
-<img alt="" src={Image2} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>6 Days</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-three'><div className='media-blocks col-md-2'>
-<img alt="" src={Image3} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>7 Days</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-four'><div className='media-blocks col-md-2'>
-<img alt="" src={Image4} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>10 Days</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-five'><div className='media-blocks col-md-2'>
-<img alt="" src={Image5} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>23 Days</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          </ul>
-          <ul className='four-row-block'>
-            <li  className='media-block-list-one'><div className='media-blocks col-md-4'>
-<img alt="" src={Image6} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>25 Days</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-two'><div className='media-blocks col-md-4'>
-<img alt="" src={Image7} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>29 Days</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-three'><div className='media-blocks col-md-4'>
-<img alt="" src={Image8} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>1 Month</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-four'><div className='media-blocks col-md-4'>
-<img alt="" src={Image9} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          </ul>
-          <ul className='five-row-block'>
-            <li className='media-block-list-one'><div className='media-blocks col-md-2'>
-<img alt="" src={Image10} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-two'><div className='media-blocks col-md-2'>
-<img alt="" src={Image11} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>2 months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-three'><div className='media-blocks col-md-2'>
-<img alt="" src={Image12} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>2 months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-four'><div className='media-blocks col-md-2'>
-<img alt="" src={Image13} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>2 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-five'><div className='media-blocks col-md-2'>
-<img alt="" src={Image14} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>3 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          </ul>
-          <ul className='four-row-block'>
-            <li className='media-block-list-one'><div className='media-blocks col-md-4'>
-<<<<<<< HEAD
-<img src={pitts} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>3 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-two'><div className='media-blocks col-md-4'>
-<img src={music} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>3 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-three'><div className='media-blocks col-md-4'>
-<img src={sistema} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>4 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-four'><div className='media-blocks col-md-4'>
-<img src={conduct} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>4 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-<img alt="" src={Image1} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-two'><div className='media-blocks col-md-4'>
-<img alt="" src={Image1} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-three'><div className='media-blocks col-md-4'>
-<img alt="" src={Image1} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-four'><div className='media-blocks col-md-4'>
-<img alt="" src={Image1} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-              </div></li>
-          </ul>
-          <ul className='five-row-block'>
-            <li className='media-block-list-one'><div className='media-blocks col-md-2'>
-<<<<<<< HEAD
-      <img src={venezuela} className='media-picture'></img>
-      <ul className='media-block-header'>
-        <li>4 Months</li>
-        <li><img src={shareButton} className='share-img'></img></li>
-=======
-      <img alt="" src={Image1} className='media-picture'></img>
-      <ul className='media-block-header'>
-        <li>1 month</li>
-        <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-      </ul>
-            </div>
-          </li>
-          <li className='media-block-list-two'><div className='media-blocks col-md-2'>
-<<<<<<< HEAD
-<img src={violinKid} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>4 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-three'><div className='media-blocks col-md-2'>
-<img src={devmtn} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>5 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-four'><div className='media-blocks col-md-2'>
-<img src={music} className='media-picture'></img>
-=======
-<img alt="" src={Image2} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-three'><div className='media-blocks col-md-2'>
-<img alt="" src={Image2} className='media-picture'></img>
-<ul className='media-block-header'>
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-four'><div className='media-blocks col-md-2'>
-<img alt="" src={Image2} className='media-picture'></img>
->>>>>>> master
-<ul className='media-block-header'>
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
-</ul>
-            </div></li>
-          <li className='media-block-list-five'><div className='media-blocks col-md-2'>
-<img alt="" src={Image2} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>5 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
+            <ul className='five-row-block'>
+              <li className='media-block-list-one'>
+                <div className='media-blocks  col-md-2'>
+                  <img alt="" src={Image1} className='media-picture'></img>
+                  <ul className='media-block-header'>
 
-          </div></li>
-          </ul>
-          <ul className='four-row-block'>
-            <li className='media-block-list-one'><div className='media-blocks col-md-4'>
-<img alt="" src={Image2} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>6 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-two'><div className='media-blocks col-md-4'>
-<img alt="" src={Image2} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>6 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-three'><div className='media-blocks col-md-4'>
-<img alt="" src={Image2} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>7 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-            </div></li>
-          <li className='media-block-list-four'><div className='media-blocks col-md-4'>
-<img alt="" src={Image2} className='media-picture'></img>
-<ul className='media-block-header'>
-<<<<<<< HEAD
-  <li>7 Months</li>
-  <li><img src={shareButton} className='share-img'></img></li>
-=======
-  <li>1 month</li>
-  <li><img alt="" src={shareButton} className='share-img'></img></li>
->>>>>>> master
-</ul>
-              </div></li>
-          </ul>
-        </div>
-</div>
-<div className='load-top-buttons-container'>
-  <ul className='media-buttons'>
-    <li className='load-more-button'>
-      <img alt="" src={loadPhotos}></img>
-    </li>
-    <li className='back-to-top'>
-      <img alt="" src={backToTop}></img>
-    </li>
-  </ul>
-</div>
-      </div>
-    )
-  }
-}
+                    <li>3 Days</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
 
-export default MediaNav;
+
+
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-two'>
+                <div className='media-blocks col-md-2'>
+                  <img alt="" src={Image2} className='media-picture'></img>
+                  <ul className='media-block-header'>
+
+                    <li>6 Days</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-three'>
+                <div className='media-blocks col-md-2'>
+                  <img alt="" src={Image3} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>7 Days</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+
+
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-four'>
+                <div className='media-blocks col-md-2'>
+                  <img alt="" src={Image4} className='media-picture'></img>
+                  <ul className='media-block-header'>
+
+                    <li>10 Days</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+
+
+
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-five'>
+                <div className='media-blocks col-md-2'>
+                  <img alt="" src={Image5} className='media-picture'></img>
+                  <ul className='media-block-header'>
+
+                    <li>23 Days</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+
+
+
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul className='four-row-block'>
+              <li className='media-block-list-one'>
+                <div className='media-blocks col-md-4'>
+                  <img alt="" src={Image6} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>25 Days</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-two'>
+                <div className='media-blocks col-md-4'>
+                  <img alt="" src={Image7} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>29 Days</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-three'>
+                <div className='media-blocks col-md-4'>
+                  <img alt="" src={Image8} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>1 Month</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-four'>
+                <div className='media-blocks col-md-4'>
+                  <img alt="" src={Image9} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>1 month</li>
+                    <li>
+                      <img alt="" src={shareButton} className='share-img'></img>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul className='five-row-block'>
+              <li className='media-block-list-one'>
+                <div className='media-blocks col-md-2'>
+                  <img alt="" src={Image10} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>1 month</li>
+                    <li>
+                      <img alt="" src={shareButton} className='share-img'></img>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-two'>
+                <div className='media-blocks col-md-2'>
+                  <img alt="" src={Image11} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>2 months</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-three'>
+                <div className='media-blocks col-md-2'>
+                  <img alt="" src={Image12} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>2 months</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-four'>
+                <div className='media-blocks col-md-2'>
+                  <img alt="" src={Image13} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>2 Months</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-five'>
+                <div className='media-blocks col-md-2'>
+                  <img alt="" src={Image14} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>3 Months</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul className='four-row-block'>
+              <li className='media-block-list-one'>
+                <div className='media-blocks col-md-4'>
+                  <img src={pitts} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>3 Months</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-two'>
+                <div className='media-blocks col-md-4'>
+                  <img src={music} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>3 Months</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-three'>
+                <div className='media-blocks col-md-4'>
+                  <img src={sistema} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>4 Months</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className='media-block-list-four'>
+                <div className='media-blocks col-md-4'>
+                  <img src={conduct} className='media-picture'></img>
+                  <ul className='media-block-header'>
+                    <li>4 Months</li>
+                    <li>
+                      <img src={shareButton} className='share-img'></img>
+                    </li>
+                  </ul>
+
+                    <ul className='media-block-header'>
+
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+                  <ul className='five-row-block'>
+                    <li className='media-block-list-one'>
+                      <div className='media-blocks col-md-2'>
+                        <img src={venezuela} className='media-picture'></img>
+                        <ul className='media-block-header'>
+                          <li>4 Months</li>
+                          <li>
+                            <img src={shareButton} className='share-img'></img>
+                          </li>
+                        </ul>
+
+                        </div>
+                      </li>
+                      <li className='media-block-list-two'>
+                        <div className='media-blocks col-md-2'>
+                          <img src={violinKid} className='media-picture'></img>
+                          <ul className='media-block-header'>
+                            <li>4 Months</li>
+                            <li>
+                              <img src={shareButton} className='share-img'></img>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li className='media-block-list-three'>
+                        <div className='media-blocks col-md-2'>
+                          <img src={devmtn} className='media-picture'></img>
+                          <ul className='media-block-header'>
+                            <li>5 Months</li>
+                            <li>
+                              <img src={shareButton} className='share-img'></img>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li className='media-block-list-four'>
+                        <div className='media-blocks col-md-2'>
+                          <img src={music} className='media-picture'></img>
+                          <ul className='media-block-header'>
+                            <li>1 month</li>
+                            <li>
+                              <img alt="" src={shareButton} className='share-img'></img>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li className='media-block-list-three'>
+                        <div className='media-blocks col-md-2'>
+                          <img alt="" src={Image2} className='media-picture'></img>
+                          <ul className='media-block-header'>
+                            <li>1 month</li>
+                            <li>
+                              <img alt="" src={shareButton} className='share-img'></img>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+
+
+                    </ul>
+
+                    <ul className='four-row-block'>
+                      <li className='media-block-list-one'>
+                        <div className='media-blocks col-md-4'>
+                          <img alt="" src={Image2} className='media-picture'></img>
+                          <ul className='media-block-header'>
+                            <li>6 Months</li>
+                            <li>
+                              <img src={shareButton} className='share-img'></img>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </li>
+                      <li className='media-block-list-two'>
+                        <div className='media-blocks col-md-4'>
+                          <img alt="" src={Image2} className='media-picture'></img>
+                          <ul className='media-block-header'>
+                            <li>6 Months</li>
+                            <li>
+                              <img src={shareButton} className='share-img'></img>
+                            </li>
+
+
+                          </ul>
+                        </div>
+                      </li>
+                      <li className='media-block-list-three'>
+                        <div className='media-blocks col-md-4'>
+                          <img alt="" src={Image2} className='media-picture'></img>
+                          <ul className='media-block-header'>
+                            <li>7 Months</li>
+                            <li>
+                              <img src={shareButton} className='share-img'></img>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </li>
+                      <li className='media-block-list-four'>
+                        <div className='media-blocks col-md-4'>
+                          <img alt="" src={Image2} className='media-picture'></img>
+                          <ul className='media-block-header'>
+                            <li>7 Months</li>
+                            <li>
+                              <img src={shareButton} className='share-img'></img>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className='load-top-buttons-container'>
+                  <ul className='media-buttons'>
+                    <li className='load-more-button'>
+                      <img alt="" src={loadPhotos}></img>
+                    </li>
+                    <li className='back-to-top'>
+                      <img alt="" src={backToTop}></img>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            )
+          }
+          }
+          export default MediaNav
