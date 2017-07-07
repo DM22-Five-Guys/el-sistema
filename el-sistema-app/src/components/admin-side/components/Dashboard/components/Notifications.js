@@ -23,7 +23,9 @@ class Notifications extends Component {
             <div>
                 <label>Message</label> 
                 <br/>           
-                <textarea className="message-box" name="message" {...field.input}></textarea>
+                <textarea className="message-box" name="message" {...field.input}
+                placeholder="Your message will go here with a maximum of 140 characters. Not because we are copying Twitter. Just because."
+                ></textarea>
             </div>
         )
     }
@@ -72,7 +74,7 @@ class Notifications extends Component {
 
     onSubmit(values){
         console.log(values)
-        let tempArr = this.state.type.slice(0);
+        let tempArr = [];
         if (this.state.c1){
             tempArr.push('1');
         }
@@ -125,7 +127,6 @@ class Notifications extends Component {
                                 <Field name='c1' val={this.state.c1} label="1" checkboxChange={this.checkboxChange} component={this.renderCheckbox}/> 
                                 <Field name='c2' val={this.state.c2} label="2" checkboxChange={this.checkboxChange} component={this.renderCheckbox}/>
                             </div>
-                            <hr/> 
                             <div className="button-container"> 
                                 <div className='list-button'> 
                                     <button type="button" className='cancel-button cancel-text' onClick={(e)=>this.cancel()}>CANCEL</button>                         
