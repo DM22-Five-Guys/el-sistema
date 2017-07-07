@@ -1,0 +1,74 @@
+.volunteer-signup-container{
+    width: 562px;
+	height: 434px;
+	border-radius: 6px;
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.volunteer-signup-title{
+    padding: 16px 0px 0px 40px;
+    font-family: Avenir;
+	font-size: 36px;
+	font-weight: 300;
+	color: #4a4a4a;
+}
+.volunteer-signup-name{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    text-align: left;
+    padding: 12px 40px;
+    
+}
+.volunteer-signup-name-label{
+	font-family: Avenir;
+	font-size: 18px;
+	font-weight: 300;
+	color: #4a4a4a;
+}
+
+.volunteer-name-field{
+    width: 223px;
+	height: 52px;
+	border-radius: 4px;
+	border: solid 1px #c6cfda;
+}
+
+
+
+.volunteer-signup-email{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0px 6px 40px;
+    /*text-align: left;*/
+}
+
+.volunteer-signup-email-label{
+	font-family: Avenir;
+	font-size: 18px;
+	font-weight: 300;
+	color: #4a4a4a;
+}
+.volunteer-email-field{
+    width: 223px;
+	height: 52px;
+	border-radius: 4px;
+	border: solid 1px #c6cfda;
+}
+
+
+.volunteer-button-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 33px;
+}
+
+.volunteer-donate-btn{
+  width: 404px;
+	height: 54px;
+	border-radius: 2px;
+	background-color: #4a90e2;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+  color: white;
+}

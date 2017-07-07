@@ -89,6 +89,7 @@ app.post('/sms/bulk', twilioCtrl.getRecipList);
 
 //--------------------Database--------------------------
 app.get('/api/events/week', mainCtrl.getCurrentWeekEvents)
+app.get('/api/events/weekclasses', mainCtrl.getClassesByWeek)
 app.get('/api/events/month/:num', mainCtrl.getEventsByMonth)
 app.get('/api/events/classes', mainCtrl.getClasses)
 app.get('/api/events/performances', mainCtrl.getPerformances)
@@ -102,6 +103,10 @@ app.post('/blog/add', blogCtrl.addBlog);
 //---------------------Create-Content------------------
 
 app.post('/create-content', passport.authenticate('jwt', {session: false}), mainCtrl.createContent)
+
+//---------------------Volunteer-Signup-----------------
+
+app.post('/volunteer-signup', mainCtrl.addVolunteers)
 
 //------------------Login/Auth--------------------------
 

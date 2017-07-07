@@ -42,6 +42,15 @@ exports.getClasses = function(req, res) {
     }).catch(err => console.log(err))
 }
 
+exports.getClassesByWeek = function(req, res) {
+    let db = app.get('db')
+    db.events.getCurrentWeekClasses()
+    .then(results => {
+        console.log(results)
+        res.status(200).json(results)
+    }).catch(err => console.log(err))
+}
+
 exports.getPerformances = function(req, res) {
     let db = app.get('db')
     db.events.getPerformances()
@@ -61,6 +70,27 @@ exports.getAllEvents = function(req, res) {
     }).catch(err => console.log(err))
 }
 
+//-------Add-Possible-Volunteers--------
+
+exports.addVolunteers = function(req, res){
+    let db = req.app.get('db');
+    const email = req.body.email;
+    const name = req.body.name;
+    db.volunteers.addVolunteers([email, name])
+        .then((response) => {
+            return res.status(200).json({
+                success: true,
+                message: "Thank you for registering"
+            })
+        })
+        .catch((error) => {
+            return res.status(501).json({
+                success: false,
+                message: "There was a problem while trying to sign-up, please try again later."
+            })
+        })
+
+}
 
 //-------Create-Content-Function--------
 //ref title, contenttypeid, description, author
