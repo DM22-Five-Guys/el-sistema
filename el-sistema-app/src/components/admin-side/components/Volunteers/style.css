@@ -276,13 +276,15 @@ height: 35px;
 border-radius: 3px;
 background-color: #4f89ab;
 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+text-align: center;
 }
 .save-text{
   font-family: Roboto;
- padding-top: 8px;
+ padding-top: 8px !important;
 	font-size: 16px;
 	text-align: center;
 	color: #ffffff;
+  background-color: transparent;
 }
 .buttons{
   margin-top:50px;
@@ -293,13 +295,15 @@ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
 	height: 35px;
 	border-radius: 3px;
 	background-color: #eaeaea;
-margin-left: 25%;
+  margin-left: 25%;
+  text-align: center;
 }
 .cancel-text{
   font-family: Roboto;
- padding-top: 8px;
+ padding-top: 8px !important;
 	font-size: 16px;
 	text-align: center;
 	color: #a8a8a8;
+  background-color: transparent;
 
 }
