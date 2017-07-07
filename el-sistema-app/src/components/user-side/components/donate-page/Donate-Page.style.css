@@ -49,11 +49,17 @@
 }
 
 .donate-money-outter-container{
-    margin: auto;
+    margin: 10vh auto;
     width: 80%;
     display: flex;
     justify-content: space-around;
-    background-color: pink;
+    max-height: 94.9vh;
+}
+
+.donate-money-outter-right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .help-info{
     margin-top: 40px;

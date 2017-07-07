@@ -103,6 +103,10 @@ app.post('/blog/add', blogCtrl.addBlog);
 
 app.post('/create-content', passport.authenticate('jwt', {session: false}), mainCtrl.createContent)
 
+//---------------------Volunteer-Signup-----------------
+
+app.post('/volunteer-signup', mainCtrl.addVolunteers)
+
 //------------------Login/Auth--------------------------
 
 app.post('/register', passport.authenticate('jwt', {session:false}), userCtrl.register);

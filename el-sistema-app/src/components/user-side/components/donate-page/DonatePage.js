@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DonateMoney from './components/DonateMoney';
 import DonateInstrument from './components/DonateInstrument';
+import VolunteerSignUp from './components/VolunteerSignUp';
 
 import './Donate-Page.style.css';
 
@@ -28,7 +29,11 @@ class DonatePage extends Component {
           
           <div className="donate-money-outter-container">
             <DonateMoney/>
-            <DonateInstrument/>
+            <div className="donate-money-outter-right-container">
+                <DonateInstrument/>
+                <VolunteerSignUp/>
+            </div>
+            
           </div> {/* end of donate-money-outter-container */}
           <div className="donate-instrument-outter-container">
               

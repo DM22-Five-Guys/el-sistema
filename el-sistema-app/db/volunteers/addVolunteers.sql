@@ -1,0 +1,1 @@
+INSERT INTO pendingvolunteers(email, volunteername) VALUES($1, $2);
