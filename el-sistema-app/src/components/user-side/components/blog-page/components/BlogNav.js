@@ -68,10 +68,10 @@ class BlogNav extends Component {
 
           </div>
           <div className='col-md-4 shadow-box'>
-            <img src={JazzBand} className='jazz-band' alt=""></img>
+            <img src={pitts} className='jazz-band' alt=""></img>
             <div className='details-box'>
               <ul className='shadow-box-ul'>
-                <li className='shadow-box-title shadow-box-title'>Jazz Band Fired Up</li>
+                <li className='shadow-box-title shadow-box-title'>Spring Performance</li>
                 <li>
                   <div className='details-line'></div>
                 </li>
@@ -83,7 +83,7 @@ class BlogNav extends Component {
                 </li>
               </ul>
               <div className='box-link'>
-                El Sistema Brass Brings The Heat
+                El Sistema Pittsburgh First Year Students Perform Live!
               </div>
               <div className='button'>
                 <img src={oval} className='oval' alt=""></img>
@@ -104,10 +104,10 @@ class BlogNav extends Component {
           </div>
 
           <div className='col-md-4 shadow-box'>
-            <img src={JazzBand} className='jazz-band' alt=""></img>
+            <img src={conduct} className='jazz-band' alt=""></img>
             <div className='details-box'>
               <ul className='shadow-box-ul'>
-                <li className='shadow-box-title shadow-box-title'>Jazz Band Fired Up</li>
+                <li className='shadow-box-title shadow-box-title'>Pittsburgh Performance</li>
                 <li>
                   <div className='details-line'></div>
                 </li>
@@ -119,7 +119,7 @@ class BlogNav extends Component {
                 </li>
               </ul>
               <div className='box-link'>
-                El Sistema Brass Brings The Heat
+                El Sistema Brings the House Down
               </div>
               <div className='button'>
                 <img src={oval} className='oval' alt=""></img>
