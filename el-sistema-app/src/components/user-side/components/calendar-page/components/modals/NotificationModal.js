@@ -23,9 +23,10 @@ class NotificationModal extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className="notification-modal">
-        <div className="exit-button">X</div>
+        <div className="exit-button" onClick={() => this.props.closeModal()}>X</div>
         <h3>Notifications</h3>
         <p>{this.state.message}</p>
         <form>
@@ -72,7 +73,7 @@ class NotificationModal extends Component {
               </li>
             </ul>
 
-          <input type="submit" value="Sign up" />
+          <input type="submit" value="Sign up" onClick={() => this.props.closeModal()}/>
         </form>
       </div>
     )

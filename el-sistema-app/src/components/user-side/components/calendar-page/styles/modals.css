@@ -172,3 +172,7 @@
 .notification-modal form .notification-selection .class-selection li span {
   white-space: nowrap;
 }
+
+.notification-modal .exit-button:hover {
+  cursor: pointer;
+}

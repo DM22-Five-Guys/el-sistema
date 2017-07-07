@@ -4,12 +4,26 @@ import './../styles/modals.css';
 
 
 class Modals extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
-    this.state = {
-      isOpen: true
+    var state = Object.assign({}, props);
+    if (props.notificationModal || props.eventsModal) {
+      state.isOpen = true;
     }
+
+    this.state = state;
+
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  componentWillReceiveProps(props) {
+    var newState = Object.assign({}, props);
+    if (props.notificationModal || props.eventsModal) {
+      newState.isOpen = true;
+    }
+
+    this.setState(newState);
   }
 
   determineDisplay() {
@@ -26,10 +40,24 @@ class Modals extends Component {
     return modalBlanketStyle;
   }
 
+  determineModal() {
+    if (this.state.notificationModal)
+      return <NotificationModal closeModal={this.closeModal}/>
+    //...
+  }
+
+  closeModal() {
+    this.setState({
+      isOpen: false
+    })
+    document.body.style.overflow = 'visible';
+    this.props.updateCalendarState();
+  }
+
   render() {
     return (
       <div className="modal-blanket" style={this.determineDisplay()}>
-        <NotificationModal />
+        {this.state.isOpen ? this.determineModal() : null}
       </div>
     )
   }
