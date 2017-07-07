@@ -23,7 +23,7 @@ class NotificationHero extends Component {
         <aside>
           <h3>Notifications</h3>
           <p>{this.state.notificationHeroMessage}</p>
-          <input type="button" value="Sign up" />
+          <input type="button" value="Sign up" onClick={() => this.props.openModal()}/>
         </aside>
       </section>
     )
