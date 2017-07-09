@@ -78,9 +78,10 @@ app.get('/test', mainCtrl.testDb);//See mainCtrl.js for how to do functions that
 
 
 //--------------------Twilio----------------------------
-app.get('/sms/:message', twilioCtrl.textTest);
 // app.post('/sms/bulk', twilioCtrl.bulkText);
+app.get('/sms/:message', twilioCtrl.textTest);
 app.post('/sms/bulk', twilioCtrl.getRecipList);
+app.post('/sms/unsubscribe', twilioCtrl.recieveMsg);
 
 //--------------------NodeMailer------------------------
 //app.post('/register', userCtrl.register);
