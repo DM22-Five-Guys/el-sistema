@@ -25,6 +25,11 @@ function bulkTexts(numberArr, message) {
     }
 }
 
+exports.recieveMsg = function(req, res){
+    console.log('Message recieved');
+    console.log(req.body);
+}
+
 exports.textTest = function (req, res) {
     let message = req.params.message;
     client.messages.create({
