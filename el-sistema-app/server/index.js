@@ -42,7 +42,7 @@ const connection_info = config.database_info;
 // s3fsInstance.create();
 
 //---------------App.use middleware-----------------------------
-app.use(express.static('../src'))
+app.use(express.static(__dirname + '/../build'));
 app.use(bodyParser.json())
 app.use(passport.initialize());
 app.use(passport.session());
