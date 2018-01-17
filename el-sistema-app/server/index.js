@@ -42,7 +42,7 @@ const connection_info = config.database_info;
 // s3fsInstance.create();
 
 //---------------App.use middleware-----------------------------
-app.use(express.static('../src'))
+app.use(express.static(__dirname + '/../build'));
 app.use(bodyParser.json())
 app.use(passport.initialize());
 app.use(passport.session());
@@ -64,6 +64,7 @@ const userCtrl = require('./userCtrl');
 const paymentCtrl = require('./model/paymentCtrl');
 
 const blogCtrl = require('./blogCtrl');
+const subscribeCtrl = require('./subscribeCtrl')
 
 //const nodemailerCtrl = require('./nodemailerCtrl')
 
@@ -126,6 +127,8 @@ app.get('/users', passport.authenticate('jwt', {session:false}), userCtrl.getAll
 
 app.post('/donate', paymentCtrl.charge)
 
+// Endpoint for Subscriptions
+app.post('/subscribe', subscribeCtrl.addSubsciption)
 
 //------------------S3----------------------
 // app.post('/images', (req,res) => {

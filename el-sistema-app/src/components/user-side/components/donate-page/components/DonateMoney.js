@@ -100,7 +100,7 @@ class DonateMoney extends Component{
                         <h4 className="bottom-title" >or select other payment method</h4>
                     </div>
                     <div className="paypal-container">
-                        <div className="paypal-btn"><span className="paypal-text">Pay with </span><img className="paypal-img" src={paypal}/></div>
+                        <div className="paypal-btn"><span className="paypal-text">Pay with </span><img className="paypal-img" src={paypal} alt="PayPal Logo"/></div>
                     </div>
                     <div className="security-container">
                         <img className="ssl-verisign-img" src={ssl_verisign} alt="ssl_verisign"/>

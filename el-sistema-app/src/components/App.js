@@ -35,7 +35,6 @@ class App extends Component {
 
 export default App;
 
-
   // isAuthed(){
   //   if(this.props.isLoggedIn || getToken() !== null){
   //     return true;

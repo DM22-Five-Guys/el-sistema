@@ -6,6 +6,7 @@ import EventsReducer from './events.reducer';
 import DonateReducer from './donate.reducer';
 import ContentReducer from './content.reducer';
 import NotifyReducer from './notify.reducer';
+import SubscribeReducer from './subscribe.reducer';
 import VolunteerSignupReducer from './volunteer.signup.reducer';
 
 const rootReducer = combineReducers({
@@ -16,7 +17,8 @@ const rootReducer = combineReducers({
     donate: DonateReducer,
     content: ContentReducer,
     notify: NotifyReducer,
-    volunteerSignup: VolunteerSignupReducer
+    volunteerSignup: VolunteerSignupReducer,
+    subscribe: SubscribeReducer
 
 })
 

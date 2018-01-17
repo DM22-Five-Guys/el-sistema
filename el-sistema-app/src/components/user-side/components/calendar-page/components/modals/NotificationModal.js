@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { subscribe } from './../../../../../../reducers/subscribe.reducer';
+
 import content from './../../assets/content';
 
 class NotificationModal extends Component {
@@ -12,6 +16,15 @@ class NotificationModal extends Component {
 
   }
 
+  renderSelectionItem(field){
+    return (
+      <li>
+        <input type="checkbox" id="jazz-violin" name="jazz-violin"/>
+        <label htmlFor="jazz-violin"><span>{field.label}</span></label>
+      </li>
+    )
+  }
+
   toggleClassSelection() {
     var newState = Object.assign({}, this.state);
     newState.classSelection = !newState.classSelection;
@@ -21,15 +34,18 @@ class NotificationModal extends Component {
   classSelectionDisplay() {
     return this.state.classSelection ? {display: "block"} : {display: "none"};
   }
+  onSubmit(values){
+    subscribe(values);
+  }
 
   render() {
-    console.log(this.props)
+    const { handleSubmit } = this.props;
     return (
       <div className="notification-modal">
         <div className="exit-button" onClick={() => this.props.closeModal()}>X</div>
         <h3>Notifications</h3>
         <p>{this.state.message}</p>
-        <form>
+        <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
           <label htmlFor="phone-number">
             <span>Phone Number</span>
             <input type="tel" id="phone-number" name="phone-number" />
@@ -42,6 +58,7 @@ class NotificationModal extends Component {
                 <span>Classes</span>
                 <div className="downwards-arrow"></div>
                 <ul className="class-selection" style={this.classSelectionDisplay()}>
+                  <Field name="test" label="Test" component={this.renderSelectionItem}/> 
                   <li>
                     <input type="checkbox" id="jazz-violin" name="jazz-violin"/>
                     <label htmlFor="jazz-violin"><span>Jazz Violin</span></label>
@@ -80,4 +97,18 @@ class NotificationModal extends Component {
   }
 }
 
-export default NotificationModal;
+function validate(values){
+  let errors = {};
+  // if (!values.message){
+  //   errors.title = "⚠ Please enter a message to send.";
+  // }
+  return errors;
+}
+
+function mapStateToProps(state) {
+    return {
+
+    }
+}
+
+export default connect(mapStateToProps, { subscribe })( reduxForm({ validate, form: 'subscribe'})(NotificationModal));

@@ -7,6 +7,10 @@ import './VolunteerSignUp.css';
 class VolunteerSignUp extends Component{
     constructor(){
         super()
+        this.state= {
+            name: '',
+            email: ''
+        }
     }
     renderTextField(field){
         return(
